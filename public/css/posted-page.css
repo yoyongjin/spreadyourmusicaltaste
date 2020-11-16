@@ -5,6 +5,7 @@
 *, *::before, *::after {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -22,11 +23,13 @@ ul {
   list-style-type: none;
 }
 .posted-page-top {
+  margin: 0 auto;
+  padding: 10px 10px;
+  width: 375px;
   border-radius: 0 0 15px 15px;
   position: relative;
-  padding: 10px 20px;
   background: rgb(33,236,192);
-  background: linear-gradient(90deg, rgba(33,236,192,0.6235119047619048) 0%, rgba(128,229,249,1) 23%);
+  background: linear-gradient(45deg, #A32CDF, #106AD2);
 }
 
 /* 간단한 게시물정보, 게시글제목, 작성자, 날짜 */
@@ -46,6 +49,7 @@ ul {
   background-position: 0% 5%;
   background-position: 10% 10%;
   /* border-radius: 5px; */
+  margin: 0 auto;
   margin-top: 15px;
   padding:8px 15px;
   height: 200px;
@@ -79,13 +83,15 @@ ul {
 .posted-page-bottom {
   background-color: white;
   color: white;
-  height:812px;
+  /* height:812px; */
+  width: 375px;
+  margin: 0 auto;
 }
 
 .posted-page-header {
   margin-bottom: -10px;
   height:80px;
-  width: 100%;
+  width: 375px;
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRQF58p4kLtXiv1dcCiCOLsNu0_llb_Dj4Vww&usqp=CAU');
 }
 
@@ -125,6 +131,7 @@ ul {
   background-color: whitesmoke;
   color:black;
   /* border-radius: 5px; */
+  margin: 0 auto;
   margin-top: 15px;
   padding: 8px 15px;
   font-size: 1.5rem;
@@ -166,25 +173,27 @@ ul {
   display: inline-block;
   width:20px;
   height:20px;
+  vertical-align: revert;
 }
 .scrap {
   background-image: url('../image/star-solid.svg');
   display: inline-block;
   width:20px;
   height:20px;
+  vertical-align: revert;
 }
 .posted-page-deleteBtn, .posted-page-editBtn {
   border:0;
   /* border-radius: 5px; */
   padding: 10px;
-  background-color: #5ecadf;
+  background-color: #A32CDF;
   color: white;
   cursor: pointer;
   border-radius: 5px;
 }
 .posted-page-deleteBtn:hover , .posted-page-editBtn:hover{
   transition-duration: 0.3s;
-  background-color: #37e0cb;
+  background-color: #106AD2;
 }
 .posted-page-editBtn {
 }
