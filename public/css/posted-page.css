@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Jua&display=swap');
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+}
+body {
+  /* font-family: 'Alegreya Sans'; */
+  font-family: 'Jua';
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 375px;
+  font-size:1.3rem;
+}
+ul {
+  list-style-type: none;
+}
+.posted-page-top {
+  border-radius: 0 0 15px 15px;
+  position: relative;
+  padding: 10px 20px;
+  background: rgb(33,236,192);
+  background: linear-gradient(90deg, rgba(33,236,192,0.6235119047619048) 0%, rgba(128,229,249,1) 23%);
+}
+
+/* 간단한 게시물정보, 게시글제목, 작성자, 날짜 */
+.posted-page-writter-info {
+  /* border-radius: 5px; */
+  color: black;
+  padding: 8px 15px;
+  font-size: 1.4rem;
+  border-radius: 25px;
+  background-color: white;
+  margin-top: 20px;
+}
+
+/* 노래명/플레이리스트/앨범자켓 이미지 컨테이너 */
+.posted-page-recommendation {
+  color: black;
+  background-position: 0% 5%;
+  background-position: 10% 10%;
+  /* border-radius: 5px; */
+  margin-top: 15px;
+  padding:8px 15px;
+  height: 200px;
+}
+
+.posted-page-album {
+  top: 1%;
+  left: 20%;
+  border: 1px solid lightgray;
+  position: relative;
+  margin-top: 15px;
+  width: 170px;
+  height: 170px;
+  background-size: contain;
+  border-radius: 50%;
+  background-image: url('https://t1.daumcdn.net/cfile/tistory/2108644A577ADA710F?original');
+}
+
+.posted-page-album-hole {
+  position: absolute;
+  width:30px;
+  height:30px;
+  border-radius: 50%;
+  background-color: red;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  background: url('https://i.pinimg.com/originals/5d/75/39/5d7539ba356a1e4a76033199793caee4.jpg');
+}
+
+.posted-page-bottom {
+  background-color: white;
+  color: white;
+  height:812px;
+}
+
+.posted-page-header {
+  margin-bottom: -10px;
+  height:80px;
+  width: 100%;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRQF58p4kLtXiv1dcCiCOLsNu0_llb_Dj4Vww&usqp=CAU');
+}
+
+.posted-page-title {
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+}
+.posted-page-writter {
+  display: inline-block;
+  margin-right: 170px 
+}
+.posted-page-time {
+  display: inline-block;
+}
+
+.posted-page-status {
+  background-color: #fff;
+  /* border-radius: 5px; */
+}
+
+.spin {
+  animation: spin 3s linear infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 게시물 내용 컨테이너 */
+.posted-page-content {
+  border-radius: 15px;
+  background-color: whitesmoke;
+  color:black;
+  /* border-radius: 5px; */
+  margin-top: 15px;
+  padding: 8px 15px;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  font-family: 'Alegreya Sans';
+}
+
+/* 좋아요 스크랩 게시글삭제수정 */
+.posted-page-status {
+  border-radius: 15px;
+  margin-top: 15px;
+  color: black;
+  font-size: 1.3rem;
+  padding: 8px 15px;
+  background-color: whitesmoke;
+}
+.status-btn, .post-athor {
+  display: inline-block;
+  border: 0;
+  vertical-align: middle;
+}
+.posted-page-scrapNum, .posted-page-likeNum {
+  background-color: transparent;
+  vertical-align: super;
+  font-size:1.5rem;
+}
+.posted-page-scrapNum {
+  margin-right: 97px;
+}
+.posted-page-likeNum {
+  margin-right: 10px;
+}
+.posted-page-scrapBtn, .posted-page-likeBtn {
+  border:0;
+  cursor: pointer;
+}
+.thumb {
+  background-image: url('../image/thumbs-up-solid.svg');
+  display: inline-block;
+  width:20px;
+  height:20px;
+}
+.scrap {
+  background-image: url('../image/star-solid.svg');
+  display: inline-block;
+  width:20px;
+  height:20px;
+}
+.posted-page-deleteBtn, .posted-page-editBtn {
+  border:0;
+  /* border-radius: 5px; */
+  padding: 10px;
+  background-color: #5ecadf;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.posted-page-deleteBtn:hover , .posted-page-editBtn:hover{
+  transition-duration: 0.3s;
+  background-color: #37e0cb;
+}
+.posted-page-editBtn {
+}
