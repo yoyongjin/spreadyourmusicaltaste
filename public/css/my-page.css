@@ -1,0 +1,103 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Nanum Gothic';
+  font-size: 10px;
+  color: #fff;
+}
+
+body {
+  width: 375px;
+  margin: 0 auto;
+}
+
+.container-box {
+  background: linear-gradient(45deg, #a32cdf, #106ad2);
+  height: 100%;
+}
+
+.profile-image {
+  width: 15%;
+  height: 15%;
+  vertical-align: middle;
+}
+
+.mypage-heading {
+  text-align: center;
+  padding: 20px;
+  font-size: 2rem;
+  font-weight: 700;
+  /* background-color: #1d4dd1; */
+}
+
+.mypage-member-nickname {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.5rem;
+  padding-left: 10px;
+}
+
+.nick-name {
+  margin-left: 10px;
+  font-weight: 700;
+}
+
+.mypage-member-link {
+  padding-top: 20px;
+  background-color: #fff;
+  height: 100%;
+  border-radius: 20px 20px 0 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.mypage-member-link li {
+  margin-left: 20px;
+  line-height: 100px;
+}
+
+.mypage-member-link a {
+  text-decoration: none;
+}
+
+.mypage-member-link a:visited {
+  color: inherit;
+}
+
+.mypage-member-icon {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.mypage-member-icon li {
+  display: inline-block;
+}
+
+.fa-star,
+.fa-pen,
+.fa-battery-empty {
+  padding: 20px;
+}
+
+.mypage-home-nav {
+  background: linear-gradient(45deg, #a32cdf, #106ad2);
+  text-align: center;
+  position: fixed;
+  width: 375px;
+  bottom: 0;
+}
+
+.mypage-home-nav a {
+  padding: 10px;
+}
+
+.mypage-home-nav img {
+  width: 30px;
+  height: 30px;
+}
