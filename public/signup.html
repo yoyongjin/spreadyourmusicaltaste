@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=375, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link href="css/signup.css" rel="stylesheet" />
+    <script defer src="./js/signup.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -21,15 +22,23 @@
         <ul class="signup-items">
           <li id="myId" class="signup-id">
             <label for="my-id"></label>
-            <input id="my-id" type="text" placeholder="아이디" />
+            <input id="inputId" type="text" placeholder="아이디" />
+            <div class="id-error"></div>
           </li>
           <li id="password" class="signup-pw">
             <label for="password"></label>
-            <input id="password" type="text" placeholder="비밀번호" />
+            <input id="inputPw" type="text" placeholder="비밀번호" />
+            <div class="pw-error"></div>
+          </li>
+          <li id="check-password" class="check-password">
+            <label for="ck-password"></label>
+            <input id="ckPassword" type="text" placeholder="비밀번호 확인" />
+            <div class="check-pw-error"></div>
           </li>
           <li id="nickname" class="signup-nickname">
             <label for="nickname"></label>
             <input id="nickname" type="text" placeholder="닉네임" />
+            <div class="nickname-error"></div>
           </li>
         </ul>
         <button class="signup-btn" type="button">가입하기</button>
