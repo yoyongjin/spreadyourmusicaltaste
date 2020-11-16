@@ -35,7 +35,6 @@ body {
   flex-flow: row wrap;
   justify-content: space-between;
   margin-top: 0.5rem;
-
 }
 .main-post-image {
   background-color: black;
@@ -82,10 +81,9 @@ a{
   height:40px;
   font-size: 1.4rem;
   color: white;
-  background-color: #1A4789;
-  bottom: 0;
+  background: linear-gradient(45deg, #A32CDF, #106AD2);  bottom: 0;
   position: fixed;
-  width:100%;
+  width:375px;
 }
 .main-nav-menus {
   display: flex;

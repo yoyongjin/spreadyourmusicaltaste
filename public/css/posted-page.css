@@ -26,7 +26,7 @@ ul {
   position: relative;
   padding: 10px 20px;
   background: rgb(33,236,192);
-  background: linear-gradient(90deg, rgba(33,236,192,0.6235119047619048) 0%, rgba(128,229,249,1) 23%);
+  background: linear-gradient(45deg, #A32CDF, #106AD2);
 }
 
 /* 간단한 게시물정보, 게시글제목, 작성자, 날짜 */
@@ -177,14 +177,14 @@ ul {
   border:0;
   /* border-radius: 5px; */
   padding: 10px;
-  background-color: #5ecadf;
+  background-color: #A32CDF;
   color: white;
   cursor: pointer;
   border-radius: 5px;
 }
 .posted-page-deleteBtn:hover , .posted-page-editBtn:hover{
   transition-duration: 0.3s;
-  background-color: #37e0cb;
+  background-color: #106AD2;
 }
 .posted-page-editBtn {
 }
