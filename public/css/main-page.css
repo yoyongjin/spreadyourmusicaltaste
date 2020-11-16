@@ -46,15 +46,15 @@ body {
 .main-post { 
   overflow: hidden;
   box-sizing: border-box;
-  background-color: lightblue;
-  width: 50%;
+  background: linear-gradient(45deg, #A32CDF, #106AD2);   width: 50%;
   height: 300px;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   justify-content: space-between;
   margin-top: 0.5rem;
   border: 1px solid black;
   position: relative;
+  flex-direction: column-reverse;
 }
 .main-post-image {
   background-image: url('https://t1.daumcdn.net/cfile/tistory/2108644A577ADA710F?original');
@@ -102,11 +102,9 @@ body {
   animation: spin 5s linear infinite;
 }
 .main-post-contents {
-  background: linear-gradient(45deg, #A32CDF, #106AD2);  
-  display: flex;
-  flex-flow: row wrap;
-  width: 275px;
-  height:180px;
+  background-color: #fff;
+  width: 150px;
+  height: 100px;
 }
 .main-post-title {
   width: 100%;
