@@ -21,6 +21,19 @@ body {
   box-sizing: border-box;
   font-size:1.3rem;
 }
+/* 애니메이션 */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+  .spin {
+    animation: spin 10s linear infinite;
+  }
+
 .main-board {
   background-color: lightyellow;
   margin: 1rem;
@@ -28,18 +41,61 @@ body {
   display: flex;
   flex-flow: row wrap;
 }
-.main-post {
+.main-post { 
+  overflow: hidden;
+  box-sizing: border-box;
   background-color: lightblue;
-  width: 100%;
+  width: 50%;
+  height: 300px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   margin-top: 0.5rem;
+  border: 1px solid black;
+  position: relative;
 }
 .main-post-image {
-  background-color: black;
-  width: 5rem;
-  height: 5rem;
+  background-image: url('https://t1.daumcdn.net/cfile/tistory/2108644A577ADA710F?original');
+  background-size: contain;
+  width:150px;
+  height: 150px;
+  border-radius: 50%;
+  top: 10%;
+  left: 40%;
+  transform: translate(50%, 50%);
+  position: absolute;
+  border: 1px solid lightgray;
+}
+.main-post-image-hole {
+  display: inline-block;
+  width:30px;
+  height:30px;
+  position: absolute;
+  background-color: lightblue;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid lightgray;
+}
+.record-needle {
+  display: inline-block;
+  width: 80px;
+  height: 50px;
+  position: absolute;
+  top:0px;
+  left:120px;
+  transform: rotate(90deg);
+  transition-duration: 1s;
+  transform-origin: 100% 100%;
+}
+.main-post:hover > .record-needle {
+  transition-duration: 2s;
+  transform: rotate(-40deg);
+  transform-origin: 100% 100%;
+}
+.main-post:hover > .main-post-image {
+  animation: spin 5s linear infinite;
 }
 .main-post-contents {
   background-color: white;
