@@ -10,5 +10,13 @@
   "license": "ISC",
   "dependencies": {
     "json-server": "^0.16.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cho-yunah/spreadyourmusicaltaste.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Cho-yunah/spreadyourmusicaltaste/issues"
+  },
+  "homepage": "https://github.com/Cho-yunah/spreadyourmusicaltaste#readme"
 }
