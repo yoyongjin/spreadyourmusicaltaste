@@ -98,7 +98,7 @@ body {
   transition-duration: 1s;
   transform-origin: 100% 100%;
   transform: scaleX(-1);
-  transform: rotate(90deg) ;
+  transform: rotate(90deg);
 }
 .main-post:hover > .record-needle {
   transition-duration: 2s;
