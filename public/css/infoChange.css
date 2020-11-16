@@ -1,0 +1,84 @@
+body {
+  width: 375px;
+  height: 100vh;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background: linear-gradient(45deg, #a32cdf, #106ad2);
+}
+.info-change {
+  margin-top: 16vh;
+}
+.info-change-header {
+  line-height: 10vh;
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: bottom;
+  text-shadow: 1px 1px #444;
+}
+.info-change-wrapper {
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 20px;
+  padding: 20px 10px;
+  vertical-align: middle;
+  border-radius: 30px;
+}
+.info-change-items {
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+}
+.info-change-items li {
+  margin: 8px 0;
+}
+.info-change-items input::placeholder {
+  color: black;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+.info-change-items input {
+  width: 300px;
+  height: 40px;
+  margin: 5px;
+  padding: 10px;
+  border: 0;
+  border-radius: 30px;
+  box-sizing: border-box;
+  /* box-shadow: 1px 1px 1px #666; */
+}
+.change-btn-wrapper {
+  margin: 15px auto 0;
+  text-align: right;
+}
+.change-complete-btn {
+  font-weight: 700;
+  font-size: 15px;
+  width: 130px;
+  padding: 10px;
+  border: 0;
+  border-radius: 20px;
+  background-color: #fff;
+  color: #666;
+  box-shadow: 1px 1px 1px #666;
+}
+.change-complete-btn:hover {
+  background-color: rgb(231, 229, 89);
+  color: #333;
+}
+.change-cancel-btn {
+  font-weight: 700;
+  font-size: 15px;
+  background-color: #c0bebe;
+  color: #666;
+  width: 80px;
+  padding: 10px;
+  border: 0;
+  border-radius: 20px;
+  box-shadow: 1px 1px 1px #666;
+}
+.change-cancel-btn:hover {
+  background-color: tomato;
+  color: #fff;
+}

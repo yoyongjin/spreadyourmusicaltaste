@@ -1,9 +1,11 @@
 /* main-nav */
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap'); 
-@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Jua&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Jua&display=swap");
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
 }
@@ -15,11 +17,11 @@ body {
   width: 375px;
   height: 100vh;
   background-color: #ccc;
-  font-family: 'Alegreya Sans';
+  font-family: "Alegreya Sans";
   /* font-family: 'Jua'; */
   margin: 0 auto;
   box-sizing: border-box;
-  font-size:1.3rem;
+  font-size: 1.3rem;
 }
 /* 애니메이션 */
 @keyframes spin {
@@ -104,7 +106,7 @@ body {
   width: 275px;
 }
 .main-post-title {
-  width: 100%;  
+  width: 100%;
   background-color: #abc;
 }
 .main-post-writer {
@@ -119,7 +121,8 @@ body {
   width: 70%;
   background-color: #bbb;
 }
-.main-post-like, .main-post-scrap {
+.main-post-like,
+.main-post-scrap {
   width: 100%;
   background-color: #aaa;
   text-align: right;
@@ -128,13 +131,13 @@ ul {
   list-style-type: none;
 }
 
-a{
+a {
   display: inline-block;
-  color:white;
+  color: white;
 }
 .main-nav {
   line-height: 40px;
-  height:40px;
+  height: 40px;
   font-size: 1.4rem;
   color: white;
   background: linear-gradient(45deg, #A32CDF, #106AD2);  bottom: 0;
@@ -145,4 +148,3 @@ a{
   display: flex;
   justify-content: space-evenly;
 }
-
