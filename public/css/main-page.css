@@ -18,7 +18,6 @@ body {
   height: 100vh;
   background-color: #ccc;
   font-family: "Alegreya Sans";
-  /* font-family: 'Jua'; */
   margin: 0 auto;
   box-sizing: border-box;
   font-size: 1.3rem;
@@ -37,7 +36,7 @@ body {
   }
 
 .main-board {
-  background-color: lightyellow;
+  background-color: white;
   margin: 1rem;
   padding: 0.5rem;
   display: flex;
@@ -46,15 +45,17 @@ body {
 .main-post { 
   overflow: hidden;
   box-sizing: border-box;
-  background: linear-gradient(45deg, #A32CDF, #106AD2);   width: 50%;
+  width: 50%;
   height: 300px;
   display: flex;
   flex-flow: column wrap;
   justify-content: space-between;
-  margin-top: 0.5rem;
-  border: 1px solid black;
+  margin-top: 1rem;
+  /* border: 1px solid black; */
+  border: 3px solid white;
   position: relative;
-  flex-direction: column-reverse;
+  background: linear-gradient(45deg, #A32CDF, #106AD2);  
+  box-shadow: 2px 2px 2px lightgray;
 }
 .main-post-image {
   background-image: url('https://t1.daumcdn.net/cfile/tistory/2108644A577ADA710F?original');
@@ -68,13 +69,20 @@ body {
   position: absolute;
   border: 1px solid lightgray;
 }
+.image1 {background-image: url('https://t1.daumcdn.net/cfile/tistory/2108644A577ADA710F?original');}
+.image2 {background-image: url('https://image.yes24.com/goods/2689473/L');}
+.image3 {background-image: url('https://upload.wikimedia.org/wikipedia/en/3/3c/Wonder_World_%28album%29.jpeg');}
+.image4 {background-image: url('https://i.ytimg.com/vi/i0mM2mT_loQ/hqdefault.jpg');}
+.image5 {background-image: url('https://lh3.googleusercontent.com/proxy/4sJ604wXghZipQ8GIDofkypKd4DzXRKNJ5I414k7xQ-mPbKYhcLxesE5kt0__B5G-SsUpRnWgs7_OD2Hrex_f2R4zYajX9mIqF6abgdBLBoZPedz6WCRMvC_hd77GcJsRAJcueko7daH2PW1zcTNpgK9dWV0xlUlRO74JrM4rfS0rCD297oeqSrlQIuhlA');}
+.image6 {background-image: url('https://crownnote.com/sites/default/files/wonder%20girls%20wonder%20party.jpg');}
+
 .main-post-image-hole {
   display: inline-block;
   width:40px;
   height:40px;
   position: absolute;
-  border: 5px solid silver;
-  background: linear-gradient(45deg, #A32CDF, #106AD2);  
+  border: 2px solid silver;
+  background: #106AD2;
   top:50%;
   left:50%;
   transform: translate(-50%, -50%);
@@ -90,7 +98,7 @@ body {
   transition-duration: 1s;
   transform-origin: 100% 100%;
   transform: scaleX(-1);
-  transform: rotate(90deg) ;
+  transform: rotate(90deg);
 }
 .main-post:hover > .record-needle {
   transition-duration: 2s;
@@ -102,9 +110,10 @@ body {
   animation: spin 5s linear infinite;
 }
 .main-post-contents {
-  background-color: #fff;
-  width: 150px;
-  height: 100px;
+  display: flex;
+  flex-flow: row wrap;
+  width: 275px;
+  height:180px;
 }
 .main-post-title {
   width: 100%;
@@ -114,19 +123,31 @@ body {
   width: 30%;
   background-color: #bcd;
 }
-/* .main-post-date {
-  width: 70%;
-  background-color: #eee;
-} */
-.main-post-time {
-  width: 70%;
-  background-color: #bbb;
+.main-post-like {
+  box-sizing: border-box;
+  display: inline-block;
+  padding-top: 20px;
+  background-color: white;
+  padding:20px;
+  margin:0;
+  color: black;
+  border-radius: 20px 0 0 0;
+  border: 3px solid white;
+  white-space: nowrap;
+  line-height: 2rem;
 }
 .main-post-like,
 .main-post-scrap {
   width: 100%;
-  /* background-color: #aaa; */
   text-align: right;
+}
+.main-post-songTitle {
+  display: block;
+  font-size: 1.5rem;
+}
+.main-post-postTitle {
+  display: block;
+  font-size: 1.4rem;
 }
 ul {
   list-style-type: none;
