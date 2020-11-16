@@ -1,0 +1,62 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+body {
+  width: 375px;
+  height: 100vh;
+  background-color: #ccc;
+}
+
+.main-board {
+  background-color: lightyellow;
+  margin: 1rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-flow: row wrap;
+}
+.main-post {
+  background-color: lightblue;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+
+}
+.main-post-image {
+  background-color: black;
+  width: 5rem;
+  height: 5rem;
+}
+.main-post-contents {
+  background-color: white;
+  display: flex;
+  flex-flow: row wrap;
+  width: 275px;
+}
+.main-post-title {
+  width: 100%;  
+  background-color: #abc;
+}
+.main-post-writer {
+  width: 30%;
+  background-color: #bcd;
+}
+/* .main-post-date {
+  width: 70%;
+  background-color: #eee;
+} */
+.main-post-time {
+  width: 70%;
+  background-color: #bbb;
+}
+.main-post-like, .main-post-scrap {
+  width: 100%;
+  background-color: #aaa;
+  text-align: right;
+}
