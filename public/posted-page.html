@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-  <link rel="stylesheet" href="posted-page-style.css" />
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/posted-page.css" />
 </head>
 <body>
-  <section class="posted-page">
+  <section class="posted-page-top">
     <h2 class="posted-page-header a11y-hidden">게시글 보기 페이지</h2>
 
     <ul class="posted-page-writter-info">
@@ -17,9 +17,20 @@
       <li class="posted-page-time"><time>2020-11-16</time></li>
     </ul>
 
-    <article class="posted-page-recommendation">노래명/플레이리스트/앨범자켓이미지</article>
-
+    <article class="posted-page-recommendation">
+      <div class="posted-page-album spin">
+        <div class="posted-page-album-hole"></div>
+      </div>
+    </article>
+  </section>
+  
+  <section class="posted-page-bottom">
     <article class="posted-page-content">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, at, dicta repellat ad animi quae esse veniam facilis assumenda fugiat ipsa ut odio suscipit libero id doloribus officiis hic nihil.
+      진짜 소녀시대 가식적인 것들 너무 가증스럽기짝이 없네요.
+
+
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt est pariatur, velit porro perferendis sequi accusantium officiis vitae cum commodi, expedita unde cumque amet quisquam excepturi quae. Ratione, consequuntur laboriosam.
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe commodi molestiae fugiat, soluta quas modi, velit provident quod iste nemo qui nostrum nulla, blanditiis repudiandae cum voluptatem sequi minus eveniet.
     </article>
 
@@ -33,10 +44,10 @@
         <span class="posted-page-scrapNum">5</span>
       </li>
       <li class="posted-page-delete post-athor">
-        <button class="posted-page-deleteBtn"><i class="far fa-trash-alt"></i></button>
+        <button class="posted-page-deleteBtn">게시글 삭제</button>
       </li>
       <li class="posted-page-edit post-athor">
-        <button class="posted-page-editBtn"><i class="fas fa-edit"></i></button>
+        <button class="posted-page-editBtn">게시물 수정</button>
       </li>
     </ul>
   </section>
