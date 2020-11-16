@@ -66,6 +66,7 @@ ul {
   background-size: contain;
   border-radius: 50%;
   background-image: url('https://t1.daumcdn.net/cfile/tistory/2108644A577ADA710F?original');
+  transition-property: border-radius;
 }
 
 .posted-page-album-hole {
@@ -79,7 +80,22 @@ ul {
   transform:translate(-50%, -50%);
   background: url('https://i.pinimg.com/originals/5d/75/39/5d7539ba356a1e4a76033199793caee4.jpg');
 }
-
+.posted-page-album:hover{
+  border-radius: 0;
+  transition-duration: 1s;
+  animation: stop 1s ease-out;
+}
+.posted-page-album:hover > .posted-page-album-hole {
+  display: none;
+}
+@keyframes stop {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 .posted-page-bottom {
   background-color: white;
   color: white;
@@ -114,7 +130,7 @@ ul {
 }
 
 .spin {
-  animation: spin 3s linear infinite;
+  animation: spin 10s linear infinite;
 }
 @keyframes spin {
   from {

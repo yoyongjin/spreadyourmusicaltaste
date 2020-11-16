@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./css/login.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jua&display=swap" />
+  <script defer src="./js/login.js"></script>
 </head>
   <body>
     <main class="login-container">
@@ -16,17 +17,22 @@
         <article class="login-box">
           <label class="login-label" for="idInput"></label>
           <input
-            id="idInput"
-            class="login-input"
-            type="text"
-            placeholder="아이디"/>
+          id="idInput"
+          class="login-input"
+          type="text"
+          placeholder="아이디"
+          autocomplete="off"/>
+          <div class="id-error"></div>
           <label class="login-label" for="pwInput"></label>
           <input
             id="pwInput"
             class="login-input"
             type="password"
-            placeholder="비밀번호"/>
+            placeholder="비밀번호"
+            autocomplete="off"/>
+            <div class="pw-error"></div>
           <button class="login-btn">로그인</button>
+          <div class="user-error"></div>
         </article>
         <article class="join-box">
           <span>회원이 아니신가요?
