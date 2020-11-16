@@ -12,14 +12,14 @@ html {
   font-size: 10px;
 }
 body {
+  width: 375px;
+  height: 100vh;
+  background-color: #ccc;
   font-family: 'Alegreya Sans';
   /* font-family: 'Jua'; */
   margin: 0 auto;
   box-sizing: border-box;
   font-size:1.3rem;
-  width: 375px;
-  height: 100vh;
-  background-color: #ccc;
 }
 .main-board {
   background-color: lightyellow;
