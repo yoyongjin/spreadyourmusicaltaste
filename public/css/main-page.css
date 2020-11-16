@@ -29,6 +29,7 @@ body {
   flex-flow: row wrap;
 }
 .main-post {
+  white-space: nowrap;
   background-color: lightblue;
   width: 100%;
   display: flex;
@@ -85,7 +86,7 @@ a{
   background-color: #1A4789;
   bottom: 0;
   position: fixed;
-  width:100%;
+  width: 375px;
 }
 .main-nav-menus {
   display: flex;
