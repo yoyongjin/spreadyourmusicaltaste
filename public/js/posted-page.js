@@ -41,7 +41,7 @@ const renderWritterInfo = post => {
 };
 
 const checkPressedLikeBtn = () => {
-  
+  like.filter(_like => _like === sessionStorage.getItem('user-id'));
 };
 const checkPressedScrapBtn = () => {
 
@@ -56,6 +56,7 @@ window.onload = () => {
     console.log(post);
     renderWritterInfo(post);
   })();
+  sessionStorage.setItem('user-id', 'kym'); // 나중에 삭제할 부분@@@@@@@@@@@@@
 };
 
 $postedpageAlbum.onmouseenter = e => {
