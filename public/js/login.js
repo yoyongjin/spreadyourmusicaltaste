@@ -11,11 +11,12 @@ $loginBtn.onclick = async () => {
   $pwError.textContent = '';
   $userError.textContent = '';
   if(!$idInput.value) {
-    $idError.textContent = '아이디를 입력해주세요';
+    $idError.textContent = '아이디를 입력해주세요.';
     $idInput.focus();
     return;
-  } else if(!$pwInput.value) {
-    $pwError.textContent = '비밀번호를 입력해주세요';
+  }
+  if(!$pwInput.value) {
+    $pwError.textContent = '비밀번호를 입력해주세요.';
     $pwInput.focus();
     return;
   }
@@ -24,18 +25,19 @@ $loginBtn.onclick = async () => {
     const users = await res.json();
     const checkUser = await users.find(user => user.id === $idInput.value && user.pw === $pwInput.value);
     if(checkUser) {
-      sessionStorage.setItem('user', JSON.stringify(users))
-      location.assign('main-page.html')
+      console.log(checkUser);
+      sessionStorage.setItem('user', JSON.stringify(checkUser));
+      window.location.assign('main-page.html');
     } else {
-      $userError.textContent = '가입하지 않은 아이디이거나, 잘못된 비밀번호입니다';
+      $userError.textContent = '가입하지 않은 아이디이거나, 잘못된 비밀번호입니다.';
       $pwInput.value = '';
       $pwInput.focus();
     }
-  } catch(err) {
+  } catch (err) {
     console.error(err);
   }
 }
 
 $joinLink.onclick = () => {
-  location.assign('signup.html');
+  window.location.assign('signup.html');
 }
