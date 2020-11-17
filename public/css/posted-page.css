@@ -56,45 +56,39 @@ ul {
 }
 
 .posted-page-album {
-  top: 1%;
+  top: -10%;
   left: 20%;
   border: 1px solid lightgray;
   position: relative;
   margin-top: 15px;
-  width: 170px;
-  height: 170px;
-  background-size: contain;
-  border-radius: 50%;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background-size: cover;
   background-image: url('https://t1.daumcdn.net/cfile/tistory/2108644A577ADA710F?original');
   transition-property: border-radius;
-}
-
-.posted-page-album-hole {
-  position: absolute;
-  width:30px;
-  height:30px;
-  border-radius: 50%;
-  background-color: red;
-  top: 50%;
-  left: 50%;
-  transform:translate(-50%, -50%);
-  background: url('https://i.pinimg.com/originals/5d/75/39/5d7539ba356a1e4a76033199793caee4.jpg');
+  transition-duration: 1s;
+  transition-property: transform;
+  border-radius: 10px;
 }
 .posted-page-album:hover{
-  border-radius: 0;
+  transform: translateX(-41%);
+}
+.posted-page-album:hover + .posted-page-song-detail {
+  opacity: 1;
+}
+.posted-page-song-detail {
+  width: 150px;
+  height: 200px;
+  position: absolute;
+  top: 101px;
+  right: 8px;
+  background-color: white;
+  opacity: 0;
+  transition-timing-function: ease-in;
   transition-duration: 1s;
-  animation: stop 1s ease-out forwards;
-}
-.posted-page-album:hover > .posted-page-album-hole {
-  display: none;
-}
-@keyframes stop {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+  border-radius: 10px;
+  padding: 10px;
 }
 .posted-page-bottom {
   background-color: white;
@@ -129,30 +123,18 @@ ul {
   /* border-radius: 5px; */
 }
 
-.spin {
-  animation: spin 10s linear infinite;
-}
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 /* 게시물 내용 컨테이너 */
 .posted-page-content {
   border-radius: 15px;
   background-color: whitesmoke;
   color:black;
-  /* border-radius: 5px; */
   margin: 0 auto;
   margin-top: 15px;
   padding: 8px 15px;
   font-size: 1.5rem;
   line-height: 1.8rem;
   font-family: 'Alegreya Sans';
+  min-height:300px;
 }
 
 /* 좋아요 스크랩 게시글삭제수정 */

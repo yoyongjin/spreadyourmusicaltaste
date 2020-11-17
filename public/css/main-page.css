@@ -142,7 +142,7 @@ body {
   height:180px;
 }
 .main-post-title {
-  width: 100%;
+  width: fit-content;
   background-color: #abc;
 }
 .main-post-writer {
@@ -154,13 +154,13 @@ body {
   display: inline-block;
   padding-top: 20px;
   background-color: white;
-  padding:20px;
+  padding:20px 10px;
   margin:0;
   color: black;
   border-radius: 20px 0 0 0;
   border: 3px solid white;
   white-space: nowrap;
-  line-height: 2rem;
+  line-height: 2.7rem;
 }
 .main-post-like,
 .main-post-scrap {
@@ -169,11 +169,19 @@ body {
 }
 .main-post-songTitle {
   display: block;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
 }
 .main-post-postTitle {
   display: block;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
 }
 ul {
   list-style-type: none;
