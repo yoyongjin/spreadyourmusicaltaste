@@ -98,8 +98,13 @@ body {
 .id-error,
 .pw-error,
 .user-error {
-  color: tomato;
-  margin-bottom: 10px;
+  color: #dbdb30;
+  height: 25px;
+  font-family: 'Nanum Gothic';
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.1;
 }
 
 .login-input:first-of-type {
@@ -139,16 +144,24 @@ body {
   color: #fff;
   font-size: 1.3rem;
   line-height: 1.5;
+  margin-top: 10px;
+}
+
+.join-question {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  width: 120px;
 }
 
 .join-link {
-  margin-left: 10px;
-  font-weight: 700;
-  font-size: 1.3rem;
+  /* margin-left: 10px; */
+  /* font-weight: 700; */
+  font-size: 1.4rem;
+  letter-spacing: 1px;
   padding: 5px;
   color: #fff;
   text-decoration: none;
-  vertical-align: middle;
+  vertical-align: baseline;
 }
 
 .join-link:hover {
