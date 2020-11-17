@@ -4,34 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/posting.css" />
+    <script defer src='./js/posting.js'></script>
     <title>Document</title>
   </head>
   <body>
     <section class="post-music">
+      <h2 class="post-music-heading">게시물 올리기</h2>
       <div class="post-music-wrapper">
-        <h2 class="post-music-heading a11y-hidden">게시물 올리기</h2>
+        <button class="add-music-btn" type="button">음악 추가하기</button>
+        <div class='selected-music'>
+          <!-- 여기에 렌더 -->
+        </div>
         <input
           class="post-title"
           type="text"
           placeholder="제목을 입력해주세요"
         />
-        <button class="add-music-btn" type="button">add music</button>
-        <input
-          class="post-content"
-          type="text"
-          placeholder="게시할 내용을 입력해 주세요(250자 내)"
-        />
-        <button class="complete-btn" type="button">complete</button>
-        <button class="cancel-btn" type="button">cancel</button>
+        <textarea
+          name="posting"
+          id="post-content"
+          placeholder="게시할 내용을 입력해 주세요 
+          (250자 내)"
+        ></textarea>
+        <div class="btn-wrapper">
+          <button class="complete-btn" type="button">complete</button>
+          <button class="cancel-btn" type="button">cancel</button>
+        </div>
       </div>
+
       <!-- 노래 검색창 -->
-      <div class="search-music-container">
-        <input class="search-music" type="text" />
-        <ul class="music-lists">
-          <li>음악1</li>
-          <li>음악2</li>
-          <li>음악3</li>
-        </ul>
+      <div class='search-cover-container'>
+        <div class="search-music-container">
+          <input class="input-search-music" type="text" />
+          <ul class="music-lists">
+            
+          </ul>
+          <button class="search-music-cancel" type='button'></button>
       </div>
     </section>
   </body>
