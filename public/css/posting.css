@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Jua&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+body {
+  /* font-family: 'Alegreya Sans'; */
+  font-family: "Jua";
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 375px;
+  height: 100vh;
+  font-size: 1.3rem;
+}
+.post-music {
+  height: 100%;
+  position: relative;
+}
+.post-music-wrapper {
+  width: 300px;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.post-music-heading {
+  background-color: #1a4789;
+  /* background: linear-gradient(45deg, #a32cdf, #106ad2); */
+  padding: 15px;
+  margin: 0 0 20px;
+  font-size: 1.5rem;
+  color: #fff;
+}
+.add-music-btn {
+  width: 290px;
+  background: linear-gradient(45deg, #a32cdf, #106ad2);
+  padding: 10px;
+  margin: 20px auto;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: 1.3px 1.5px 1px #444;
+}
+.selected-music {
+  margin: 5px auto;
+  border: 1px solid #666;
+  width: 290px;
+  height: 60px;
+}
+.post-title {
+  display: inline-block;
+  text-align: center;
+  padding: 5px;
+  width: 270px;
+  margin: 15px 0 10px;
+  border: none;
+  border-bottom: 2px solid #3c90f0;
+  /* border-radius: 5px; */
+}
+#post-content {
+  width: 275px;
+  height: 140px;
+  resize: none;
+  margin: 15px 0;
+  border: 2px solid #3c90f0;
+  border-radius: 10px;
+  white-space: pre-line;
+  padding: 8px;
+  word-wrap: break-all;
+}
+.btn-wrapper {
+  text-align: right;
+}
+.complete-btn {
+  padding: 10px;
+  margin: 5px;
+  border: 0;
+  border-radius: 5px;
+  color: #666;
+  font-size: 15px;
+  font-weight: 700;
+}
+.complete-btn:hover {
+  background-color: rgb(139, 216, 223);
+  color: white;
+}
+.cancel-btn {
+  padding: 10px;
+  margin: 5px;
+  border: 0;
+  border-radius: 5px;
+  color: #666;
+  font-size: 15px;
+  font-weight: 700;
+}
+.cancel-btn:hover {
+  background-color: tomato;
+  color: white;
+}
+
+/* 노래 검색창 */
+.search-cover-container {
+  display: none;
+}
+.active {
+  display: block;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.search-music-container {
+  background-color: rgb(235, 232, 232);
+  border-radius: 10px;
+  width: 300px;
+  padding: 15px;
+  margin: 10px auto;
+  text-align: center;
+  position: absolute;
+  top: 9vh;
+  left: 10%;
+}
+.input-search-music {
+  width: 250px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #888;
+  border-radius: 10px;
+}
+
+.music-lists {
+  text-align: center;
+}
+.music-lists li {
+  /* background-color: pink; */
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+.search-music-thumbnail {
+  width: 80px;
+  margin: 0 10px;
+  border-radius: 3px;
+}
+.search-music-title {
+  width: 150px;
+  padding: 5px 0;
+  margin: 5px;
+}
+.search-music-radio {
+  display: none;
+}
+.search-music-cancel {
+  background: url(../image/times-circle-regular.svg);
+  background-size: cover;
+  padding: 8px;
+  margin: 2px;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
