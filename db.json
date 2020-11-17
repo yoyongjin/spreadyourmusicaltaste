@@ -3,7 +3,7 @@
     {
       "id": "videotest1",
       "pw": "12345",
-      "nickname": "video"
+      "nickname": "video2"
     },
     {
       "id": "videotest12",
@@ -23,6 +23,8 @@
   ],
   "posts": [
     {
+      "id": 6,
+      "writter": "kym123",
       "date": "2020-11-17",
       "music": {
         "thumbnail": "https://newsimg.hankookilbo.com/cms/articlerelease/2020/04/09/202004090790084642_1.jpg",
@@ -45,6 +47,8 @@
       ]
     },
     {
+      "id": 5,
+      "writter": "kym3",
       "date": "2020-11-10",
       "music": {
         "thumbnail": "https://i.ebayimg.com/images/g/WO0AAOSwanhbhW3I/s-l400.jpg",
@@ -67,6 +71,8 @@
       ]
     },
     {
+      "id": 4,
+      "writter": "kydsdm123",
       "date": "2020-01-11",
       "music": {
         "thumbnail": "https://upload.wikimedia.org/wikipedia/en/4/4c/13_%28Blur_album_-_cover_art%29.jpg",
@@ -87,6 +93,8 @@
       ]
     },
     {
+      "id": 3,
+      "writter": "kymdsdsd123",
       "date": "2020-01-01",
       "music": {
         "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/51z7VYBQBdL._AC_SY355_.jpg",
@@ -106,6 +114,8 @@
       ]
     },
     {
+      "id": 2,
+      "writter": "kym1dsds23",
       "date": "2019-12-23",
       "music": {
         "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfscLfV2Q4pfWH9Us1NscGBfKC3O4wj74S2w&usqp=CAU",
@@ -136,6 +146,8 @@
       ]
     },
     {
+      "id": 1,
+      "writter": "용진천재123",
       "date": "2019-12-23",
       "music": {
         "thumbnail": "https://cdn.shopify.com/s/files/1/0001/9650/9713/products/8be8162ec7f42e86e26b69296b04a315_1338656181_800x.jpg?v=1556383429",
