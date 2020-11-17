@@ -6,8 +6,8 @@ const $mainMain = document.querySelector('.main-main');
 // functions
 const renderPost = () => {
   $mainBoard.innerHTML = '';
-  $mainBoard.innerHTML += posts.map((post, i) => `<li class="main-post">
-      <span class="main-post-image image${i}"><span class="main-post-image-hole"></span></span>
+  $mainBoard.innerHTML += posts.map(post => `<li class="main-post ${post.id}">
+      <span class="main-post-image"><span class="main-post-image-hole"></span></span>
       <div class="main-post-contents">
       </div>
       <div class="main-post-like main-post-scrap" >
@@ -21,8 +21,7 @@ const renderPost = () => {
 const applyThumbnail = () => {
   const items = [...document.querySelectorAll('.main-post-image')];
   items.forEach((item, i) => {
-    console.log(item, posts[i]);
-    item.classList.add(`image${i}`);
+    item.classList.add(`${posts[i].id}`);
     item.style.backgroundImage = `url('${posts[i].music.thumbnail}')`;
   });
 };
@@ -47,7 +46,7 @@ const displayLoading = () => {
 const loadNextPosts = () => {
   const { scrollY } = window;
   console.log(scrollY);
-  if (scrollY + document.body.getBoundingClientRect().height + 10 >= $mainMain.scrollHeight) {
+  if (scrollY + document.body.getBoundingClientRect().height >= $mainMain.scrollHeight + 50) {
     displayLoading();
     setTimeout(async () => {
       const res = await request.get('/posts');
@@ -56,7 +55,7 @@ const loadNextPosts = () => {
       renderPost();
       applyThumbnail();
       document.querySelector('.loading-container').remove();
-    }, 800);
+    }, 700);
   }
 };
 
@@ -71,3 +70,11 @@ window.onload = () => {
 };
 
 document.onscroll = _.throttle(loadNextPosts, 500);
+
+$mainBoard.onclick = e => {
+  if(e.target.matches('ul')) return;
+
+  console.log(e.target.closest('li').classList[1]);
+  sessionStorage.setItem('post-id', e.target.closest('li').classList[1]);
+  location.assign('./posted-page.html');
+};

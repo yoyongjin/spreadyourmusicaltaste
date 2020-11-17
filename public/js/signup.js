@@ -17,13 +17,12 @@ const $userInfo = document.querySelectorAll('.signup-items input');
 
 // 아이디 입력창 이벤트
 $inputId.onblur = async () => {
-
-  const idReg = /^[A-Za-z0-9+]{6,12}$/
+  const idReg = /^[A-Za-z0-9+]{6,12}$/;
 
   $idError.textContent = '';
 
   if (!$inputId.value.trim()) {
-    $idError.textContent = '필수 입력 항목입니다.'
+    $idError.textContent = '필수 입력 항목입니다.';
     return;
   }
   if (!idReg.test($inputId.value)) {
@@ -65,7 +64,6 @@ $inputPw.onblur = () => {
 
 // 비밀번호 확인 이벤트
 $ckPassword.onblur = () => {
-
   $checkPwError.textContent = '';
 
   if (!$ckPassword.value.trim()) {
@@ -81,11 +79,10 @@ $ckPassword.onblur = () => {
 
 // 닉네임 확인 이벤트
 $inputNickname.onblur = async () => {
-
   $nickNameError.textContent = '';
 
   if (!$inputNickname.value.trim()) {
-    $nickNameError.textContent = '필수 입력 항목입니다.'
+    $nickNameError.textContent = '필수 입력 항목입니다.';
     return;
   }
 
@@ -94,13 +91,13 @@ $inputNickname.onblur = async () => {
     const users = await res.json();
     const checkNickname = await users.find(user => user.nickname === $inputNickname.value);
     if (checkNickname) {
-      $nickNameError.textContent = '이미 존재하는 닉네임 입니다.'
+      $nickNameError.textContent = '이미 존재하는 닉네임 입니다.';
       return;
     } 
   } catch (err) {
     console.error(err);
   }
-}
+};
 
 $signupBtn.onmouseenter = e => {
   const userCheck = [...$userInfo].filter(userInfo => userInfo.value.length);
@@ -131,4 +128,3 @@ $signupBtn.onclick = async () => {
     console.error(err);
   }
 };
-
