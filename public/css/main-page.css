@@ -84,7 +84,7 @@ body {
   width: 50%;
   height: 300px;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   justify-content: space-between;
   margin-top: 1rem;
   border: 3px solid white;

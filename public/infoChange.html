@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=375, initial-scale=1.0">
-    <link href="./css/reset.css" rel="stylesheet" />
-    <link href="./css/infoChange.css" rel="stylesheet" />
-    <title>Document</title>
-  </head>
-  <body>
-    <!-- 개인정보 변경 섹션  -->
-    <section class="info-change">
-      <h2 class="info-change-header">개인정보 변경</h2>
-      <article class='info-change-wrapper'>
-        <ul class="info-change-items">
-          <li id="change-id" class="info-change-id"> 아이디
-            <label for="change-id"></label>
-            <input id="change-id" type="text" />
-          </li>
-          <li id="change-pw" class="change-pw"> 비밀번호 확인
-            <label for="change-pw"></label>
-            <input id="change-pw" type="text" />
-          </li>
-          <li id="change-pw" class="change-pw"> 새 비밀번호
-            <label for="change-pw"></label>
-            <input id="change-pw" type="text" />
-          </li>
-          <li id="nickname" class="change-nickname"> 닉네임
-            <label for="nickname"></label>
-            <input id="nickname" type="text" />
-          </li>
-        </ul>
-        <div class='change-btn-wrapper'>
-          <button class='change-complete-btn' type="button">정보 변경하기</button>
-          <button class='change-cancel-btn' type="button">취소하기</button>
-        </div>
-      </article>
-    </section>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <link href="./css/reset.css" rel="stylesheet" />
+  <link href="./css/infoChange.css" rel="stylesheet" />
+  <title>Document</title>
+  <script defer src="./js/infoChange.js"></script>
+</head>
+<body>
+  <!-- 개인정보 변경 섹션  -->
+  <section class="info-change">
+    <h2 class="info-change-header">개인정보 변경</h2>
+    <article class='info-change-wrapper'>
+      <ul class="info-change-items">
+        <li id="change-id" class="info-change-id">
+          <span class="display-id"></span>
+        </li>
+        <!-- <li id="change-pw" class="change-pw"> 비밀번호 확인
+          <label for="change-pw"></label>
+          <input id="change-pw" type="text" />
+        </li>
+        <li id="change-pw" class="change-pw"> 새 비밀번호
+          <label for="change-pw"></label>
+          <input id="change-pw" type="text" />
+        </li>
+        <li id="nickname" class="change-nickname"> 닉네임
+          <label for="nickname"></label>
+          <input id="nickname" type="text" />
+        </li> -->
+        <li id="change-pw" class="change-pw">비밀번호 확인<input type="password"></li>
+      </ul>
+      <div class='change-btn-wrapper'>
+        <button class='change-complete-btn' type="button">정보 변경하기</button>
+        <button class='change-cancel-btn' type="button">취소하기</button>
+      </div>
+    </article>
+  </section>
+</body>
 </html>
