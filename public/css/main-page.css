@@ -34,6 +34,26 @@ body {
 .spin {
   animation: spin 10s linear infinite alternate both;  
 }
+.loading-container {
+  width:100%;
+  height:100%;
+  top: 0%;
+  left: 0%;
+  position: fixed;
+  text-align: center;
+  background-color: rgba(0,0,0, 0.3);
+}
+.loading-img {
+  position: absolute;
+  top:30%;
+  left:43%;
+  width: 200px;
+  height: 200px;
+  animation: spin 1s linear infinite;
+}
+.main-main {
+  position: relative;
+}
 .main-nav-top {
   box-sizing: border-box;
   padding: 0 10px;
@@ -74,23 +94,13 @@ body {
   box-shadow: 2px 2px 2px lightgray;
 }
 .main-post-image {
-  background-image: url('https://t1.daumcdn.net/cfile/tistory/2108644A577ADA710F?original');
   background-size: contain;
   width:200px;
   height: 200px;
   border-radius: 50%;
-  /* top: -10%; */
-  /* left: 6%; */
-  /* transform: translate(50%, 50%); */
   position: absolute;
   border: 1px solid lightgray;
 }
-.image1 {background-image: url('https://t1.daumcdn.net/cfile/tistory/2108644A577ADA710F?original');}
-.image2 {background-image: url('https://image.yes24.com/goods/2689473/L');}
-.image3 {background-image: url('https://upload.wikimedia.org/wikipedia/en/3/3c/Wonder_World_%28album%29.jpeg');}
-.image4 {background-image: url('https://i.ytimg.com/vi/i0mM2mT_loQ/hqdefault.jpg');}
-.image5 {background-image: url('https://lh3.googleusercontent.com/proxy/4sJ604wXghZipQ8GIDofkypKd4DzXRKNJ5I414k7xQ-mPbKYhcLxesE5kt0__B5G-SsUpRnWgs7_OD2Hrex_f2R4zYajX9mIqF6abgdBLBoZPedz6WCRMvC_hd77GcJsRAJcueko7daH2PW1zcTNpgK9dWV0xlUlRO74JrM4rfS0rCD297oeqSrlQIuhlA');}
-.image6 {background-image: url('https://crownnote.com/sites/default/files/wonder%20girls%20wonder%20party.jpg');}
 
 .main-post-image-hole {
   display: inline-block;

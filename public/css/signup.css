@@ -1,19 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Jua&display=swap');
+
+html {
+  font-size: 10px;
+}
+
 body {
+  font-family: 'Jua';
   width: 375px;
   /* height: 100vh; */
   background-image: url(../image/a813810e3c2916726127e2127019d9fd.jpg);
   background-repeat: no-repeat;
 }
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-family: 'Jua';
+  color: #fff;
+  letter-spacing: 1px;
+  opacity: 1;
+  /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #fff;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #fff;
+}
+
 .design-container {
   line-height: 30vh;
   width: 375px;
   text-align: center;
 }
+
 .design-container img {
   width: 130px;
   border-radius: 10px;
@@ -22,6 +53,7 @@ body {
   margin-bottom: 10px;
   box-shadow: 5px 5px 5px #1c2866, -5px -5px 5px #1c2866;
 }
+
 .signup {
   background-color: rgba(255, 255, 255, 0.2);
   margin: 35px;
@@ -29,6 +61,7 @@ body {
   margin-top: 5vh;
   border-radius: 20px;
 }
+
 .signup-heading {
   color: white;
   font-weight: 700;
@@ -39,40 +72,62 @@ body {
   width: 230px;
   margin: 0 auto;
 }
-.signup-items {
-  /* text-align: center;
-  vertical-align: middle; */
-}
-.signup-items li {
-  margin: 20px 0;
-}
+
+
 .signup-items input::placeholder {
   color: #333;
   font-size: 14px;
   font-weight: 600;
   text-align: center;
 }
+
 .signup-items input {
   background-color: #fff;
   width: 100%;
   height: 40px;
   padding: 10px;
+  margin-bottom: 10px;
   border: none;
   border-radius: 30px;
 }
+
+.signup-items input:focus {
+  outline: none;
+  box-shadow: 0 0 3pt 2pt yellow;
+}
+
 .signup-btn {
+  letter-spacing: 2px;
   width: 100%;
   height: 40px;
   margin: 0 auto;
   padding: 10px;
   border: 0;
   border-radius: 30px;
-  background-color: #888;
+  background-color: #666;
   color: #fff;
-  font-size: 15px;
+  cursor: pointer;
+  font-family: 'Jua';
+  font-size: 1.2rem;
   font-weight: 600;
 }
+
+.signup-btn:focus {
+  outline: none;
+}
+
 .signup-btn:hover {
-  background-color: rgb(221, 209, 41);
-  color: #555;
+  background-color: #dbdb30;
+  transition-duration: 0.5s;
+  color: #666;
+}
+
+.id-error,
+.pw-error,
+.check-pw-error,
+.nickname-error {
+  color: tomato;
+  margin-bottom: 10px;
+  font-family: 'Nanum Gothic';
+  font-size: 1.1rem;
 }
