@@ -64,6 +64,18 @@ body {
   background-color: rgb(231, 229, 89);
   color: #333;
 }
+.change-complete-btn2:hover {
+  background-color: rgb(231, 229, 89);
+  color: #333;
+}
+.change-cancel-btn:hover {
+  background-color: tomato;
+  color: #fff;
+}
+.change-cancel-btn2:hover {
+  background-color: tomato;
+  color: #fff;
+}
 .change-cancel-btn, .change-cancel-btn2{
   font-weight: 700;
   font-size: 15px;
@@ -74,10 +86,6 @@ body {
   border: 0;
   border-radius: 20px;
   box-shadow: 1px 1px 1px #666;
-}
-.change-cancel-btn:hover {
-  background-color: tomato;
-  color: #fff;
 }
 .changing-pw {
   display: none;
