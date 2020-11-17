@@ -39,20 +39,17 @@ body {
   text-align: center;
 }
 .info-change-items input {
-  width: 300px;
+  width: 65%;
   height: 40px;
   margin: 5px;
   padding: 10px;
   border: 0;
   border-radius: 30px;
   box-sizing: border-box;
+  text-align: center;
   /* box-shadow: 1px 1px 1px #666; */
 }
-.change-btn-wrapper {
-  margin: 15px auto 0;
-  text-align: right;
-}
-.change-complete-btn {
+.change-complete-btn, .change-complete-btn2 {
   font-weight: 700;
   font-size: 15px;
   width: 130px;
@@ -67,7 +64,7 @@ body {
   background-color: rgb(231, 229, 89);
   color: #333;
 }
-.change-cancel-btn {
+.change-cancel-btn, .change-cancel-btn2{
   font-weight: 700;
   font-size: 15px;
   background-color: #c0bebe;
@@ -81,4 +78,23 @@ body {
 .change-cancel-btn:hover {
   background-color: tomato;
   color: #fff;
+}
+.changing-pw {
+  display: none;
+}
+.changed-pw {
+  display: none;
+}
+.change-btn-wrapper, .change-btn-wrapper2 {
+  margin: 15px auto 0;
+  text-align: right;
+}
+.change-btn-wrapper2 {
+  display: none;
+}
+.my-nick {
+  display: none;
+}
+.my-nick-text {
+  display: block;
 }
