@@ -83,7 +83,7 @@ ul {
 .posted-page-album:hover{
   border-radius: 0;
   transition-duration: 1s;
-  animation: stop 1s ease-out;
+  animation: stop 1s ease-out forwards;
 }
 .posted-page-album:hover > .posted-page-album-hole {
   display: none;

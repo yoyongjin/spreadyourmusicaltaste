@@ -47,7 +47,7 @@ const displayLoading = () => {
 const loadNextPosts = () => {
   const { scrollY } = window;
   console.log(scrollY);
-  if (scrollY + document.body.getBoundingClientRect().height + 10 >= $mainMain.scrollHeight) {
+  if (scrollY + document.body.getBoundingClientRect().height >= $mainMain.scrollHeight + 50) {
     displayLoading();
     setTimeout(async () => {
       const res = await request.get('/posts');
@@ -56,7 +56,7 @@ const loadNextPosts = () => {
       renderPost();
       applyThumbnail();
       document.querySelector('.loading-container').remove();
-    }, 800);
+    }, 700);
   }
 };
 
