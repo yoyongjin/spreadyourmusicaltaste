@@ -6,7 +6,6 @@ const $idError = document.querySelector('.id-error');
 const $pwError = document.querySelector('.pw-error');
 const $userError = document.querySelector('.user-error');
 
-
 $loginBtn.onclick = async () => {
   $idError.textContent = '';
   $pwError.textContent = '';
