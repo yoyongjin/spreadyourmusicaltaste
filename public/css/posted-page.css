@@ -149,15 +149,13 @@ ul {
 .status-btn, .post-athor {
   display: inline-block;
   border: 0;
-  vertical-align: middle;
 }
 .posted-page-scrapNum, .posted-page-likeNum {
   background-color: transparent;
-  vertical-align: super;
   font-size:1.5rem;
 }
 .posted-page-scrapNum {
-  margin-right: 97px;
+  margin-right: 35px;
 }
 .posted-page-likeNum {
   margin-right: 10px;
@@ -165,6 +163,12 @@ ul {
 .posted-page-scrapBtn, .posted-page-likeBtn {
   border:0;
   cursor: pointer;
+  background-color: #A32CDF;
+  color: white;
+  font-size:1.4rem;
+  border-radius: 5px;
+  padding: 10px;
+  display: inline-block;
 }
 .thumb {
   background-image: url('../image/thumbs-up-solid.svg');
@@ -173,16 +177,8 @@ ul {
   height:20px;
   vertical-align: revert;
 }
-.scrap {
-  background-image: url('../image/star-solid.svg');
-  display: inline-block;
-  width:20px;
-  height:20px;
-  vertical-align: revert;
-}
 .posted-page-deleteBtn, .posted-page-editBtn {
   border:0;
-  /* border-radius: 5px; */
   padding: 10px;
   background-color: #A32CDF;
   color: white;
