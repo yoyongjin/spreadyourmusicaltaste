@@ -9,8 +9,8 @@ html {
 body {
   font-family: 'Jua';
   width: 375px;
-  /* height: 100vh; */
-  background-image: url(../image/a813810e3c2916726127e2127019d9fd.jpg);
+  margin: 0 auto;
+  height: 100vh;
   background-repeat: no-repeat;
 }
 
@@ -37,6 +37,11 @@ body {
 ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: #fff;
+}
+
+.container-box {
+  background: url(../image/login-bg.jpg);
+  height: 100%;
 }
 
 .design-container {
@@ -116,7 +121,7 @@ body {
   outline: none;
 }
 
-.signup-btn:hover {
+.focus-btn {
   background-color: #dbdb30;
   transition-duration: 0.5s;
   color: #666;
@@ -126,8 +131,11 @@ body {
 .pw-error,
 .check-pw-error,
 .nickname-error {
-  color: tomato;
-  margin-bottom: 10px;
+  color: #dbdb30;
+  height: 35px;
   font-family: 'Nanum Gothic';
-  font-size: 1.1rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.1;
 }
