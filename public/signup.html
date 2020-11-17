@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=375, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link href="css/signup.css" rel="stylesheet" />
-    <script defer src="./js/signup.js"></script>
-    <title>Document</title>
-  </head>
-  <body>
-    <!-- 회원가입 섹션 -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=375, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link href="css/signup.css" rel="stylesheet" />
+  <script defer src="./js/signup.js"></script>
+  <title>Signup</title>
+</head>
+
+<body>
+  <!-- 회원가입 섹션 -->
+  <div class="container-box">
     <div class="design-container">
-      <img
-        src="./image/Colorful Sound Waves Music App Logo (6).png"
-        alt="logo"
-      />
+      <img src="./image/Colorful Sound Waves Music App Logo (6).png" alt="logo" />
     </div>
     <section class="signup">
       <h2 class="signup-heading a11y-hidden"></h2>
@@ -22,27 +22,29 @@
         <ul class="signup-items">
           <li id="myId" class="signup-id">
             <label for="my-id"></label>
-            <input id="inputId" type="text" placeholder="아이디" autocomplete="off"/>
+            <input class="user-info" id="inputId" type="text" placeholder="아이디" autocomplete="off" />
             <div class="id-error"></div>
           </li>
           <li id="password" class="signup-pw">
             <label for="password"></label>
-            <input id="inputPw" type="password" placeholder="비밀번호" />
+            <input class="user-info" id="inputPw" type="password" placeholder="비밀번호" />
             <div class="pw-error"></div>
           </li>
           <li id="check-password" class="check-password">
             <label for="ck-password"></label>
-            <input id="ckPassword" type="password" placeholder="비밀번호 확인" />
+            <input class="user-info" id="ckPassword" type="password" placeholder="비밀번호 확인" />
             <div class="check-pw-error"></div>
           </li>
           <li id="nickname" class="signup-nickname">
             <label for="nickname"></label>
-            <input id="input-nickname" type="text" placeholder="닉네임" autocomplete="off"/>
+            <input class="user-info" id="input-nickname" type="text" placeholder="닉네임" autocomplete="off" />
             <div class="nickname-error"></div>
           </li>
         </ul>
         <button class="signup-btn" type="button">가입하기</button>
       </article>
     </section>
-  </body>
+  </div>
+</body>
+
 </html>
