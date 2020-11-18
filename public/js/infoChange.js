@@ -26,7 +26,8 @@ const {id: currId, pw:currPw, nickname: currNickName} = JSON.parse(sessionStorag
 
 $displayId.textContent = `${currNickName}님`;
 
-$changeCompleteBtn.onclick = () => {
+//비밀번호 확인 후 다음페이지
+const pwChecked = () => {
   if ($changePwInput.value !== currPw) {
     $pwError.textContent = '비밀번호가 일치하지 않습니다.'
   }
@@ -40,9 +41,12 @@ $changeCompleteBtn.onclick = () => {
     $myNick.style.display = 'block';
     $changedPw.style.display = 'block';
   }
+}
+$changeCompleteBtn.onclick = () => {
+  pwChecked();
 };
 
-$changeCompleteBtn2.onclick = () => {
+const finishChange = () => {
   const pwReg = /^[A-Za-z0-9+]{8,12}$/;
   $changingPwError.textContent = '';
   $changedPwError.textContent = '';
@@ -86,8 +90,39 @@ $changeCompleteBtn2.onclick = () => {
     }).then(response => response.json())
       .then(users => console.log(users))
       .catch(err => console.error(err));  
+    request.patch(`/users/${sessionStorage.getItem('user.nickname')}`, {
+      pw: `${currNickName}`
+    }).then(response => response.json())
+      .then(users => console.log(users))
+      .catch(err => console.error(err));  
+
+    
   }
 }
+
+
+$changeCompleteBtn2.onclick = () => {
+  finishChange();
+}
+$changedPwInput.onkeyup = e => {
+  if(e.key == 'Enter') {
+    finishChange();
+  }
+}
+$myNickInput.onkeyup = e => {
+  if(e.key == 'Enter') {
+    finishChange();
+  }
+}
+
+//개인정보 변경을 위한 비밀번호 확인
+$changePwInput.onkeyup = e => {
+  if(e.key == 'Enter') {
+    pwChecked();
+  }
+}
+
+
 
 $changeCancleBtn.onclick = () => {
   window.location.assign('my-page.html');
