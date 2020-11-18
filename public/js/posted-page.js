@@ -13,6 +13,8 @@ const $postedpageYtTitle = document.querySelector('.posted-page-youtube-title');
 const $postedPageStatus = document.querySelector('.posted-page-status');
 const $postedPageLikeBtn = document.querySelector('.posted-page-likeBtn');
 const $postedPageScrapBtn = document.querySelector('.posted-page-scrapBtn');
+const $postedPageDelete = document.querySelector('.posted-page-delete');
+const $postedPageEdit = document.querySelector('.posted-page-edit');
 
 // functions
 const request = {
@@ -24,6 +26,11 @@ const request = {
       method: 'PATCH',
       headers: { 'content-Type': 'application/json' },
       body: JSON.stringify(payload)
+    });
+  },
+  delete(url) {
+    return fetch(url, {
+      method: 'DELETE'
     });
   }
 };
@@ -39,15 +46,15 @@ const renderWritterInfo = post => {
   $postedPageLikeBtn.nextElementSibling.textContent = post.like.length;
 };
 
-const checkPressedLikeBtn = () => {
-  if (like.find(_like => _like === userInfo.id)) {
+const checkPressedLikeBtn = arr => {
+  if (arr.find(_like => _like === userInfo.id)) {
     console.log('이미 좋아요 했습니다.');
     return true;
   }
   return false;
 };
-const checkPressedScrapBtn = () => {
-  if (scrap.find(_scrap => _scrap === userInfo.id)) {
+const checkPressedScrapBtn = arr => {
+  if (arr.find(_scrap => _scrap === userInfo.id)) {
     console.log('이미 스크랩 했습니다.');
     return true;
   }
@@ -55,8 +62,18 @@ const checkPressedScrapBtn = () => {
 };
 
 const removeUserLike = () => like.filter(_like => _like !== userInfo.id);
-
 const removeUserScrap = () => scrap.filter(_scrap => _scrap !== userInfo.id);
+
+const deletePost = url => {
+  request.delete(url);
+};
+
+const checkIfWritter = postWritter => {
+  if (userInfo.id !== postWritter) {
+    $postedPageEdit.style.display = 'none';
+    $postedPageDelete.style.display = 'none';
+  }
+};
 
 // Events
 window.onload = () => {
@@ -65,8 +82,11 @@ window.onload = () => {
     console.log(userInfo);
     const res = await request.get(`/posts/${sessionStorage.getItem('post-id')}`);
     const post = await res.json();
-    console.log(post);
+    console.log(post.writter);
     renderWritterInfo(post);
+    checkIfWritter(post.writter);
+    if (checkPressedLikeBtn(post.like)) $postedPageLikeBtn.classList.add('pressed');
+    if (checkPressedScrapBtn(post.scrap)) $postedPageScrapBtn.classList.add('pressed');
   })();
 };
 
@@ -84,16 +104,17 @@ $postedPageStatus.onclick = e => {
       const post = await res.json();
 
       scrap = post.scrap;
-      if (checkPressedScrapBtn()) {
+      if (checkPressedScrapBtn(scrap)) {
         scrap = removeUserScrap();
         await request.patch(`/posts/${sessionStorage.getItem('post-id')}`, { scrap: [...scrap] });
         $postedPageScrapBtn.nextElementSibling.textContent = scrap.length;
+        $postedPageScrapBtn.classList.remove('pressed');
         return;
       }
       await request.patch(`/posts/${sessionStorage.getItem('post-id')}`, { scrap: [userInfo.id, ...scrap] });
       scrap = [userInfo.id, ...scrap];
-
       $postedPageScrapBtn.nextElementSibling.textContent = scrap.length;
+      $postedPageScrapBtn.classList.add('pressed');
     })();
   } else if (e.target.classList[1] === 'like') {
     (async () => {
@@ -101,16 +122,23 @@ $postedPageStatus.onclick = e => {
       const post = await res.json();
 
       like = post.like;
-      if (checkPressedLikeBtn()) {
+      if (checkPressedLikeBtn(like)) {
         like = removeUserLike();
         await request.patch(`/posts/${sessionStorage.getItem('post-id')}`, { like: [...like] });
         $postedPageLikeBtn.nextElementSibling.textContent = like.length;
+        $postedPageLikeBtn.classList.remove('pressed');
         return;
       }
       await request.patch(`/posts/${sessionStorage.getItem('post-id')}`, { like: [userInfo.id, ...like] });
       like = [userInfo.id, ...like];
 
       $postedPageLikeBtn.nextElementSibling.textContent = like.length;
+      $postedPageLikeBtn.classList.add('pressed');
     })();
   }
+};
+
+$postedPageDelete.onclick = () => {
+  deletePost(`/posts/${sessionStorage.getItem('post-id')}`);
+  window.location.assign('./main-page.html');
 };

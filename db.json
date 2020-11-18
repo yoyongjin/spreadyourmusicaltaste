@@ -88,7 +88,7 @@
     {
       "id": "kym1234",
       "pw": "12341234",
-      "nickname": "김용민"
+      "nickname": "김재"
     },
     {
       "id": "yongjin",
@@ -99,6 +99,11 @@
       "id": "rladydals",
       "pw": "rladydals",
       "nickname": "김용민"
+    },
+    {
+      "id": "rladydals1",
+      "pw": "rladydals1",
+      "nickname": "김용민123"
     }
   ],
   "posts": [
@@ -114,6 +119,7 @@
       "content": "첫 솔로 정규앨범인 1719를 발매했다.",
       "title": "핫펠트, 데뷔 14년 만에 첫 솔로 정규",
       "like": [
+        "rladydals1",
         "rladydals"
       ],
       "scrap": [
@@ -132,6 +138,8 @@
       "content": "British rock band blur released new single...",
       "title": "blur best of the songs",
       "like": [
+        "rladydals1",
+        "rladydals",
         1,
         2,
         3,
@@ -166,32 +174,9 @@
         5
       ],
       "scrap": [
-        "rladydals",
         1,
         2,
         3
-      ]
-    },
-    {
-      "id": 3,
-      "writter": "kymdsdsd123",
-      "date": "2020-01-01",
-      "music": {
-        "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/51z7VYBQBdL._AC_SY355_.jpg",
-        "url": "https://yotube.com",
-        "title": "keane-this is the last time"
-      },
-      "content": "British rock band kean released new single...",
-      "title": "the best song of keane",
-      "like": [
-        "rladydals",
-        1,
-        2,
-        5
-      ],
-      "scrap": [
-        1,
-        2
       ]
     },
     {
@@ -206,6 +191,7 @@
       "content": "British rock band oasis released new single...",
       "title": "the masterplan by Oasis",
       "like": [
+        "rladydals",
         1,
         2,
         5,
@@ -241,6 +227,7 @@
       "content": "the best girl band of South kore, wondergirls, released their new song.",
       "title": "wonder girls-like this",
       "like": [
+        "rladydals1",
         1,
         2,
         5,
@@ -258,6 +245,7 @@
         "1"
       ],
       "scrap": [
+        "rladydals1",
         1,
         2,
         3,

@@ -79,6 +79,7 @@ window.onload = () => {
     displayUserName(userInfo);
     const res = await request.get('/posts');
     posts = await res.json();
+    console.log(posts);
     renderPost();
     applyThumbnail();
     displayBtn();
