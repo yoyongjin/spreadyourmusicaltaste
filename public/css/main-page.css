@@ -54,6 +54,7 @@ body {
   animation: spin 1s linear infinite;
 }
 .main-main {
+  z-index: -1;
   position: relative;
 }
 .main-nav-top {
@@ -213,6 +214,9 @@ a {
   display: flex;
   justify-content: space-evenly;
 }
+.main-nav-menu{
+  cursor: pointer;
+}
 .scroll-icon {
   position: fixed;
   left: 50%;
@@ -254,14 +258,50 @@ a {
 .main-nav-menu.sort, .main-nav-posting, .main-nav-myPage{
   text-align: center;
   padding: 0 15px;
-  z-index: 0;
 }
 .order-panel {
-  position: absolute;
+  position: fixed;
   width: 100px;
-  height: 600px;
-  top: 0%;
-  left: 10%;
-  background-color: pink;
-  z-index: 4;
+  bottom: -20%;
+  left: 39%;
+  z-index: -1;
+  background: linear-gradient(45deg, #A32CDF, #106AD2);
+  border-radius: 15px 15px 0 0;
+}
+.order-panel-item {
+  width:100px;
+  height:50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 1.5rem;
+  color:white;
+  border:1px solid white;
+}
+.order-panel-item:last-child {
+  border-bottom: 0;
+}
+.order-panel-item.selected {
+  background-color: yellowgreen;
+}
+.slide-up {
+  animation: slideUp 0.5s ease-in forwards;
+}
+.slide-down {
+  animation: slideDown 0.5s ease-in forwards;
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }

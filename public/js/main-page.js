@@ -7,6 +7,8 @@ const $userName = document.querySelector('.main-nav-top-username');
 const $mainBoard = document.querySelector('.main-board');
 const $mainMain = document.querySelector('.main-main');
 const $icon = document.querySelector('.scroll-icon');
+const $sortBtn = document.querySelector('.sort');
+const $orderPanel = document.querySelector('.order-panel');
 
 // functions
 const renderPost = () => {
@@ -122,4 +124,14 @@ $mainBoard.onclick = e => {
 
 $icon.onclick = () => {
   window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+};
+
+$sortBtn.onclick = () => {
+  if ($orderPanel.classList.contains('slide-up')) {
+    $orderPanel.classList.add('slide-down');
+    $orderPanel.classList.remove('slide-up');
+    return;
+  }
+  $orderPanel.classList.remove('slide-down');
+  $orderPanel.classList.add('slide-up');
 };

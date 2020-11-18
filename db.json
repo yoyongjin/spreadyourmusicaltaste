@@ -89,6 +89,11 @@
       "id": "yongjin",
       "pw": "yongjin123",
       "nickname": "용지니"
+    },
+    {
+      "id": "rladydals",
+      "pw": "rladydals",
+      "nickname": "김용민123"
     }
   ],
   "posts": [
@@ -160,30 +165,6 @@
         2,
         3,
         "5"
-      ]
-    },
-    {
-      "id": 11,
-      "writter": "rladydals",
-      "date": "2017-03-31",
-      "music": {
-        "thumbnail": "https://i.pinimg.com/originals/89/2d/a6/892da693e23ac9a6c9d2f5bb99a224dd.jpg",
-        "url": "https://yotube.com",
-        "title": "oasis - don't believe the truth"
-      },
-      "content": "oasis - don't believe the truth...",
-      "title": "oasis - don't believe the truth",
-      "like": [
-        "rladydals",
-        1,
-        2,
-        5
-      ],
-      "scrap": [
-        "rladydals",
-        1,
-        2,
-        3
       ]
     },
     {
