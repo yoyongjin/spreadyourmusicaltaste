@@ -4,6 +4,7 @@ let pageCount = 1;
 let isLastPage = false;
 let orderState = 'recent';
 let sortBy = 'Date';
+let isRendering = false;
 
 const $userName = document.querySelector('.main-nav-top-username');
 const $mainBoard = document.querySelector('.main-board');
@@ -64,12 +65,15 @@ const displayLoading = () => {
 
 const loadNextPosts = () => {
   const { scrollY } = window;
+  console.log(scrollY);
+  if (isRendering) return; // // // 
   if (scrollY + document.body.getBoundingClientRect().height >= $mainMain.scrollHeight + 50 && !isLastPage) {
+    isRendering = true;  // // //
     displayLoading();
     setTimeout(async () => {
-      sortBy = orderState === 'recent' ? 'date'
-       : orderState === 'like' ? 'like' : 'scrap';
-      const res = await request.get(`/posts?_page=${pageCount + 1}&_limit=6&_sort=${sortBy}&_order=asc`);
+      sortBy = (orderState === 'recent') ? 'date'
+       : (orderState === 'like' ? 'like.length' : 'scrap.length');
+      const res = await request.get(`/posts?_page=${pageCount + 1}&_limit=6&_sort=${sortBy}&_order=desc`);
       const _posts = await res.json();
 
       if (_posts.length < 6) { // 마지막페이지인 경우
@@ -84,6 +88,7 @@ const loadNextPosts = () => {
       }
       pageCount++;
       posts = [...posts, ..._posts];
+      console.log(posts);
       renderPost();
       applyThumbnail();
       document.querySelector('.loading-container').remove();
@@ -98,10 +103,10 @@ const displayBtn = () => {
 };
 
 // events
-window.onload = () => { 
+window.onload = () => {
   (async () => {
     sortBy = orderState === 'recent' ? 'date'
-       : orderState === 'like' ? 'like' : 'scrap';
+      : orderState === 'like' ? 'like.length' : 'scrap.length';
     userInfo = JSON.parse(sessionStorage.getItem('user'));
     displayUserName(userInfo);
     const res = await request.get(`/posts?_page=1&_limit=6&_sort=${sortBy}&_order=desc`);
@@ -141,6 +146,9 @@ $sortBtn.onclick = () => {
 };
 
 $orderPanel.onclick = e => {
+  window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+
+  console.log('pageCount:', pageCount);
   console.log(e.target.classList[1]);
   orderState = e.target.classList[1];
   document.querySelector('.selected').classList.remove('selected');
@@ -149,9 +157,11 @@ $orderPanel.onclick = e => {
   $orderPanel.classList.add('slide-down');
   (async () => {
     sortBy = orderState === 'recent' ? 'date'
-       : orderState === 'like' ? 'like' : 'scrap';
+      : orderState === 'like' ? 'like.length' : 'scrap.length';
     userInfo = JSON.parse(sessionStorage.getItem('user'));
     displayUserName(userInfo);
+    pageCount = 1;
+    isLastPage = false;
     const res = await request.get(`/posts?_page=1&_limit=6&_sort=${sortBy}&_order=desc`);
     posts = await res.json();
     console.log(posts);
