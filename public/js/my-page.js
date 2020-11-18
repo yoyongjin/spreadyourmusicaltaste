@@ -2,8 +2,13 @@
 const $userNickName = document.querySelector('.user-nick-name');
 const $profileImage = document.querySelector('.profile-image');
 
+const $scrapNumber = document.querySelector('.scrap-number');
+const $postingNumber = document.querySelector('.posting-number');
+const $userLank = document.querySelector('.user-lank');
+const $userLankIcon = document.querySelector('.user-lank-icon');
+
 // 로딩 이벤트
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', async () => {
   
   if (!sessionStorage.getItem('user')) {
     window.location.assign('login.html');
@@ -17,4 +22,17 @@ window.addEventListener('DOMContentLoaded', () => {
   $profileImage.setAttribute('src', `./image/profile${random}.gif`);
   // 유저 닉네임 추가
   $userNickName.textContent = `${currUserNickName}님`;
+
+  try {
+    const res = await fetch('/posts');
+    const newPosts = await res.json();
+    const postCount = await newPosts.filter(post => post.writter === currUserId);
+    const scraps = await newPosts.map(post => post.scrap).flat();
+    const scrapCount = await scraps.filter(scrap => scrap === currUserId);
+  
+    $postingNumber.textContent = `${postCount.length}`;
+    $scrapNumber.textContent = `${scrapCount.length}`;
+  } catch (err) {
+    console.error(err);
+  }
 });
