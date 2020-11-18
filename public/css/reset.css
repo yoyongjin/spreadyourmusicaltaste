@@ -124,7 +124,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -132,13 +132,15 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+button {
+  cursor: pointer;
+}
 
 .a11y-hidden {
   position: absolute;
   width: 1px;
-  Height: 1px;
-  Overflow: hidden;
-  Margin: -1px;
+  height: 1px;
+  overflow: hidden;
+  margin: -1px;
   clip-path: polygon(0 0, 0 0, 0 0);
 }
-
