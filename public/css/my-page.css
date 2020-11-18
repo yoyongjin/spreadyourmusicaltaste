@@ -89,21 +89,32 @@ body {
   margin-right: 10px;
 }
 
-.user-lank {
-  margin-left: 10px;
+.mypage-member-icon .user-lank {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 100px;
+  margin: 20px 0;
 }
 
-.fa-star,
-.fa-pen,
-.fa-battery-quarter {
-  padding: 10px;
+.user-info {
   vertical-align: middle;
 }
 
 .user-lank {
-  margin-left: 10px;
-  width: 30px;
-  height: 30px;
+  margin: 10px 0;
+  height: 20px;
+}
+
+.user-lank-icon {
+  width: 20px;
+  height: 20px;
+  border: none;
+}
+
+.fa-star,
+.fa-pen {
+  padding: 10px;
+  vertical-align: middle;
 }
 
 .mypage-home-nav {
@@ -123,4 +134,9 @@ body {
   width: 30px;
   height: 50px;
   margin-top: 50px;
+}
+
+.scrap-number,
+.posting-number {
+  vertical-align: middle;
 }

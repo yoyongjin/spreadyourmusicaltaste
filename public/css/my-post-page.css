@@ -1,0 +1,282 @@
+/* main-nav */
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Jua&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://use.fontawesome.com/releases/v5.5.0/css/all.css');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  width: 375px;
+  height: 100vh;
+  background-color: #ccc;
+  font-family: "Alegreya Sans";
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-size: 1.3rem;
+}
+
+/* 애니메이션 */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin {
+  animation: spin 10s linear infinite alternate both;
+}
+
+.loading-container {
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  position: fixed;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.loading-img {
+  position: absolute;
+  top: 30%;
+  left: 43%;
+  width: 200px;
+  height: 200px;
+  animation: spin 1s linear infinite;
+}
+
+.main-main {
+  position: relative;
+}
+
+.main-nav-top {
+  box-sizing: border-box;
+  padding: 2px 10px;
+  font-family: 'Lobster';
+  color: white;
+  font-size: 2.5rem;
+  text-align: left;
+  line-height: 50px;
+  width: 375px;
+  height: auto;
+  background: linear-gradient(45deg, #A32CDF, #106AD2);
+}
+
+.main-nav-top-slogan {}
+
+.main-nav-top-username {
+  text-align: right;
+  font-family: 'Nanum Gothic';
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+}
+
+.main-board {
+  box-sizing: border-box;
+  width: 375px;
+  min-height: 812px;
+  background-color: white;
+  margin: 0 auto;
+  padding: 0.5rem;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.main-post {
+  cursor: pointer;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 50%;
+  height: 300px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  margin-top: 1rem;
+  border: 3px solid white;
+  border-radius: 15px 15px 0 0;
+  position: relative;
+  background: linear-gradient(45deg, #A32CDF, #106AD2);
+  box-shadow: 2px 2px 2px lightgray;
+}
+
+.main-post-image {
+  background-size: contain;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  border: 1px solid lightgray;
+}
+
+.main-post-image-hole {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  border: 2px solid silver;
+  background: #106AD2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.record-needle {
+  display: inline-block;
+  width: 130px;
+  height: 50px;
+  position: absolute;
+  top: 150px;
+  left: -170px;
+  transition-duration: 0.5s;
+  transform-origin: 100% 100%;
+  transform: scaleX(-1);
+  transform: rotate(90deg);
+}
+
+.main-post:hover>.record-needle {
+  transition-duration: 2s;
+  transform: rotate(125deg);
+  transform-origin: 100% 100%;
+
+}
+
+.main-post:hover>.main-post-image {
+  animation: spin 5s linear infinite;
+}
+
+.main-post-contents {
+  display: flex;
+  flex-flow: row wrap;
+  width: 275px;
+  height: 180px;
+}
+
+.main-post-title {
+  width: fit-content;
+  background-color: #abc;
+}
+
+.main-post-writer {
+  width: 30%;
+  background-color: #bcd;
+}
+
+.main-post-like {
+  box-sizing: border-box;
+  display: inline-block;
+  padding-top: 20px;
+  background-color: white;
+  padding: 20px 10px;
+  margin: 0;
+  color: black;
+  border-radius: 20px 0 0 0;
+  border: 3px solid white;
+  white-space: nowrap;
+  line-height: 2.7rem;
+}
+
+.main-post-like,
+.main-post-scrap {
+  width: 100%;
+  text-align: right;
+}
+
+.main-post-songTitle {
+  display: block;
+  font-size: 1.4rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.main-post-postTitle {
+  display: block;
+  font-size: 1.3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  display: inline-block;
+  color: white;
+}
+
+.main-nav {
+  line-height: 40px;
+  height: 40px;
+  font-size: 1.4rem;
+  color: white;
+  background: linear-gradient(45deg, #A32CDF, #106AD2);
+  bottom: 0;
+  position: fixed;
+  width: 375px;
+}
+
+.main-nav-menus {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.scroll-icon {
+  position: fixed;
+  left: 50%;
+  bottom: 3%;
+  font-size: 36px;
+  cursor: pointer;
+  animation: glow 2s infinite backwards;
+  transform: translate(-50%, -50%);
+  display: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #A32CDF, #106AD2);
+}
+
+.scroll-icon::before {
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes glow {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -44%);
+  }
+
+  50% {
+    opacity: 0.3;
+    transform: translate(-50%, -56%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -44%);
+
+  }
+}
