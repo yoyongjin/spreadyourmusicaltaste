@@ -54,7 +54,6 @@ body {
   animation: spin 1s linear infinite;
 }
 .main-main {
-  z-index: -1;
   position: relative;
 }
 .main-nav-top {
@@ -209,6 +208,7 @@ a {
   bottom: 0;
   position: fixed;
   width:375px;
+  z-index: 2;
 }
 .main-nav-menus {
   display: flex;
@@ -261,15 +261,15 @@ a {
 }
 .order-panel {
   position: fixed;
-  width: 100px;
-  bottom: -20%;
-  left: 39%;
-  z-index: -1;
+  bottom: -15%;
+  left: 37%;
+  z-index: 1;
   background: linear-gradient(45deg, #A32CDF, #106AD2);
   border-radius: 15px 15px 0 0;
+  cursor: pointer;
 }
 .order-panel-item {
-  width:100px;
+  width:145px;
   height:50px;
   line-height: 50px;
   text-align: center;
