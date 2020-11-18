@@ -70,6 +70,22 @@ $changeCompleteBtn2.onclick = () => {
     const changeUserInfo = { id: currId, pw: $changedPwInput.value, nickname: $myNickInput.value }
     sessionStorage.setItem('user', JSON.stringify(changeUserInfo));
     window.location.assign('my-page.html');
+
+    const request = {
+      patch(url, payload) {
+        return fetch(url, {
+          mothod: 'PATCH',
+          headers: { 'content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+      }
+    }
+
+    request.patch(`/users/${sessionStorage.getItem('user.id')}`, {
+      pw: `${currPw}`
+    }).then(response => response.json())
+      .then(users => console.log(users))
+      .catch(err => console.error(err));  
   }
 }
 

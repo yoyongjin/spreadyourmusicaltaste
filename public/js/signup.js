@@ -99,8 +99,7 @@ $inputNickname.onblur = async () => {
   }
 };
 
-$signupBtn.onmouseenter = e => {
-  // $inputNickname.focusout();
+$signupBtn.onmouseenter = () => {
   const userCheck = [...$userInfo].filter(userInfo => userInfo.value.length);
   if (userCheck.length < 4) return;
   $signupBtn.classList.add('focus-btn');
