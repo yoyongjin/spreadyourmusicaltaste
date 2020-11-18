@@ -112,7 +112,8 @@ ul {
 }
 .posted-page-writter {
   display: inline-block;
-  margin-right: 170px 
+  margin-right: 160px;
+  width: 33px;
 }
 .posted-page-time {
   display: inline-block;
