@@ -1,11 +1,6 @@
 {
   "users": [
     {
-      "id": "ehdcks123",
-      "pw": "ehdcks12",
-      "nickname": "동찬킴"
-    },
-    {
       "id": "ehdcks1234",
       "pw": "ehdcks123",
       "nickname": "동찬김"
@@ -94,16 +89,6 @@
       "id": "yongjin",
       "pw": "yongjin123",
       "nickname": "용지니"
-    },
-    {
-      "id": "rladydals",
-      "pw": "rladydals",
-      "nickname": "김용민"
-    },
-    {
-      "id": "rladydals1",
-      "pw": "rladydals1",
-      "nickname": "김용민123"
     }
   ],
   "posts": [
@@ -142,6 +127,8 @@
         "rladydals"
       ],
       "scrap": [
+        "gg2929",
+        "gg2929",
         "rladydals"
       ]
     },
