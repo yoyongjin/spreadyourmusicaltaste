@@ -59,9 +59,9 @@ $musicLists.onclick = (e) => {
 };
 
 const renderSelectedMusic = () => {
-  selectedData = musicItems.items.filter((item) => {
+  selectedData = musicItems.items.find((item) => {
     return item.id.videoId === videoId;
   });
   $selectedMusic.innerHTML = "";
-  $selectedMusic.innerHTML = `<img src="${selectedData[0].snippet.thumbnails.medium.url}" alt="${selectedData[0].snippet.title}"> <span>${selectedData[0].snippet.title}</span>`;
+  $selectedMusic.innerHTML = `<img class='render-music-thumbnail' src="${selectedData.snippet.thumbnails.medium.url}" alt="${selectedData.snippet.title}"> <span class='render-music-title'>${selectedData.snippet.title}</span>`;
 };
