@@ -99,11 +99,11 @@ $inputNickname.onblur = async () => {
   }
 };
 
-$signupBtn.onmouseenter = e => {
+$signupBtn.onmouseenter = () => {
   const userCheck = [...$userInfo].filter(userInfo => userInfo.value.length);
   if (userCheck.length < 4) return;
   $signupBtn.classList.add('focus-btn');
-}
+};
 
 // 가입하기 버튼 이벤트
 $signupBtn.onclick = async () => {

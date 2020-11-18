@@ -120,7 +120,7 @@ body {
 .mypage-home-nav {
   background: linear-gradient(45deg, #a32cdf, #106ad2);
   text-align: center;
-  position: fixed;
+  /* position: fixed; */
   width: 375px;
   height: 145px;
   bottom: 0;

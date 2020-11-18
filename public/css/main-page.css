@@ -251,3 +251,17 @@ a {
 
   }
 }
+.main-nav-menu.sort, .main-nav-posting, .main-nav-myPage{
+  text-align: center;
+  padding: 0 15px;
+  z-index: 0;
+}
+.order-panel {
+  position: absolute;
+  width: 100px;
+  height: 600px;
+  top: 0%;
+  left: 10%;
+  background-color: pink;
+  z-index: 4;
+}
