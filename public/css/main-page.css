@@ -251,3 +251,7 @@ a {
 
   }
 }
+.main-nav-menu.sort, .main-nav-posting, .main-nav-myPage{
+  text-align: center;
+  padding: 0 15px;
+}
