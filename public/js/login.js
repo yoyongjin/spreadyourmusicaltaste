@@ -51,4 +51,4 @@ $pwInput.onkeyup = e => {
 
 $joinLink.onclick = () => {
   window.location.assign('signup.html');
-}
+}ccc
