@@ -5,9 +5,11 @@ body {
   box-sizing: border-box;
   background: linear-gradient(45deg, #a32cdf, #106ad2);
 }
+
 .info-change {
   margin-top: 16vh;
 }
+
 .info-change-header {
   line-height: 10vh;
   color: #fff;
@@ -17,6 +19,7 @@ body {
   vertical-align: bottom;
   text-shadow: 1px 1px #444;
 }
+
 .info-change-wrapper {
   background-color: rgba(255, 255, 255, 0.2);
   margin: 0 20px;
@@ -24,20 +27,24 @@ body {
   vertical-align: middle;
   border-radius: 30px;
 }
+
 .info-change-items {
   color: #fff;
   text-align: center;
   vertical-align: middle;
 }
+
 .info-change-items li {
   margin: 8px 0;
 }
+
 .info-change-items input::placeholder {
   color: black;
   font-size: 14px;
   font-weight: 600;
   text-align: center;
 }
+
 .info-change-items input {
   width: 65%;
   height: 40px;
@@ -49,7 +56,9 @@ body {
   text-align: center;
   /* box-shadow: 1px 1px 1px #666; */
 }
-.change-complete-btn, .change-complete-btn2 {
+
+.change-complete-btn,
+.change-complete-btn2 {
   font-weight: 700;
   font-size: 15px;
   width: 130px;
@@ -60,23 +69,29 @@ body {
   color: #666;
   box-shadow: 1px 1px 1px #666;
 }
+
 .change-complete-btn:hover {
   background-color: rgb(231, 229, 89);
   color: #333;
 }
+
 .change-complete-btn2:hover {
   background-color: rgb(231, 229, 89);
   color: #333;
 }
+
 .change-cancel-btn:hover {
   background-color: tomato;
   color: #fff;
 }
+
 .change-cancel-btn2:hover {
   background-color: tomato;
   color: #fff;
 }
-.change-cancel-btn, .change-cancel-btn2{
+
+.change-cancel-btn,
+.change-cancel-btn2 {
   font-weight: 700;
   font-size: 15px;
   background-color: #c0bebe;
@@ -87,22 +102,39 @@ body {
   border-radius: 20px;
   box-shadow: 1px 1px 1px #666;
 }
+
 .changing-pw {
   display: none;
 }
+
 .changed-pw {
   display: none;
 }
-.change-btn-wrapper, .change-btn-wrapper2 {
-  margin: 15px auto 0;
+
+.change-btn-wrapper,
+.change-btn-wrapper2 {
+  margin: 10px auto 0;
   text-align: right;
 }
+
 .change-btn-wrapper2 {
   display: none;
 }
+
 .my-nick {
   display: none;
 }
+
 .my-nick-text {
   display: block;
+}
+
+.pw-error,
+.changing-pw-error,
+.changed-pw-error {
+  height: 20px;
+}
+
+.display-id {
+  font-weight: 700;
 }
