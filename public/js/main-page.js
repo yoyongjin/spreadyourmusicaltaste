@@ -1,7 +1,10 @@
 let posts = [];
+let userInfo; // 로그인한 회원정보
 
+const $userName = document.querySelector('.main-nav-top-username');
 const $mainBoard = document.querySelector('.main-board');
 const $mainMain = document.querySelector('.main-main');
+const $icon = document.querySelector('.scroll-icon');
 
 // functions
 const renderPost = () => {
@@ -16,6 +19,10 @@ const renderPost = () => {
       </div>
       <img class="record-needle" src="https://static.thenounproject.com/png/1892806-200.png" alt="바늘" />
   </li>`).join('');
+};
+
+const displayUserName = userInfo => {
+  $userName.textContent = `${userInfo.nickname}님 안녕하세요.`;
 };
 
 const applyThumbnail = () => {
@@ -59,22 +66,38 @@ const loadNextPosts = () => {
   }
 };
 
+const displayBtn = () => {
+  const { scrollY } = window;
+  console.log(scrollY);
+  $icon.style.display = scrollY >= 450 ? 'block' : 'none';
+};
+
 // events
 window.onload = () => {
   (async () => {
+    userInfo = JSON.parse(sessionStorage.getItem('user'));
+    displayUserName(userInfo);
     const res = await request.get('/posts');
     posts = await res.json();
     renderPost();
     applyThumbnail();
+    displayBtn();
   })();
 };
 
-document.onscroll = _.throttle(loadNextPosts, 500);
+document.onscroll = _.throttle(() => {
+  loadNextPosts();
+  displayBtn();
+}, 500);
 
 $mainBoard.onclick = e => {
-  if(e.target.matches('ul')) return;
+  if (e.target.matches('ul')) return;
 
   console.log(e.target.closest('li').classList[1]);
   sessionStorage.setItem('post-id', e.target.closest('li').classList[1]);
-  location.assign('./posted-page.html');
+  window.location.assign('./posted-page.html');
+};
+
+$icon.onclick = () => {
+  window.scroll({ top: 0, left: 0, behavior: 'smooth' });
 };

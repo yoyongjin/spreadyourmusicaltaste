@@ -112,7 +112,8 @@ ul {
 }
 .posted-page-writter {
   display: inline-block;
-  margin-right: 170px 
+  margin-right: 160px;
+  width: 33px;
 }
 .posted-page-time {
   display: inline-block;
@@ -153,12 +154,14 @@ ul {
 .posted-page-scrapNum, .posted-page-likeNum {
   background-color: transparent;
   font-size:1.5rem;
+  display: inline-block;
+  width:20px;
 }
 .posted-page-scrapNum {
-  margin-right: 35px;
+  margin-right: 20px;
 }
 .posted-page-likeNum {
-  margin-right: 10px;
+  margin-right: 2px;
 }
 .posted-page-scrapBtn, .posted-page-likeBtn {
   border:0;

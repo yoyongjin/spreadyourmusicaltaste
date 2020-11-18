@@ -1,10 +1,9 @@
 // status
-let posts;
 let scrap;
 let like;
+let userInfo;
 
 // doms
-const $postedPageWritterInfo = document.querySelector('.posted-page-writter-info');
 const $postedPageTitle = document.querySelector('.posted-page-title');
 const $postedPageWritter = document.querySelector('.posted-page-writter');
 const $postedPageTime = document.querySelector('.posted-page-time');
@@ -41,16 +40,29 @@ const renderWritterInfo = post => {
 };
 
 const checkPressedLikeBtn = () => {
-  
+  if (like.find(_like => _like === userInfo.id)) {
+    console.log('이미 좋아요 했습니다.');
+    return true;
+  }
+  return false;
 };
 const checkPressedScrapBtn = () => {
-
+  if (scrap.find(_scrap => _scrap === userInfo.id)) {
+    console.log('이미 스크랩 했습니다.');
+    return true;
+  }
+  return false;
 };
+
+const removeUserLike = () => like.filter(_like => _like !== userInfo.id);
+
+const removeUserScrap = () => scrap.filter(_scrap => _scrap !== userInfo.id);
 
 // Events
 window.onload = () => {
-  console.log(sessionStorage.getItem('post-id'));
   (async () => {
+    userInfo = JSON.parse(sessionStorage.getItem('user'));
+    console.log(userInfo);
     const res = await request.get(`/posts/${sessionStorage.getItem('post-id')}`);
     const post = await res.json();
     console.log(post);
@@ -70,29 +82,35 @@ $postedPageStatus.onclick = e => {
     (async () => {
       const res = await request.get(`/posts/${sessionStorage.getItem('post-id')}`);
       const post = await res.json();
+
       scrap = post.scrap;
-      console.log(scrap);
-      scrap.push(sessionStorage.getItem('post-id'));
-      
-      const res2 = await request.patch(`/posts/${sessionStorage.getItem('post-id')}`, { scrap });
-      //scrap의 프로퍼티값으로 현재 로그인된 사람 아이디 넣기
-      const post2 = await res2.json();
-      console.log(post2.scrap.length);
-      $postedPageScrapBtn.nextElementSibling.textContent = post.scrap.length;
+      if (checkPressedScrapBtn()) {
+        scrap = removeUserScrap();
+        await request.patch(`/posts/${sessionStorage.getItem('post-id')}`, { scrap: [...scrap] });
+        $postedPageScrapBtn.nextElementSibling.textContent = scrap.length;
+        return;
+      }
+      await request.patch(`/posts/${sessionStorage.getItem('post-id')}`, { scrap: [userInfo.id, ...scrap] });
+      scrap = [userInfo.id, ...scrap];
+
+      $postedPageScrapBtn.nextElementSibling.textContent = scrap.length;
     })();
   } else if (e.target.classList[1] === 'like') {
     (async () => {
       const res = await request.get(`/posts/${sessionStorage.getItem('post-id')}`);
       const post = await res.json();
+
       like = post.like;
-      console.log(like);
-      like.push(sessionStorage.getItem('post-id'));
-      
-      const res2 = await request.patch(`/posts/${sessionStorage.getItem('post-id')}`, { like });
-      //like의 프로퍼티 값으로 현재 로그인된 사람 아이디 넣기.
-      const post2 = await res2.json();
-      console.log(post2.like.length);
-      $postedPageLikeBtn.nextElementSibling.textContent = post.like.length;
+      if (checkPressedLikeBtn()) {
+        like = removeUserLike();
+        await request.patch(`/posts/${sessionStorage.getItem('post-id')}`, { like: [...like] });
+        $postedPageLikeBtn.nextElementSibling.textContent = like.length;
+        return;
+      }
+      await request.patch(`/posts/${sessionStorage.getItem('post-id')}`, { like: [userInfo.id, ...like] });
+      like = [userInfo.id, ...like];
+
+      $postedPageLikeBtn.nextElementSibling.textContent = like.length;
     })();
   }
 };
