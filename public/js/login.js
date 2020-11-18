@@ -49,5 +49,6 @@ $pwInput.onkeyup = e => {
   }
 }
 
-$joinLink.onclicdow.location.assign('signup.html');
-}ccciigeaoifhaeoifhgeaufaerhaerh
+$joinLink.onclick = () => {
+  window.location.assign('signup.html');
+}
