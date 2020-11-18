@@ -19,10 +19,13 @@ body {
   background: linear-gradient(45deg, #a32cdf, #106ad2);
 }
 
+
 .profile-image {
   padding-left: 10px;
-  width: 15%;
-  height: 15%;
+  /* width: 15%;
+  height: 15%; */
+  width: 60px;
+  height: 50px;
   vertical-align: middle;
 }
 
@@ -41,7 +44,7 @@ body {
   padding-left: 10px;
 }
 
-.nick-name {
+.user-nick-name {
   margin-left: 10px;
   font-weight: 700;
 }
