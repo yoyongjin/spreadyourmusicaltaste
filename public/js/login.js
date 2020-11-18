@@ -6,7 +6,7 @@ const $idError = document.querySelector('.id-error');
 const $pwError = document.querySelector('.pw-error');
 const $userError = document.querySelector('.user-error');
 
-$loginBtn.onclick = async () => {
+const loginFunc = async () => {
   $idError.textContent = '';
   $pwError.textContent = '';
   $userError.textContent = '';
@@ -35,6 +35,17 @@ $loginBtn.onclick = async () => {
     }
   } catch (err) {
     console.error(err);
+  }
+}
+
+//로그인을 할 수 있는 두 가지 방법
+$loginBtn.onclick = () => {
+  loginFunc();
+};
+
+$pwInput.onkeyup = e => {
+  if(e.key ==='Enter') {
+    loginFunc();
   }
 }
 
