@@ -29,9 +29,9 @@ window.onload = e => {
 
   //   $displayId.textContent = users[0].id;
 
-    sessionStorage.setItem('id', 'yongjin');
-    sessionStorage.setItem('pw', '1234');
-    sessionStorage.setItem('nickname', '용진');
+    // sessionStorage.setItem('id', 'yongjin');
+    // sessionStorage.setItem('pw', '1234');
+    // sessionStorage.setItem('nickname', '용진');
     // console.log(sessionStorage.getItem('id'));
     // console.log(sessionStorage.getItem('pw'));
     // console.log(sessionStorage.getItem('name'));
@@ -64,3 +64,4 @@ $changeCompleteBtn2.onclick = () => {
 }
 
 
+const { nickname } = JSON.parse(sessionStorage)
