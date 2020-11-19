@@ -78,7 +78,7 @@ const finishChange = () => {
     const request = {
       patch(url, payload) {
         return fetch(url, {
-          mothod: 'PATCH',
+          method: 'PATCH',
           headers: { 'content-Type': 'application/json' },
           body: JSON.stringify(payload)
         });
@@ -89,18 +89,14 @@ const finishChange = () => {
       pw: `${currPw}`
     }).then(response => response.json())
       .then(users => console.log(users))
-      .catch(err => console.error(err));  
+      .catch(err => console.error(err));
     request.patch(`/users/${sessionStorage.getItem('user.nickname')}`, {
       pw: `${currNickName}`
     }).then(response => response.json())
       .then(users => console.log(users))
-      .catch(err => console.error(err));  
-
-    
+      .catch(err => console.error(err));
   }
 }
-
-
 $changeCompleteBtn2.onclick = () => {
   finishChange();
 }

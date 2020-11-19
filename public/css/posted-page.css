@@ -12,7 +12,6 @@ html {
   font-size: 10px;
 }
 body {
-  /* font-family: 'Alegreya Sans'; */
   font-family: 'Jua';
   margin: 0 auto;
   box-sizing: border-box;
@@ -48,7 +47,6 @@ ul {
   color: black;
   background-position: 0% 5%;
   background-position: 10% 10%;
-  /* border-radius: 5px; */
   margin: 0 auto;
   margin-top: 15px;
   padding:8px 15px;
@@ -71,13 +69,10 @@ ul {
   transition-property: transform;
   border-radius: 10px;
 }
-.posted-page-album:hover{
+.posted-page-album.selected {
   transform: translateX(-41%);
 }
-.posted-page-album:hover + .posted-page-song-detail {
-  opacity: 1;
-}
-.posted-page-song-detail {
+.posted-page-song-detail{
   width: 150px;
   height: 200px;
   position: absolute;
@@ -90,10 +85,12 @@ ul {
   border-radius: 10px;
   padding: 10px;
 }
+.posted-page-song-detail.selected{
+  opacity: 1;
+}
 .posted-page-bottom {
   background-color: white;
   color: white;
-  /* height:812px; */
   width: 375px;
   margin: 0 auto;
 }
@@ -112,11 +109,13 @@ ul {
 }
 .posted-page-writter {
   display: inline-block;
-  margin-right: 127px;
-  width: 66px;
+  text-align: left;
+  width: calc(50% - 5px);
 }
 .posted-page-time {
   display: inline-block;
+  text-align: right;
+  width: calc(50% - 5px);
 }
 
 .posted-page-status {

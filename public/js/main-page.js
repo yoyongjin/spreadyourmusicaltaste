@@ -19,7 +19,7 @@ const renderPost = () => {
       <span class="main-post-image"><span class="main-post-image-hole"></span></span>
       <div class="main-post-contents">
       </div>
-      <div class="main-post-like main-post-scrap" >
+      <div class="main-post-like" >
         <span class="main-post-postTitle">${post.title}</span>
         <span class="main-post-songTitle">${post.content}</span>
       </div>
@@ -57,8 +57,8 @@ const displayLoading = () => {
 };
 // 다음 데이터 확인해서 출력
 const loadNextPosts = () => {
-  const { scrollY } = window;
-  if (scrollY + document.body.getBoundingClientRect().height >= $mainMain.scrollHeight + 50 && !isLastPage) {
+  const { pageYOffset } = window;
+  if (pageYOffset + document.body.getBoundingClientRect().height >= $mainMain.scrollHeight + 50 && !isLastPage) {
     displayLoading();
     setTimeout(async () => {
       sortBy = (orderState === 'recent') ? 'date'
@@ -114,7 +114,7 @@ document.onscroll = _.throttle(() => {
 
 $mainBoard.onclick = e => {
   if (e.target.matches('ul')) return;
-  const { scrollY } = window;
+  const { pageYOffset } = window;
   sessionStorage.setItem('post-id', e.target.closest('li').classList[1]);
   window.location.assign('./posted-page.html');
 };
@@ -153,8 +153,4 @@ $orderPanel.onclick = e => {
     applyThumbnail();
     displayBtn();
   })();
-};
-
-document.oncontextmenu = () => {
-  history.go(0);
 };

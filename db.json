@@ -127,26 +127,6 @@
       ]
     },
     {
-      "id": 14,
-      "writter": "rladydals",
-      "date": "2020-12-14",
-      "music": {
-        "thumbnail": "https://upload.wikimedia.org/wikipedia/en/7/7b/Sunmi_-_Noir.jpg",
-        "url": "https://yotube.com",
-        "title": "sunmi - Noir"
-      },
-      "content": "sunmi - Noir.",
-      "title": "sunmi - Noir",
-      "like": [
-        "nara12345",
-        "rladydals1",
-        "rladydals"
-      ],
-      "scrap": [
-        "rladydals"
-      ]
-    },
-    {
       "id": 13,
       "writter": "kym123",
       "date": "2020-11-14",
@@ -494,6 +474,20 @@
       },
       "content": "너무좋아요 진짜 매일 삼천번씩 듣고있어요!",
       "title": "micheal jackson- dangerous",
+      "like": [],
+      "scrap": []
+    },
+    {
+      "id": 22,
+      "writter": "김용민123",
+      "date": "2020-11-19",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/6diAJ6MrkiE/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=6diAJ6MrkiE",
+        "title": "[Simply K-Pop] Wonder Girls(원더걸스) &#39;Why So Lonely&#39;"
+      },
+      "content": "fggffgffg",
+      "title": "원더걸스",
       "like": [],
       "scrap": []
     }

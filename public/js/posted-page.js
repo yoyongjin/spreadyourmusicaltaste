@@ -2,6 +2,7 @@
 let scrap;
 let like;
 let userInfo;
+let isSelected = false;
 
 // doms
 const $postedPageTitle = document.querySelector('.posted-page-title');
@@ -15,6 +16,8 @@ const $postedPageLikeBtn = document.querySelector('.posted-page-likeBtn');
 const $postedPageScrapBtn = document.querySelector('.posted-page-scrapBtn');
 const $postedPageDelete = document.querySelector('.posted-page-delete');
 const $postedPageEdit = document.querySelector('.posted-page-edit');
+const $postedSongDetail = document.querySelector('.posted-page-song-detail');
+const $postedPageYtlink = document.querySelector('.posted-page-youtube-link');
 
 // functions
 const request = {
@@ -44,6 +47,7 @@ const renderWritterInfo = post => {
   $postedpageYtTitle.textContent = post.music.title;
   $postedPageScrapBtn.nextElementSibling.textContent = post.scrap.length;
   $postedPageLikeBtn.nextElementSibling.textContent = post.like.length;
+  $postedPageYtlink.setAttribute('href', post.music.url);
 };
 
 const checkPressedLikeBtn = arr => {
@@ -90,8 +94,20 @@ window.onload = () => {
   })();
 };
 
-$postedpageAlbum.onmouseenter = e => {
+$postedpageAlbum.onclick = e => {
   console.log(e.target);
+  isSelected = true;
+  e.target.classList.add('selected');
+  $postedSongDetail.classList.add('selected');
+  e.target.style.transform = 'translateX(-40%)';
+};
+
+document.onclick = e => {
+  if (e.target === $postedpageAlbum) return;
+  document.querySelector('.posted-page-album.selected').classList.remove('selected');
+  document.querySelector('.posted-page-song-detail.selected').classList.remove('selected');
+  $postedpageAlbum.style.transform = 'translateX(0%)';
+  isSelected = false;
 };
 
 $postedPageStatus.onclick = e => {
