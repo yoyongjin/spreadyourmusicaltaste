@@ -3,7 +3,7 @@ let userInfo; // 로그인한 회원정보
 let pageCount = 1;
 let isLastPage = false;
 let orderState = 'recent';
-let sortBy = 'Date';
+let sortBy = 'date';
 
 const $userName = document.querySelector('.main-nav-top-username');
 const $mainBoard = document.querySelector('.main-board');
@@ -45,14 +45,6 @@ const request = {
   }
 };
 
-const isEqualArrays = (arr1, arr2) => {
-  if (arr1.length !== arr2.length) return false;
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) return false;
-    return true;
-  }
-};
-
 const displayLoading = () => {
   const $imgContainer = document.createElement('div');
   const $img = document.createElement('img');
@@ -69,14 +61,16 @@ const loadNextPosts = () => {
   if (scrollY + document.body.getBoundingClientRect().height >= $mainMain.scrollHeight + 50 && !isLastPage) {
     displayLoading();
     setTimeout(async () => {
-      sortBy = orderState === 'recent' ? 'date'
-       : orderState === 'like' ? 'like' : 'scrap';
-      const res = await request.get(`/posts?_page=${pageCount + 1}&_limit=6&_sort=${sortBy}&_order=asc`);
+      sortBy = (orderState === 'recent') ? 'date'
+        : (orderState === 'like' ? 'like.length' : 'scrap.length');
+      const res_length = await request.get('/posts');
+      const _posts_length = await res_length.json();
+      
+      const pageNum = Math.ceil(_posts_length.length / 6);
+      const res = await request.get(`/posts?_page=${pageCount + 1}&_limit=6&_sort=${sortBy}&_order=desc`);
       const _posts = await res.json();
-
-      if (_posts.length < 6) { // 마지막페이지인 경우
-        console.log('마지막페이지 입니다.');
-        console.log(_posts);
+      pageCount++;
+      if (_posts.length < 6 || pageNum === pageCount) { // 마지막페이지인 경우
         posts = [...posts, ..._posts];
         renderPost();
         applyThumbnail();
@@ -84,13 +78,12 @@ const loadNextPosts = () => {
         isLastPage = true;
         return;
       }
-      pageCount++;
       posts = [...posts, ..._posts];
       renderPost();
       applyThumbnail();
       document.querySelector('.loading-container').remove();
       isLastPage = false;
-    }, 700);
+    }, 300);
   }
 };
 
@@ -99,16 +92,15 @@ const displayBtn = () => {
   $icon.style.display = scrollY >= 450 ? 'block' : 'none';
 };
 
-// events
-window.onload = () => { 
+// events 
+window.onload = () => {
   (async () => {
     sortBy = orderState === 'recent' ? 'date'
-       : orderState === 'like' ? 'like' : 'scrap';
+      : orderState === 'like' ? 'like.length' : 'scrap.length';
     userInfo = JSON.parse(sessionStorage.getItem('user'));
     displayUserName(userInfo);
     const res = await request.get(`/posts?_page=1&_limit=6&_sort=${sortBy}&_order=desc`);
     posts = await res.json();
-    console.log(posts);
     renderPost();
     applyThumbnail();
     displayBtn();
@@ -122,8 +114,7 @@ document.onscroll = _.throttle(() => {
 
 $mainBoard.onclick = e => {
   if (e.target.matches('ul')) return;
-
-  console.log(e.target.closest('li').classList[1]);
+  const { scrollY } = window;
   sessionStorage.setItem('post-id', e.target.closest('li').classList[1]);
   window.location.assign('./posted-page.html');
 };
@@ -143,7 +134,7 @@ $sortBtn.onclick = () => {
 };
 
 $orderPanel.onclick = e => {
-  console.log(e.target.classList[1]);
+  window.scroll({ top: 0, left: 0 });
   orderState = e.target.classList[1];
   document.querySelector('.selected').classList.remove('selected');
   e.target.classList.add('selected');
@@ -151,14 +142,19 @@ $orderPanel.onclick = e => {
   $orderPanel.classList.add('slide-down');
   (async () => {
     sortBy = orderState === 'recent' ? 'date'
-       : orderState === 'like' ? 'like' : 'scrap';
+      : orderState === 'like' ? 'like.length' : 'scrap.length';
     userInfo = JSON.parse(sessionStorage.getItem('user'));
     displayUserName(userInfo);
+    pageCount = 1;
+    isLastPage = false;
     const res = await request.get(`/posts?_page=1&_limit=6&_sort=${sortBy}&_order=desc`);
     posts = await res.json();
-    console.log(posts);
     renderPost();
     applyThumbnail();
     displayBtn();
   })();
+};
+
+document.oncontextmenu = () => {
+  history.go(0);
 };

@@ -1,5 +1,6 @@
 // server.js
 const jsonServer = require('json-server');
+
 const server = jsonServer.create();
 const router = jsonServer.router('db.json');
 const middlewares = jsonServer.defaults();
@@ -7,8 +8,10 @@ const middlewares = jsonServer.defaults();
 // db.json를 조작하기 위해 lowdb를 사용
 const low = require('lowdb');
 const FileSync = require('lowdb/adapters/FileSync');
+
 const adapter = new FileSync('db.json');
 const db = low(adapter);
+
 
 // Set default middlewares (logger, static, cors and no-cache)
 server.use(middlewares);
@@ -24,14 +27,11 @@ server.delete('/todos/completed', (req, res) => {
   res.send(db.get('todos').value());
 });
 
-server.get('/posts?_page=:page&_limit=6&_sort=:sortBy&_order=desc', (req, res) => {
-  db.get('posts')
-    .
-});
+
 
 // Use default router
 server.use(router);
 
-server.listen(3000, () => {
+server.listen(4000, () => {
   console.log('JSON Server is running');
 });
