@@ -7,6 +7,8 @@ const $postingNumber = document.querySelector('.posting-number');
 const $userLank = document.querySelector('.user-lank');
 const $userLankIcon = document.querySelector('.user-lank-icon');
 
+const $logOutBtn = document.querySelector('.log-out-btn');
+
 // 로딩 이벤트
 window.addEventListener('DOMContentLoaded', async () => {
   
@@ -36,3 +38,9 @@ window.addEventListener('DOMContentLoaded', async () => {
     console.error(err);
   }
 });
+
+//로그 아웃
+$logOutBtn.onclick = () => {
+  sessionStorage.clear();
+  window.location.assign('login.html');
+}
