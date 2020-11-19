@@ -15,13 +15,6 @@ const $musicLists = document.querySelector(".music-lists");
 const $selectedMusic = document.querySelector(".selected-music");
 const $previousBtn = document.querySelector(".previous-page-btn");
 const $nextBtn = document.querySelector(".next-page-btn");
-<<<<<<< HEAD
-
-
-
-// 작성된 내용 DB에 보내기
-=======
->>>>>>> f44e57c6a80a282afe7b152fecae4be82c1aa714
 const $completeBtn = document.querySelector(".complete-btn");
 const $cancleBtn = document.querySelector(".cancel-btn");
 const $postTitle = document.querySelector(".post-title");
@@ -262,4 +255,3 @@ $cancleBtn.onclick = () => {
 if($postContent.textContent === '') {
   $completeBtn.setAttribute('disabled');
 }
-

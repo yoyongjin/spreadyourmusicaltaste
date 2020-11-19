@@ -253,11 +253,7 @@ a {
 .main-nav-menu.sort, .main-nav-posting, .main-nav-myPage{
   text-align: center;
   padding: 0 15px;
-<<<<<<< HEAD
-  z-index: 0;
-=======
   z-index: 999;
->>>>>>> f44e57c6a80a282afe7b152fecae4be82c1aa714
 }
 .order-panel {
   position: absolute;

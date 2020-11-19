@@ -154,9 +154,4 @@ $orderPanel.onclick = e => {
     applyThumbnail();
     displayBtn();
   })();
-<<<<<<< HEAD
 };
-    
-=======
-};
->>>>>>> f44e57c6a80a282afe7b152fecae4be82c1aa714

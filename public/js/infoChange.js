@@ -20,6 +20,10 @@ const $changedPwError = document.querySelector('.changed-pw-error');
 const $changeCancleBtn = document.querySelector('.change-cancel-btn');
 const $changeCancleBtn2 = document.querySelector('.change-cancel-btn2');
 const $goodByeBtn = document.querySelector('.good-bye-btn');
+const $caution = document.querySelector('.caution');
+const $cautionCheck = document.querySelector('input[type=checkbox]');
+const $cautionCheckBtn = document.querySelector('.caution-check-btn');
+
 
 // 세션 스토리지 user 정보 받아올 변수
 const {id: currId, pw:currPw, nickname: currNickName} = JSON.parse(sessionStorage.getItem('user'));
@@ -54,6 +58,7 @@ const pwChecked = () => {
     $changeBtnWrapper2.style.display = 'block';
     $myNick.style.display = 'block';
     $changedPw.style.display = 'block';
+    $goodByeBtn.style.display = 'block';
   }
 }
 $changeCompleteBtn.onclick = () => {
@@ -95,8 +100,6 @@ const finishChange = () => {
   if ($changingPwInput.value === $changedPwInput.value && $myNickInput.value) {
     const changeUserInfo = { id: currId, pw: $changedPwInput.value, nickname: $myNickInput.value }
     sessionStorage.setItem('user', JSON.stringify(changeUserInfo));
-<<<<<<< HEAD
-=======
     window.location.assign('my-page.html');
 
     const request = {
@@ -108,18 +111,10 @@ const finishChange = () => {
         });
       }
     }
->>>>>>> f44e57c6a80a282afe7b152fecae4be82c1aa714
 
     request.patch(`/users/${JSON.parse(sessionStorage.getItem('user')).id}`, {
       pw: `${currPw}`, nickname: `${currNickName}`
     }).then(response => response.json())
-<<<<<<< HEAD
-      // .then(users => console.log(users))
-      .then(_user => JSON.parse(_user))
-      .then(patched_user => { console.log(patched_user); })
-      .catch(err => console.error(err));  
-    window.location.assign('my-page.html');
-=======
       .then(users => console.log(users))
       .catch(err => console.error(err));
     request.patch(`/users/${sessionStorage.getItem('user.nickname')}`, {
@@ -127,7 +122,6 @@ const finishChange = () => {
     }).then(response => response.json())
       .then(users => console.log(users))
       .catch(err => console.error(err));
->>>>>>> f44e57c6a80a282afe7b152fecae4be82c1aa714
   }
 }
 $changeCompleteBtn2.onclick = () => {
@@ -149,13 +143,13 @@ $changePwInput.onkeyup = e => {
   if(e.key == 'Enter') {
     pwChecked();
   }
-}
+};
 
 
 
 $changeCancleBtn.onclick = () => {
   window.location.assign('my-page.html');
-}
+};
 
 $changeCancleBtn2.onclick = () => {
   window.location.assign('my-page.html');
@@ -163,11 +157,15 @@ $changeCancleBtn2.onclick = () => {
 
 //회원 탈퇴(good-bye) : db.json에서 삭제
 $goodByeBtn.onclick = () => {
-  console.log(JSON.parse(sessionStorage.getItem('user')).id)
+  $caution.style.display = 'block';
+  $cautionCheckBtn.onclick = () => {
+    console.log(JSON.parse(sessionStorage.getItem('user')).id)
+    
+    request.delete(`/users/${JSON.parse(sessionStorage.getItem('user')).id}`)
+      .then(users => users.json())
+      .then(users_fixed => console.log(users_fixed))
+      .catch(err => console.error(err));
+    window.location.assign('login.html'); 
 
-  request.delete(`/users/${JSON.parse(sessionStorage.getItem('user')).id}`)
-    .then(users => users.json())
-    .then(users_fixed => console.log(users_fixed))
-    .catch(err => console.error(err));
-  window.location.assign('login.html');
-}
+  };  
+};

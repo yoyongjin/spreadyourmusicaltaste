@@ -5,16 +5,6 @@ const $profileImage = document.querySelector('.profile-image');
 const $scrapNumber = document.querySelector('.scrap-number');
 const $postingNumber = document.querySelector('.posting-number');
 
-<<<<<<< HEAD
-const $logOutBtn = document.querySelector('.log-out-btn');
-
-// 로딩 이벤트
-window.addEventListener('DOMContentLoaded', async () => {
-  
-  if (!sessionStorage.getItem('user')) {
-    window.location.assign('login.html');
-  }
-=======
 // 마이뮤직
 const $addMusicBtn = document.querySelector('.add-mymusic-btn');
 const $searchCoverContainer = document.querySelector('.search-cover-container');
@@ -37,7 +27,6 @@ const {
   pw: currUserPw,
   nickname: currUserNickName
 } = JSON.parse(sessionStorage.getItem('user'));
->>>>>>> f44e57c6a80a282afe7b152fecae4be82c1aa714
 
 // 로딩 이벤트
 window.addEventListener('load', async () => {
@@ -226,14 +215,4 @@ $previousBtn.onclick = async () => {
   } catch (err) {
     console.error(err);
   }
-<<<<<<< HEAD
-});
-
-//로그 아웃
-$logOutBtn.onclick = () => {
-  sessionStorage.clear();
-  window.location.assign('login.html');
-}
-=======
 };
->>>>>>> f44e57c6a80a282afe7b152fecae4be82c1aa714

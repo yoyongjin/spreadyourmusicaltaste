@@ -138,3 +138,19 @@ body {
 .display-id {
   font-weight: 700;
 }
+
+/* 회원탈퇴 버튼 */
+.good-bye-btn {
+  display: none;
+}
+
+.caution {
+  display: none;
+}
+
+.caution-red {
+  color: red;
+}
+.caution-emphasis {
+  text-emphasis: filled red;
+}
