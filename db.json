@@ -104,6 +104,11 @@
       "id": "rlaehdcks",
       "pw": "rlaehdcks",
       "nickname": "ehd"
+    },
+    {
+      "id": "yuna12",
+      "pw": "yuna1212",
+      "nickname": "yunada"
     }
   ],
   "posts": [
@@ -427,6 +432,62 @@
       },
       "content": "fggffgffg",
       "title": "원더걸스",
+      "like": [],
+      "scrap": []
+    },
+    {
+      "id": 20,
+      "writter": "yongjin",
+      "date": "2020-11-19",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/kx0ynC8Thlw/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=kx0ynC8Thlw",
+        "title": "All SSD Types EXPLAINED"
+      },
+      "content": "sdsdsd",
+      "title": "dssd",
+      "like": [],
+      "scrap": []
+    },
+    {
+      "id": 21,
+      "writter": "yuna12",
+      "date": "2020-11-19",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/3vVHy0XoIN4/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=3vVHy0XoIN4",
+        "title": "Wonder Girls &quot;Tell Me&quot; M/V"
+      },
+      "content": "dd",
+      "title": "dd",
+      "like": [],
+      "scrap": []
+    },
+    {
+      "id": 22,
+      "writter": "yuna12",
+      "date": "2020-11-19",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/t7X8qhESIfs/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=t7X8qhESIfs",
+        "title": "Wonder Girls - Tell Me, 원더걸스 - 텔미, Music Core 20070908"
+      },
+      "content": "텔미",
+      "title": "텔미",
+      "like": [],
+      "scrap": []
+    },
+    {
+      "id": 23,
+      "writter": "yuna12",
+      "date": "2020-11-19",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/zV9C4fh3Fuc/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=zV9C4fh3Fuc",
+        "title": "Wonder Girls (원더걸스) - Tell Me (텔미) Stage Mix 무대모음 교차편집"
+      },
+      "content": "fsdsdf",
+      "title": "dsdsfdsf",
       "like": [],
       "scrap": []
     }
