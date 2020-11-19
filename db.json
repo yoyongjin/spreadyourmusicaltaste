@@ -98,6 +98,27 @@
   ],
   "posts": [
     {
+      "id": 15,
+      "writter": "kym123",
+      "date": "2020-12-16",
+      "music": {
+        "thumbnail": "https://lh3.googleusercontent.com/proxy/Jo80SYq9v-c6rrKFDJTe0uO6YaiTf6rJ_CiHtwF-JrVSmGimN4nxzpI5WsV1VYnlgC00zhdUWYNaRh_Oqebb4RaX74LI2MJwIkXLfv28Pg2fhcbb9Sr63pY6ByF3VLx1HccV9uEHV3wPwk3oWXBSSDj4A4KyBSrU0Q",
+        "url": "https://yotube.com",
+        "title": "owlcity - hot airballoon"
+      },
+      "content": "owlcity - hot airballoon.",
+      "title": "owlcity - hot airballoon",
+      "like": [
+        "rladydals",
+        "rladydals1"
+      ],
+      "scrap": [
+        "rladydals"
+      ],
+      "like.length": 2,
+      "scrap.length": 1
+    },
+    {
       "id": 14,
       "writter": "kym123",
       "date": "2020-12-14",
@@ -108,15 +129,12 @@
       },
       "content": "sunmi - Noir.",
       "title": "sunmi - Noir",
-      "like": [
-        "rladydals1",
-        "rladydals"
-      ],
+      "like": [],
       "scrap": [
         "rladydals"
       ],
-      "like.length" : 2,
-      "scrap.length" : 1
+      "like.length": 2,
+      "scrap.length": 1
     },
     {
       "id": 13,
@@ -130,16 +148,15 @@
       "content": "oasis- stop the clock.",
       "title": "oasis stop the clock",
       "like": [
-        "rladydals1",
-        "rladydals"
+        "rladydals1"
       ],
       "scrap": [
         "gg2929",
         "gg2929",
         "rladydals"
       ],
-      "like.length" : 2,
-      "scrap.length" : 3
+      "like.length": 2,
+      "scrap.length": 3
     },
     {
       "id": 12,
@@ -165,13 +182,14 @@
         "5"
       ],
       "scrap": [
+        "rladydals",
         1,
         2,
         3,
         "5"
       ],
-      "like.length" : 10,
-      "scrap.length" : 4
+      "like.length": 10,
+      "scrap.length": 4
     },
     {
       "id": 10,
@@ -185,14 +203,14 @@
       "content": "@the best of keane.",
       "title": "@핫the best of keane...",
       "like": [
-        "rladydals1",
-        "rladydals"
+        "rladydals",
+        "rladydals1"
       ],
       "scrap": [
         "rladydals"
       ],
-      "like.length" : 2,
-      "scrap.length" : 1
+      "like.length": 2,
+      "scrap.length": 1
     },
     {
       "id": 9,
@@ -223,8 +241,8 @@
         3,
         "5"
       ],
-      "like.length" : 10,
-      "scrap.length" : 4
+      "like.length": 10,
+      "scrap.length": 4
     },
     {
       "id": 8,
@@ -244,12 +262,13 @@
         5
       ],
       "scrap": [
+        "rladydals",
         1,
         2,
         3
       ],
-      "like.length" : 4,
-      "scrap.length" : 3
+      "like.length": 4,
+      "scrap.length": 3
     },
     {
       "id": 7,
@@ -273,8 +292,8 @@
         2,
         3
       ],
-      "like.length" : 3,
-      "scrap.length" : 4
+      "like.length": 3,
+      "scrap.length": 4
     },
     {
       "id": 6,
@@ -304,8 +323,8 @@
         2,
         3
       ],
-      "like.length" : 9,
-      "scrap.length" : 4
+      "like.length": 9,
+      "scrap.length": 4
     },
     {
       "id": 5,
@@ -330,8 +349,8 @@
         1,
         2
       ],
-      "like.length" : 6,
-      "scrap.length" : 2
+      "like.length": 6,
+      "scrap.length": 2
     },
     {
       "id": 4,
@@ -355,8 +374,8 @@
         2,
         3
       ],
-      "like.length" : 4,
-      "scrap.length" : 3
+      "like.length": 4,
+      "scrap.length": 3
     },
     {
       "id": 2,
@@ -370,7 +389,6 @@
       "content": "sunmi - siren",
       "title": "sunmi - siren",
       "like": [
-        "rladydals",
         1,
         2,
         5,
@@ -384,8 +402,8 @@
         4,
         5
       ],
-      "like.length" : 6,
-      "scrap.length" : 5
+      "like.length": 6,
+      "scrap.length": 5
     },
     {
       "id": 1,
@@ -414,8 +432,8 @@
         4,
         5
       ],
-      "like.length" : 6,
-      "scrap.length" : 6
+      "like.length": 6,
+      "scrap.length": 6
     }
   ]
 }

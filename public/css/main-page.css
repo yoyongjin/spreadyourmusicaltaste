@@ -150,7 +150,7 @@ body {
   height:180px;
 }
 .main-post-title {
-  width: fit-content;
+  width: 100px;
   background-color: #abc;
 }
 .main-post-writer {
@@ -173,7 +173,6 @@ body {
 .main-post-like,
 .main-post-scrap {
   width: 100%;
-  text-align: right;
 }
 .main-post-songTitle {
   display: block;
@@ -261,15 +260,15 @@ a {
 }
 .order-panel {
   position: fixed;
-  bottom: -15%;
-  left: 37%;
+  bottom: -15vh;
+  left: 67vh;
   z-index: 1;
   background: linear-gradient(45deg, #A32CDF, #106AD2);
   border-radius: 15px 15px 0 0;
   cursor: pointer;
 }
 .order-panel-item {
-  width:145px;
+  width:15vh;
   height:50px;
   line-height: 50px;
   text-align: center;
