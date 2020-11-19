@@ -95,19 +95,41 @@ const finishChange = () => {
   if ($changingPwInput.value === $changedPwInput.value && $myNickInput.value) {
     const changeUserInfo = { id: currId, pw: $changedPwInput.value, nickname: $myNickInput.value }
     sessionStorage.setItem('user', JSON.stringify(changeUserInfo));
+<<<<<<< HEAD
+=======
+    window.location.assign('my-page.html');
+
+    const request = {
+      patch(url, payload) {
+        return fetch(url, {
+          method: 'PATCH',
+          headers: { 'content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+      }
+    }
+>>>>>>> f44e57c6a80a282afe7b152fecae4be82c1aa714
 
     request.patch(`/users/${JSON.parse(sessionStorage.getItem('user')).id}`, {
       pw: `${currPw}`, nickname: `${currNickName}`
     }).then(response => response.json())
+<<<<<<< HEAD
       // .then(users => console.log(users))
       .then(_user => JSON.parse(_user))
       .then(patched_user => { console.log(patched_user); })
       .catch(err => console.error(err));  
     window.location.assign('my-page.html');
+=======
+      .then(users => console.log(users))
+      .catch(err => console.error(err));
+    request.patch(`/users/${sessionStorage.getItem('user.nickname')}`, {
+      pw: `${currNickName}`
+    }).then(response => response.json())
+      .then(users => console.log(users))
+      .catch(err => console.error(err));
+>>>>>>> f44e57c6a80a282afe7b152fecae4be82c1aa714
   }
 }
-
-
 $changeCompleteBtn2.onclick = () => {
   finishChange();
 }

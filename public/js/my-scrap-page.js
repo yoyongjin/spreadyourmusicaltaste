@@ -69,16 +69,10 @@ const loadNextPosts = () => {
   if (scrollY + document.body.getBoundingClientRect().height >= $mainMain.scrollHeight + 50 && !isLastPage) {
     displayLoading();
     setTimeout(async () => {
+      
       // 스크랩 영역 시작
-
-      const res = await request.get(`/posts?scrap_like=\b${userInfo.id}\b`);
+      const res = await request.get(`/posts?scrap_like=\\b${userInfo.id}\\b`);
       const _posts = await res.json();
-
-      // const res = await request.get('/posts');
-      // const newPosts = await res.json();
-      // const scraps = await newPosts.map(post => post.scrap).flat();
-      // const _posts = await scraps.filter(scrap => scrap === userInfo.id);
-
       // 스크랩 영역 끝
 
       if (_posts.length < 6) { // 마지막페이지인 경우
@@ -111,16 +105,11 @@ window.onload = () => {
   (async () => {
     userInfo = JSON.parse(sessionStorage.getItem('user'));
     displayUserName(userInfo);
+
     // 스크랩 영역 시작
     console.log(userInfo.id);
-    const res = await request.get(`/posts?scrap_like=\b${userInfo.id}\b`);
+    const res = await request.get(`/posts?scrap_like=\\b${userInfo.id}\\b`);
     posts = await res.json();
-
-    // const test = newPosts.map(post => post.scrap.flat().map(scrap => scrap === userInfo.id));
-    // console.log(test);
-    // const scraps = await newPosts.map(post => post.scrap).flat();
-    // posts = await scraps.filter(scrap => scrap === userInfo.id);
-
     // 스크랩 영역 끝
 
     renderPost();

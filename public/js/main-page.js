@@ -17,7 +17,7 @@ const renderPost = () => {
       <span class="main-post-image"><span class="main-post-image-hole"></span></span>
       <div class="main-post-contents">
       </div>
-      <div class="main-post-like main-post-scrap" >
+      <div class="main-post-like" >
         <span class="main-post-postTitle">${post.title}</span>
         <span class="main-post-songTitle">${post.content}</span>
       </div>
@@ -35,6 +35,10 @@ const applyThumbnail = () => {
     item.classList.add(`${posts[i].id}`);
     item.style.backgroundImage = `url('${posts[i].music.thumbnail}')`;
   });
+};
+
+const addNewWrite = () => {
+  
 };
 
 const request = {
@@ -55,8 +59,8 @@ const displayLoading = () => {
 };
 // 다음 데이터 확인해서 출력
 const loadNextPosts = () => {
-  const { scrollY } = window;
-  if (scrollY + document.body.getBoundingClientRect().height >= $mainMain.scrollHeight + 50 && !isLastPage) {
+  const { pageYOffset } = window;
+  if (pageYOffset + document.body.getBoundingClientRect().height >= $mainMain.scrollHeight + 50 && !isLastPage) {
     displayLoading();
     setTimeout(async () => {
       sortBy = (orderState === 'recent') ? 'date'
@@ -90,7 +94,7 @@ const displayBtn = () => {
   $icon.style.display = scrollY >= 450 ? 'block' : 'none';
 };
 
-// events 
+// events
 window.onload = () => {
   (async () => {
     sortBy = orderState === 'recent' ? 'date'
@@ -112,7 +116,6 @@ document.onscroll = _.throttle(() => {
 
 $mainBoard.onclick = e => {
   if (e.target.matches('ul')) return;
-  const { scrollY } = window;
   sessionStorage.setItem('post-id', e.target.closest('li').classList[1]);
   window.location.assign('./posted-page.html');
 };
@@ -151,5 +154,9 @@ $orderPanel.onclick = e => {
     applyThumbnail();
     displayBtn();
   })();
+<<<<<<< HEAD
 };
     
+=======
+};
+>>>>>>> f44e57c6a80a282afe7b152fecae4be82c1aa714

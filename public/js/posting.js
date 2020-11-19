@@ -2,7 +2,9 @@ let videoId;
 let selectedData;
 let musicItems;
 let count;
-
+let count1 = 0; // 유튜브 노래 선택여부
+let count2 = 0; // 게시글 제목 작성 여부
+let count3 = 0; // 게시글 내용 작성여부
 //DOMs
 const $addMusic = document.querySelector(".add-music-btn");
 const $searchCoverContainer = document.querySelector(".search-cover-container");
@@ -13,17 +15,27 @@ const $musicLists = document.querySelector(".music-lists");
 const $selectedMusic = document.querySelector(".selected-music");
 const $previousBtn = document.querySelector(".previous-page-btn");
 const $nextBtn = document.querySelector(".next-page-btn");
+<<<<<<< HEAD
 
 
 
 // 작성된 내용 DB에 보내기
+=======
+>>>>>>> f44e57c6a80a282afe7b152fecae4be82c1aa714
 const $completeBtn = document.querySelector(".complete-btn");
 const $cancleBtn = document.querySelector(".cancel-btn");
 const $postTitle = document.querySelector(".post-title");
 const $postContent = document.getElementById("post-content");
-
+const $contentShowError = document.querySelector(".content-show-error");
+const $titleShowError = document.querySelector(".title-show-error");
 
 // Event Handler
+window.onload = () => {
+  $postTitle.value = "";
+  $postContent.value = "";
+  $inputSearchMusic.value = "";
+};
+
 $addMusic.onclick = () => {
   $searchCoverContainer.classList.add("active");
 };
@@ -46,7 +58,9 @@ $inputSearchMusic.onkeyup = async (e) => {
 
   count = 0;
   $previousBtn.style.display = "none";
+  count1 = 1;
 
+  if (count1 + count2 + count3 === 3) $completeBtn.disabled = false;
   setTimeout(() => {
     $searchMoreBtnWrapper.classList.add("showBtn");
   }, 400);
@@ -58,7 +72,7 @@ $inputSearchMusic.onkeyup = async (e) => {
     musicItems = await res.json();
     const musicLists = await musicItems;
     // console.log(musicLists);
-    $musicLists.innerHTML = '';
+    $musicLists.innerHTML = "";
     $musicLists.innerHTML += musicLists.items
       .map((item) => {
         return `<li class="${item.id.videoId}">
@@ -154,12 +168,58 @@ $previousBtn.onclick = async () => {
     console.error(err);
   }
 };
+// 제목 최대 입력 글자수 제한
+$postTitle.oninput = () => {
+  const titleLength = $postTitle.value.length;
+  if (titleLength >= 20) {
+    $postTitle.textContent = $postTitle.value.substring(0, 20);
+    $titleShowError.textContent = "입력 가능한 글자수를 초과하였습니다.";
+  } else {
+    $titleShowError.textContent = "";
+  }
+};
+// 게시물 최대 입력 글자수 제한
+$postContent.oninput = () => {
+  const contentLength = $postContent.value.length;
+  if (contentLength >= 250) {
+    $postContent.value = $postContent.value.substring(0, 250);
+    $contentShowError.textContent = "입력 가능한 글자수를 초과하였습니다.";
+  } else {
+    $contentShowError.textContent = "";
+  }
+};
 
+document.body.onkeyup = (e) => {
+  if (!e.key === "Enter" || !$inputSearchMusic.value) return;
+
+  if (e.target === $inputSearchMusic) count1 = 1;
+
+  if ($postContent.value !== "") count3 = 1;
+  else count3 = 0;
+
+  if ($postTitle.value !== "") count2 = 1;
+  else count2 = 0;
+
+  if (count1 + count2 + count3 === 3) {
+    $completeBtn.disabled = false;
+    $completeBtn.style["box-shadow"] = "0 0 4px 5px skyblue inset";
+    $completeBtn.style.cursor = "pointer";
+    $completeBtn.classList.add("satisfied");
+  } else {
+    $completeBtn.disabled = true;
+    $completeBtn.style.cursor = "default";
+    $completeBtn.style["box-shadow"] = "";
+    $completeBtn.classList.remove("satisfied");
+  }
+};
+
+// 작성 완료하기
 $completeBtn.onclick = async () => {
   const loginUser = JSON.parse(sessionStorage.getItem("user"));
   const today = new Date();
 
   if ($postTitle.value === "" || $postContent.value === "") return;
+
   try {
     const res = await fetch("/posts");
     const posts = await res.json();
@@ -169,7 +229,7 @@ $completeBtn.onclick = async () => {
 
     const postingData = {
       id: postId,
-      writter: loginUser.nickname,
+      writter: loginUser.id,
       date: `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`,
       music: {
         thumbnail: selectedData.snippet.thumbnails.medium.url,
