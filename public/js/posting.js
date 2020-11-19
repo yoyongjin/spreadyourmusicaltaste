@@ -16,6 +16,13 @@ const $selectedMusic = document.querySelector(".selected-music");
 const $previousBtn = document.querySelector(".previous-page-btn");
 const $nextBtn = document.querySelector(".next-page-btn");
 
+// 작성된 내용 DB에 보내기
+const $completeBtn = document.querySelector(".complete-btn");
+const $cancleBtn = document.querySelector(".cancel-btn");
+const $postTitle = document.querySelector(".post-title");
+const $postContent = document.getElementById("post-content");
+
+
 // Event Handler
 $addMusic.onclick = () => {
   $searchCoverContainer.classList.add("active");
@@ -53,7 +60,7 @@ $inputSearchMusic.onkeyup = async (e) => {
     musicItems = await res.json();
     const musicLists = await musicItems;
     // console.log(musicLists);
-
+    $musicLists.innerHTML = '';
     $musicLists.innerHTML += musicLists.items
       .map((item) => {
         return `<li class="${item.id.videoId}">
@@ -150,12 +157,6 @@ $previousBtn.onclick = async () => {
   }
 };
 
-// 작성된 내용 DB에 보내기
-const $completeBtn = document.querySelector(".complete-btn");
-const $cancleBtn = document.querySelector(".cancel-btn");
-const $postTitle = document.querySelector(".post-title");
-const $postContent = document.getElementById("post-content");
-
 $completeBtn.onclick = async () => {
   const loginUser = JSON.parse(sessionStorage.getItem("user"));
   const today = new Date();
@@ -188,6 +189,7 @@ $completeBtn.onclick = async () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(postingData),
     });
+    window.location.assign("/main-page.html");
   } catch (err) {
     console.error(err);
   }
