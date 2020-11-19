@@ -47,7 +47,6 @@ const renderWritterInfo = post => {
   $postedpageYtTitle.textContent = post.music.title;
   $postedPageScrapBtn.nextElementSibling.textContent = post.scrap.length;
   $postedPageLikeBtn.nextElementSibling.textContent = post.like.length;
-  $postedPageYtlink.setAttribute('href', post.music.url);
 };
 
 const checkPressedLikeBtn = arr => {
@@ -80,19 +79,17 @@ const checkIfWritter = postWritter => {
 };
 
 // Events
-window.onload = () => {
-  (async () => {
-    userInfo = JSON.parse(sessionStorage.getItem('user'));
-    console.log(userInfo);
-    const res = await request.get(`/posts/${sessionStorage.getItem('post-id')}`);
-    const post = await res.json();
-    console.log(post.writter);
-    renderWritterInfo(post);
-    checkIfWritter(post.writter);
-    if (checkPressedLikeBtn(post.like)) $postedPageLikeBtn.classList.add('pressed');
-    if (checkPressedScrapBtn(post.scrap)) $postedPageScrapBtn.classList.add('pressed');
-  })();
-};
+document.addEventListener('DOMContentLoaded', async () => {
+  userInfo = JSON.parse(sessionStorage.getItem('user'));
+  console.log(userInfo);
+  const res = await request.get(`/posts/${sessionStorage.getItem('post-id')}`);
+  const post = await res.json();
+  console.log(post.writter);
+  renderWritterInfo(post);
+  checkIfWritter(post.writter);
+  if (checkPressedLikeBtn(post.like)) $postedPageLikeBtn.classList.add('pressed');
+  if (checkPressedScrapBtn(post.scrap)) $postedPageScrapBtn.classList.add('pressed');
+});
 
 $postedpageAlbum.onclick = e => {
   console.log(e.target);

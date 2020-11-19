@@ -23,6 +23,7 @@ const $postTitle = document.querySelector(".post-title");
 const $postContent = document.getElementById("post-content");
 const $contentShowError = document.querySelector(".content-show-error");
 const $titleShowError = document.querySelector(".title-show-error");
+const $searchMusicTitle = document.querySelector('.search-music-title');
 
 // Event Handler
 window.onload = () => {
@@ -62,7 +63,7 @@ $inputSearchMusic.onkeyup = async (e) => {
     $searchMoreBtnWrapper.classList.add("showBtn");
   }, 400);
 
-  const musicUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${$inputSearchMusic.value}&key=AIzaSyAc3Bpa6FdYzU_4MAk5IltowVJdbW8jlsU`;
+  const musicUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${$inputSearchMusic.value}&key=AIzaSyBmXKte4MYkU1dWxEOcSdTag5Ew0wXE0T0`;
 
   try {
     const res = await fetch(musicUrl);
@@ -106,7 +107,7 @@ const renderSelectedMusic = () => {
 
 // 다음 검색 결과 보기
 $nextBtn.onclick = async () => {
-  const nextMusicUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${$inputSearchMusic.value}&pageToken=${musicItems.nextPageToken}&key=AIzaSyAc3Bpa6FdYzU_4MAk5IltowVJdbW8jlsU`;
+  const nextMusicUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${$inputSearchMusic.value}&pageToken=${musicItems.nextPageToken}&key=AIzaSyBmXKte4MYkU1dWxEOcSdTag5Ew0wXE0T0`;
 
   $previousBtn.style.display = "block";
   count++;
@@ -135,7 +136,7 @@ $nextBtn.onclick = async () => {
 
 // 이전 검색 결과 보기
 $previousBtn.onclick = async () => {
-  const nextMusicUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${$inputSearchMusic.value}&pageToken=${musicItems.prevPageToken}&key=AIzaSyAc3Bpa6FdYzU_4MAk5IltowVJdbW8jlsU`;
+  const nextMusicUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${$inputSearchMusic.value}&pageToken=${musicItems.prevPageToken}&key=AIzaSyBmXKte4MYkU1dWxEOcSdTag5Ew0wXE0T0`;
 
   try {
     const res = await fetch(nextMusicUrl);
@@ -168,8 +169,8 @@ $previousBtn.onclick = async () => {
 // 제목 최대 입력 글자수 제한
 $postTitle.oninput = () => {
   const titleLength = $postTitle.value.length;
-  if (titleLength >= 20) {
-    $postTitle.textContent = $postTitle.value.substring(0, 20);
+  if (titleLength >= 30) {
+    $postTitle.textContent = $postTitle.value.substring(0, 30);
     $titleShowError.textContent = "입력 가능한 글자수를 초과하였습니다.";
   } else {
     $titleShowError.textContent = "";
@@ -197,7 +198,7 @@ document.body.onkeyup = (e) => {
   if ($postTitle.value !== "") count2 = 1;
   else count2 = 0;
 
-  if (count1 + count2 + count3 === 3) {
+  if (count1 + count2 + count3 === 3 && $postContent.value.length < 250 && $postTitle.value.length < 30) {
     $completeBtn.disabled = false;
     $completeBtn.style["box-shadow"] = "0 0 4px 5px skyblue inset";
     $completeBtn.style.cursor = "pointer";
@@ -220,23 +221,25 @@ $completeBtn.onclick = async () => {
   try {
     const res = await fetch("/posts");
     const posts = await res.json();
-    const postId = posts.length
-      ? Math.max(...posts.map((post) => post.id)) + 1
-      : 1;
+    // const postId = posts.length
+    //   ? Math.max(...posts.map((post) => post.id)) + 1
+    //   : 1;
 
     const postingData = {
-      id: postId,
       writter: loginUser.id,
       date: `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`,
       music: {
         thumbnail: selectedData.snippet.thumbnails.medium.url,
         url: `https://www.youtube.com/watch?v=${selectedData.id.videoId}`,
         title: selectedData.snippet.title,
+        musicid: selectedData.id.videoId
       },
       content: $postContent.value,
       title: $postTitle.value,
       like: [],
       scrap: [],
+      likeLength: 0,
+      scrapLength: 0,
     };
     // console.log(postingData);
     await fetch("/posts", {
@@ -252,5 +255,9 @@ $completeBtn.onclick = async () => {
 
 // 작성 취소하기
 $cancleBtn.onclick = () => {
-  window.location.assign("main-page.html");
+  window.location.assign("main-page.html");ㅏㄴ저
+};
+
+$searchMusicTitle.onmouseenter = e => {
+  e.target.parentNode.style.background = 'linear-gradient(45deg, #ff0a6c, #4a3cdb)';
 };

@@ -114,200 +114,25 @@
       "id": "yuna12",
       "pw": "yuna1212",
       "nickname": "yunada"
+    },
+    {
+      "id": "rladydals2",
+      "pw": "rladydals2",
+      "nickname": "용민2"
     }
   ],
   "posts": [
     {
-      "id": 13,
-      "writter": "kym123",
-      "date": "2020-11-14",
-      "music": {
-        "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71vJUVFYIZL._SL1500_.jpg",
-        "url": "https://yotube.com",
-        "title": "oasis - stop the clock"
-      },
-      "content": "oasis- stop the clock.",
-      "title": "oasis stop the clock",
-      "like": [
-        "rladydals1"
-      ],
-      "scrap": [
-        "gg2929",
-        "gg2929",
-        "rladydals"
-      ]
-    },
-    {
-      "id": 12,
       "writter": "rladydals",
-      "date": "2020-07-12",
+      "date": "2020-11-19",
       "music": {
-        "thumbnail": "https://www.breaknews.com/imgdata/breaknews_com/200810/200810024725581.jpg",
-        "url": "https://yotube.com",
-        "title": "oasis - dig out your soul"
+        "thumbnail": "https://i.ytimg.com/vi/ATVDtfUe8pY/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=ATVDtfUe8pY",
+        "title": "칭찬받는 코드 작성법 (처음 HTML/CSS 공부하시는 분들이라면 꼭꼭 보세요!)"
       },
-      "content": "oasis - dig out your soul",
-      "title": "oasis - dig out your soul",
+      "content": "김버그",
+      "title": "김버그",
       "like": [
-        "rladydals1",
-        "rladydals",
-        1,
-        2,
-        3,
-        4,
-        5,
-        "5",
-        "5",
-        "5"
-      ],
-      "scrap": [
-        "rladydals",
-        1,
-        2,
-        3,
-        "5"
-      ]
-    },
-    {
-      "id": 10,
-      "writter": "kym123",
-      "date": "2008-02-17",
-      "music": {
-        "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/81B5uofARwL._SL1400_.jpg",
-        "url": "https://yotube.com",
-        "title": "the best of keane"
-      },
-      "content": "@the best of keane.",
-      "title": "@핫the best of keane...",
-      "like": [
-        "rladydals",
-        "rladydals1"
-      ],
-      "scrap": [
-        "rladydals"
-      ]
-    },
-    {
-      "id": 9,
-      "writter": "rladydals",
-      "date": "2012-11-10",
-      "music": {
-        "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/51UREJ1dtJL._AC_.jpg",
-        "url": "https://yotube.com",
-        "title": "keane - perfect symmetry"
-      },
-      "content": "@British rock band keane - perfect symmetry, new single...",
-      "title": "keane - perfect symmetry!!!",
-      "like": [
-        "rladydals1",
-        "rladydals",
-        1,
-        2,
-        3,
-        4,
-        5,
-        "5",
-        "5",
-        "5"
-      ],
-      "scrap": [
-        1,
-        2,
-        3,
-        "5"
-      ]
-    },
-    {
-      "id": 8,
-      "writter": "rladydals",
-      "date": "2013-01-13",
-      "music": {
-        "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRscVoylRoI_T0jR0snpl4u6QBOxzGhhHfXMg&usqp=CAU",
-        "url": "https://yotube.com",
-        "title": "aimyon - let the night"
-      },
-      "content": "@japanese female singer, aimyon - let the night",
-      "title": "aimyon - let the night,!! songs",
-      "like": [
-        "rladydals",
-        1,
-        2,
-        5
-      ],
-      "scrap": [
-        "rladydals",
-        1,
-        2,
-        3
-      ]
-    },
-    {
-      "id": 7,
-      "writter": "kym1dsds23",
-      "date": "2020-06-23",
-      "music": {
-        "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfscLfV2Q4pfWH9Us1NscGBfKC3O4wj74S2w&usqp=CAU",
-        "url": "https://yotube.com",
-        "title": "@oasis-the masterplan"
-      },
-      "content": "@British rock band oasis released new single...",
-      "title": "@the masterplan by Oasis",
-      "like": [
-        "yongjin",
-        "rladydals",
-        1
-      ],
-      "scrap": [
-        "yongjin",
-        1,
-        2,
-        3
-      ],
-      "like.length": 3,
-      "scrap.length": 4
-    },
-    {
-      "id": 6,
-      "writter": "rladydals",
-      "date": "2012-12-23",
-      "music": {
-        "thumbnail": "https://cdn.shopify.com/s/files/1/0001/9650/9713/products/8be8162ec7f42e86e26b69296b04a315_1338656181_800x.jpg?v=1556383429",
-        "url": "https://yotube.com",
-        "title": "@원더걸스-Like this"
-      },
-      "content": "@the best girl band of South kore, wondergirls, released their new song.",
-      "title": "@wonder girls-like this",
-      "like": [
-        "rladydals1",
-        1,
-        2,
-        5,
-        4,
-        1,
-        3,
-        5,
-        6
-      ],
-      "scrap": [
-        "rladydals1",
-        1,
-        2,
-        3
-      ]
-    },
-    {
-      "id": 5,
-      "writter": "kym3",
-      "date": "2018-11-10",
-      "music": {
-        "thumbnail": "https://i.ebayimg.com/images/g/WO0AAOSwanhbhW3I/s-l400.jpg",
-        "url": "https://yotube.com",
-        "title": "blur-song2"
-      },
-      "content": "British rock band blur released new single...",
-      "title": "blur best of the songs",
-      "like": [
-        "rladydals1",
         "rladydals",
         1,
         2,
@@ -317,212 +142,169 @@
       "scrap": [
         1,
         2
-      ]
-    },
-    {
-      "id": 4,
-      "writter": "rladydals",
-      "date": "2020-01-18",
-      "music": {
-        "thumbnail": "https://upload.wikimedia.org/wikipedia/en/4/4c/13_%28Blur_album_-_cover_art%29.jpg",
-        "url": "https://yotube.com",
-        "title": "blur-tender"
-      },
-      "content": "British rock band blur released new single...",
-      "title": "blur best of the songs",
-      "like": [
-        "rladydals",
-        1,
-        2,
-        5
       ],
-      "scrap": [
-        1,
-        2,
-        3
-      ]
+      "likeLength": 5,
+      "scrapLength": 2,
+      "id": 10
     },
     {
-      "id": 2,
-      "writter": "kym1dsds23",
-      "date": "2019-11-23",
+      "writter": "rladydals",
+      "date": "2020-11-19",
       "music": {
-        "thumbnail": "https://t1.daumcdn.net/cfile/tistory/99628F415B9CCD5506",
-        "url": "https://yotube.com",
-        "title": "sunmi - siren"
+        "thumbnail": "https://i.ytimg.com/vi/AMoDKhrlc8M/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=AMoDKhrlc8M",
+        "title": "[김버그X구름] 버그 없는 시리즈 제작 후기"
       },
-      "content": "sunmi - siren",
-      "title": "sunmi - siren",
+      "content": "김버그2",
+      "title": "김버그2",
       "like": [
-        "nara12345",
-        "rladydals",
         1,
         2,
-        5,
-        4,
-        1
+        3,
+        4
       ],
       "scrap": [
         1,
         2,
         3,
         4,
-        5
-      ]
+        5,
+        7
+      ],
+      "id": 11,
+      "likeLength": 4,
+      "scrapLength": 6
     },
     {
-      "id": 17,
-      "writter": "용지니",
+      "writter": "rladydals",
       "date": "2020-11-19",
       "music": {
-        "thumbnail": "https://i.ytimg.com/vi/jJKHTJy_eek/mqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=jJKHTJy_eek",
-        "title": "태연(Taeyeon) - 만약에 ♬ #비긴어게인3 #DJ티비씨"
+        "thumbnail": "https://i.ytimg.com/vi/aS_0aPCARpg/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=aS_0aPCARpg",
+        "title": "GIRL&#39;S DAY (걸스데이) - DARLING (달링) Official Audio"
       },
-      "content": "태연(Taeyeon) - 만약에",
-      "title": "태연(Taeyeon) - 만약에",
-      "like": [],
-      "scrap": []
+      "content": "걸데달링\n",
+      "title": "걸데 달링",
+      "like": [
+        1
+      ],
+      "scrap": [
+        1
+      ],
+      "likeLength": 1,
+      "scrapLength": 1,
+      "id": 12
     },
     {
-      "id": 19,
-      "writter": "김용민123",
+      "writter": "rladydals",
       "date": "2020-11-19",
       "music": {
-        "thumbnail": "https://i.ytimg.com/vi/h86R8IKrhxQ/mqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=h86R8IKrhxQ",
-        "title": "MTV Wonder Girls S1-e02(泫雅HyunA) [WGCN中文字幕] part1"
+        "thumbnail": "https://i.ytimg.com/vi/4G1BFFcEgpc/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=4G1BFFcEgpc",
+        "title": "Don&#39;t Look Back In Anger"
       },
-      "content": "선예와 현아의 옷 리폼하기 동영상입니다 재밋게 봐주세요!",
-      "title": "현아가 있던 시절의 원더걸스!",
-      "like": [],
-      "scrap": []
+      "content": "sdfsdf",
+      "title": "oasis don'tlooka",
+      "like": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8.9,
+        0
+      ],
+      "scrap": [
+        1,
+        2,
+        3
+      ],
+      "likeLength": 8,
+      "scrapLength": 3,
+      "id": 13
     },
     {
-      "id": 20,
-      "writter": "용민천재123",
-      "date": "2020-11-19",
+      "writter": "rladydals",
+      "date": "2020-11-20",
       "music": {
-        "thumbnail": "https://i.ytimg.com/vi/r_x13Ok4uJg/mqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=r_x13Ok4uJg",
-        "title": "01. 주인공 [선미 (SUNMI) – 주인공] mp3 audio"
+        "thumbnail": "https://i.ytimg.com/vi/wiAI6AUtltE/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=wiAI6AUtltE",
+        "title": "Wonder Girls - So Hot, 원더걸스 - 쏘 핫, Music Core 20080621"
       },
-      "content": "소녀시대 팬이었는데 이노래 한번 듣고 바로 갈아탔어요!",
-      "title": "선미 - 주인공 들어보세요! 너무좋아요!",
-      "like": [],
-      "scrap": []
+      "content": "wondergirls so hot",
+      "title": "wonder girls - so hot",
+      "like": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "scrap": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "likeLength": 4,
+      "scrapLength": 9,
+      "id": 14
     },
     {
-      "id": 21,
-      "writter": "용민천재123",
-      "date": "2020-11-19",
+      "writter": "rladydals",
+      "date": "2020-11-20",
       "music": {
-        "thumbnail": "https://i.ytimg.com/vi/7jTq2FXKr0g/mqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=7jTq2FXKr0g",
-        "title": "Michael Jackson - Dangerous (Audio)"
+        "thumbnail": "https://i.ytimg.com/vi/PWD04kHB_7M/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=PWD04kHB_7M",
+        "title": "HYUNA(현아) - &#39;잘나가서 그래 (Feat. 정일훈 Of BTOB)&#39; (Roll Deep) [Audio]"
       },
-      "content": "너무좋아요 진짜 매일 삼천번씩 듣고있어요!",
-      "title": "micheal jackson- dangerous",
+      "content": "내가다 잘나가서그래",
+      "title": "잘나가서그래",
       "like": [],
-      "scrap": []
+      "scrap": [],
+      "likeLength": 0,
+      "scrapLength": 0,
+      "id": 16
     },
     {
-      "id": 22,
-      "writter": "김용민123",
-      "date": "2020-11-19",
+      "writter": "rladydals",
+      "date": "2020-11-20",
       "music": {
-        "thumbnail": "https://i.ytimg.com/vi/6diAJ6MrkiE/mqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=6diAJ6MrkiE",
-        "title": "[Simply K-Pop] Wonder Girls(원더걸스) &#39;Why So Lonely&#39;"
+        "thumbnail": "https://i.ytimg.com/vi/CAC-onWPMB0/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=CAC-onWPMB0",
+        "title": "Kiss Me"
       },
-      "content": "fggffgffg",
-      "title": "원더걸스",
+      "content": "best song",
+      "title": "sixpence none the richer",
       "like": [],
-      "scrap": []
+      "scrap": [],
+      "likeLength": 0,
+      "scrapLength": 0,
+      "id": 17
     },
     {
-      "id": 20,
-      "writter": "yongjin",
-      "date": "2020-11-19",
+      "writter": "rladydals",
+      "date": "2020-11-20",
       "music": {
-        "thumbnail": "https://i.ytimg.com/vi/kx0ynC8Thlw/mqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=kx0ynC8Thlw",
-        "title": "All SSD Types EXPLAINED"
+        "thumbnail": "https://i.ytimg.com/vi/rSD7jb4Xjq8/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=rSD7jb4Xjq8",
+        "title": "Snow Man「D.D.」MV (YouTube ver.)"
       },
-      "content": "sdsdsd",
-      "title": "dssd",
+      "content": "dskfjhsdkfjhsdkjfhskdfhsdkjfhskdjfksdjfhksdjhfksdjhfksehfkjsdkvbksdvbksdjbvksdjvbksdjbkvjjfhskdfhsdkjfhskdjfksdjfhksdjhfksdjhfksehfkjsdkvbksdvbksdjbvksdjvbksdjbkvjjfhskdfhsdkjfhskdjfksdjfhksdjhfksdjhfksehfkjsdkvbksdvbksdjbvksdjvbksdjbkvjjfhskdfhsdkjf",
+      "title": "sdfjdfshkdsfjhksdjfhksdjfhksdfhksdjf",
       "like": [],
-      "scrap": []
-    },
-    {
-      "id": 21,
-      "writter": "yuna12",
-      "date": "2020-11-19",
-      "music": {
-        "thumbnail": "https://i.ytimg.com/vi/3vVHy0XoIN4/mqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=3vVHy0XoIN4",
-        "title": "Wonder Girls &quot;Tell Me&quot; M/V"
-      },
-      "content": "dd",
-      "title": "dd",
-      "like": [],
-      "scrap": []
-    },
-    {
-      "id": 22,
-      "writter": "yuna12",
-      "date": "2020-11-19",
-      "music": {
-        "thumbnail": "https://i.ytimg.com/vi/t7X8qhESIfs/mqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=t7X8qhESIfs",
-        "title": "Wonder Girls - Tell Me, 원더걸스 - 텔미, Music Core 20070908"
-      },
-      "content": "텔미",
-      "title": "텔미",
-      "like": [],
-      "scrap": []
-    },
-    {
-      "id": 23,
-      "writter": "yuna12",
-      "date": "2020-11-19",
-      "music": {
-        "thumbnail": "https://i.ytimg.com/vi/zV9C4fh3Fuc/mqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=zV9C4fh3Fuc",
-        "title": "Wonder Girls (원더걸스) - Tell Me (텔미) Stage Mix 무대모음 교차편집"
-      },
-      "content": "fsdsdf",
-      "title": "dsdsfdsf",
-      "like": [],
-      "scrap": []
-    },
-    {
-      "id": 20,
-      "writter": "ehd",
-      "date": "2020-11-19",
-      "music": {
-        "thumbnail": "https://i.ytimg.com/vi/rWpnZafjauU/mqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=rWpnZafjauU",
-        "title": "BLUE"
-      },
-      "content": "띵곡 추천",
-      "title": "뜨로이 씨반",
-      "like": [],
-      "scrap": []
-    },
-    {
-      "id": 21,
-      "writter": "ehd",
-      "date": "2020-11-19",
-      "music": {
-        "thumbnail": "https://i.ytimg.com/vi/gQCpoIbPD5s/mqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=gQCpoIbPD5s",
-        "title": "Wonder Girls-이 바보 (This Fool)"
-      },
-      "content": "lorem Ipsum dadsadsddddsdsadasdsadsadwewewewewew조윤아edasdwewdsdsdsd",
-      "title": "조윤아조장님",
-      "like": [],
-      "scrap": []
+      "scrap": [
+        "rladydals",
+        1
+      ],
+      "likeLength": 0,
+      "scrapLength": 1,
+      "id": 19
     }
   ],
   "mymusic": [
