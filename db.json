@@ -94,12 +94,22 @@
       "id": "rladydals",
       "pw": "rladydals",
       "nickname": "김용민123"
+    },
+    {
+      "id": "nara12345",
+      "pw": "skfk12345",
+      "nickname": "나라짱"
+    },
+    {
+      "id": "rlaehdcks",
+      "pw": "rlaehdcks",
+      "nickname": "ehd"
     }
   ],
   "posts": [
     {
       "id": 14,
-      "writter": "kym123",
+      "writter": "rladydals",
       "date": "2020-12-14",
       "music": {
         "thumbnail": "https://upload.wikimedia.org/wikipedia/en/7/7b/Sunmi_-_Noir.jpg",
@@ -109,6 +119,7 @@
       "content": "sunmi - Noir.",
       "title": "sunmi - Noir",
       "like": [
+        "nara12345",
         "rladydals1",
         "rladydals"
       ],
@@ -133,13 +144,12 @@
       ],
       "scrap": [
         "gg2929",
-        "gg2929",
-        "rladydals"
+        "gg2929"
       ]
     },
     {
       "id": 12,
-      "writter": "kym3",
+      "writter": "rladydals",
       "date": "2020-07-12",
       "music": {
         "thumbnail": "https://www.breaknews.com/imgdata/breaknews_com/200810/200810024725581.jpg",
@@ -188,7 +198,7 @@
     },
     {
       "id": 9,
-      "writter": "kym3",
+      "writter": "rladydals",
       "date": "2012-11-10",
       "music": {
         "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/51UREJ1dtJL._AC_.jpg",
@@ -213,12 +223,13 @@
         1,
         2,
         3,
-        "5"
+        "5",
+        "rladydals"
       ]
     },
     {
       "id": 8,
-      "writter": "kydsdm123",
+      "writter": "rladydals",
       "date": "2013-01-13",
       "music": {
         "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRscVoylRoI_T0jR0snpl4u6QBOxzGhhHfXMg&usqp=CAU",
@@ -277,7 +288,7 @@
     },
     {
       "id": 6,
-      "writter": "용진천재123",
+      "writter": "rladydals",
       "date": "2012-12-23",
       "music": {
         "thumbnail": "https://cdn.shopify.com/s/files/1/0001/9650/9713/products/8be8162ec7f42e86e26b69296b04a315_1338656181_800x.jpg?v=1556383429",
@@ -315,38 +326,8 @@
       ]
     },
     {
-      "id": 5,
-      "writter": "kym3",
-      "date": "2018-11-10",
-      "music": {
-        "thumbnail": "https://i.ebayimg.com/images/g/WO0AAOSwanhbhW3I/s-l400.jpg",
-        "url": "https://yotube.com",
-        "title": "blur-song2"
-      },
-      "content": "British rock band blur released new single...",
-      "title": "blur best of the songs",
-      "like": [
-        "rladydals1",
-        "rladydals",
-        1,
-        2,
-        3,
-        4,
-        5,
-        "5",
-        "5",
-        "5"
-      ],
-      "scrap": [
-        1,
-        2,
-        3,
-        "5"
-      ]
-    },
-    {
       "id": 4,
-      "writter": "kydsdm123",
+      "writter": "rladydals",
       "date": "2020-01-18",
       "music": {
         "thumbnail": "https://upload.wikimedia.org/wikipedia/en/4/4c/13_%28Blur_album_-_cover_art%29.jpg",
@@ -379,6 +360,7 @@
       "content": "sunmi - siren",
       "title": "sunmi - siren",
       "like": [
+        "nara12345",
         "rladydals",
         1,
         2,
