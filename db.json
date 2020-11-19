@@ -108,25 +108,6 @@
   ],
   "posts": [
     {
-      "id": 15,
-      "writter": "kym123",
-      "date": "2020-12-16",
-      "music": {
-        "thumbnail": "https://lh3.googleusercontent.com/proxy/Jo80SYq9v-c6rrKFDJTe0uO6YaiTf6rJ_CiHtwF-JrVSmGimN4nxzpI5WsV1VYnlgC00zhdUWYNaRh_Oqebb4RaX74LI2MJwIkXLfv28Pg2fhcbb9Sr63pY6ByF3VLx1HccV9uEHV3wPwk3oWXBSSDj4A4KyBSrU0Q",
-        "url": "https://yotube.com",
-        "title": "owlcity - hot airballoon"
-      },
-      "content": "owlcity - hot airballoon.",
-      "title": "owlcity - hot airballoon",
-      "like": [
-        "rladydals",
-        "rladydals1"
-      ],
-      "scrap": [
-        "rladydals"
-      ]
-    },
-    {
       "id": 13,
       "writter": "kym123",
       "date": "2020-11-14",
@@ -380,34 +361,6 @@
       ]
     },
     {
-      "id": 1,
-      "writter": "용진천재123",
-      "date": "2019-02-23",
-      "music": {
-        "thumbnail": "https://d24jnm9llkb1ub.cloudfront.net/icpn/190295489595/190295489595-cover-zoom.jpg",
-        "url": "https://yotube.com",
-        "title": "aimyon- marigold"
-      },
-      "content": "aimyon- marigold.",
-      "title": "aimyon- marigold",
-      "like": [
-        "rladydals1",
-        1,
-        2,
-        5,
-        4,
-        6
-      ],
-      "scrap": [
-        "rladydals1",
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    },
-    {
       "id": 17,
       "writter": "용지니",
       "date": "2020-11-19",
@@ -418,20 +371,6 @@
       },
       "content": "태연(Taeyeon) - 만약에",
       "title": "태연(Taeyeon) - 만약에",
-      "like": [],
-      "scrap": []
-    },
-    {
-      "id": 18,
-      "writter": "김용민123",
-      "date": "2020-11-19",
-      "music": {
-        "thumbnail": "https://i.ytimg.com/vi/1ye6D7ExAzg/mqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=1ye6D7ExAzg",
-        "title": "[부러우면 지는거다] JYP를 만나러 간 원더걸스! ＂예쁘다 진짜...♥＂  20200629"
-      },
-      "content": "원더걸스 멤버들한테 몰카를 당하는 영! 너무 재미있네요 다들 한번씩 보세요. 비오는데 조심하세요.",
-      "title": "혜림 결혼전에 만난 원더걸스와 박진영",
       "like": [],
       "scrap": []
     },

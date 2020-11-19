@@ -39,6 +39,10 @@ const applyThumbnail = () => {
   });
 };
 
+const addNewWrite = () => {
+  
+};
+
 const request = {
   get(url) {
     return fetch(url);
@@ -92,7 +96,7 @@ const displayBtn = () => {
   $icon.style.display = scrollY >= 450 ? 'block' : 'none';
 };
 
-// events 
+// events
 window.onload = () => {
   (async () => {
     sortBy = orderState === 'recent' ? 'date'
@@ -114,7 +118,6 @@ document.onscroll = _.throttle(() => {
 
 $mainBoard.onclick = e => {
   if (e.target.matches('ul')) return;
-  const { pageYOffset } = window;
   sessionStorage.setItem('post-id', e.target.closest('li').classList[1]);
   window.location.assign('./posted-page.html');
 };
