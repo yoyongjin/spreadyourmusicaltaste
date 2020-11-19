@@ -152,7 +152,3 @@ $orderPanel.onclick = e => {
     displayBtn();
   })();
 };
-
-document.oncontextmenu = () => {
-  history.go(0);
-};
