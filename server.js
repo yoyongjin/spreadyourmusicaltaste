@@ -12,9 +12,6 @@ const FileSync = require('lowdb/adapters/FileSync');
 const adapter = new FileSync('db.json');
 const db = low(adapter);
 
-function compare(key) {
-  return (a, b) => (a[key] > b[key] ? 1 : (a[key] < b[key] ? -1 : 0));
-}
 
 // Set default middlewares (logger, static, cors and no-cache)
 server.use(middlewares);
@@ -30,21 +27,11 @@ server.delete('/todos/completed', (req, res) => {
   res.send(db.get('todos').value());
 });
 
-// server.get('/posts?_page=:page&_limit=6&_sort=:sortBy&_order=desc', (req, res) => {
-//   const { sortBy } = req.params;
 
-//   if (sortBy === 'recent') {
-//     db.get('posts')
-//       .sort(compare('Date'))
-//       .write();
-
-//     res.send(db.get('posts').value());
-//   }// 최신순 정렬경우
-// });
 
 // Use default router
 server.use(router);
 
-server.listen(3000, () => {
+server.listen(4000, () => {
   console.log('JSON Server is running');
 });
