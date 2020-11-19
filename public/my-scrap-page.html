@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0" />
   <title>Document</title>
   <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/my-post-page.css" />
+  <link rel="stylesheet" href="./css/my-scrap-page.css" />
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <script defer src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script>
-  <script defer src="./js/my-post-page.js"></script>
+  <script defer src="./js/my-scrap-page.js"></script>
 </head>
 <body>
   <!-- 상단 로고 -->
   <nav class="main-nav-top">
-    <span class="main-nav-top-slogan">My Posts!</span>
+    <span class="main-nav-top-slogan">My Scraps!</span>
     <p class="main-nav-top-username"></p>
   </nav>
     <!-- 메인 게시판 영역 -->
@@ -39,9 +39,14 @@
   <nav class="main-nav">
     <ul class="main-nav-menus">
       <li class="main-nav-menu sort"><i class="fas fa-sort-amount-down"></i></li>
-      <li class="main-nav-menu posting"><a href=""><i class="fas fa-pencil-alt"></i></a></li>
-      <li class="main-nav-menu myPage"><a href="./my-page.html"><i class="fas fa-user"></i></a></li>
+      <li class="main-nav-menu posting"><a href="#" class="main-nav-posting"><i class="fas fa-pencil-alt"></i></a></li>
+      <li class="main-nav-menu myPage"><a href="./my-page.html" class="main-nav-myPage"><i class="fas fa-user"></i></a></li>
     </ul>
   </nav>
+  <ul class="order-panel">
+    <li class="order-panel-item recent selected">최신 순</li>
+    <li class="order-panel-item like">좋아요 많은 순</li>
+    <li class="order-panel-item scrap">스크랩 많은 순</li>
+  </ul>
 </body>
 </html>

@@ -41,6 +41,7 @@ body {
 
 .container-box {
   background: url(../image/login-bg.jpg);
+  background-size: cover;
   height: 100%;
 }
 
@@ -98,7 +99,7 @@ body {
 
 .signup-items input:focus {
   outline: none;
-  box-shadow: 0 0 3pt 2pt yellow;
+  box-shadow: 0 0 2pt 4pt #ab40f7;
 }
 
 .signup-btn {
@@ -122,9 +123,8 @@ body {
 }
 
 .focus-btn {
-  background-color: #dbdb30;
   transition-duration: 0.5s;
-  color: #666;
+  color: #fff;
 }
 
 .id-error,
