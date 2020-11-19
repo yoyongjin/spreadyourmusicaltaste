@@ -65,7 +65,7 @@ body {
 
 .mypage-member-link li {
   margin-left: 20px;
-  line-height: 100px;
+  line-height: 70px;
 }
 
 .mypage-member-link a {
@@ -76,10 +76,28 @@ body {
   color: inherit;
 }
 
-.list-box {
-  margin-top: 10px;
-  /* border: 2px solid #106AD2; */
-  border-radius: 10px;
+.mypage-member-link .mymusic-box {
+  height: 120px;
+  line-height: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.my-music {
+  width: 120px;
+  height: 120px;
+  background-size: contain;
+  border-radius: 50%;
+}
+
+.add-mymusic-btn {
+  background: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  outline: none;
+  border: 0;
+  padding: 0;
 }
 
 .mypage-member-icon {
@@ -91,13 +109,6 @@ body {
 .mypage-member-icon li {
   display: inline-block;
   margin-right: 10px;
-}
-
-.mypage-member-icon .user-lank {
-  display: flex;
-  justify-content: space-around;
-  padding: 0 100px;
-  margin: 20px 0;
 }
 
 .user-info {
@@ -143,4 +154,117 @@ body {
 .scrap-number,
 .posting-number {
   vertical-align: middle;
+}
+
+/* 추가 입력창 */
+
+.search-cover-container {
+  display: none;
+}
+
+.active {
+  display: block;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.search-music-container {
+  background: linear-gradient(45deg,
+      rgba(163, 44, 223, 0.9),
+      rgba(16, 106, 210, 0.9));
+  border-radius: 10px;
+  width: 300px;
+  padding: 15px 0 10px;
+  margin: 30px auto 20px;
+  text-align: center;
+  position: absolute;
+  top: 20.5%;
+  left: 33.5%;
+}
+
+.search-music-thumbnail {
+  width: 80px;
+  height: 55px;
+  margin: 0 5px;
+  border-radius: 3px;
+}
+
+.search-music-title {
+  width: 180px;
+  padding: 5px 0;
+  margin: 8px 5px 5px;
+  vertical-align: middle;
+  letter-spacing: 1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  line-height: 1.2;
+  height: 4rem;
+  text-align: left;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.search-music-radio {
+  display: none;
+}
+
+.search-more-btn-wrapper {
+  display: none;
+}
+
+.showBtn {
+  display: flex;
+  justify-content: space-around;
+}
+
+.previous-page-btn {
+  background: url(../image/angle-double-left-solid.svg);
+  background-repeat: no-repeat;
+  padding: 13px;
+  border: none;
+}
+
+.next-page-btn {
+  background: url(../image/angle-double-right-solid.svg);
+  background-repeat: no-repeat;
+  padding: 13px;
+  border: none;
+}
+
+.search-music-cancel {
+  background: url(../image/times-circle-regular.svg);
+  background-size: cover;
+  padding: 8px;
+  margin: 2px;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.input-search-music {
+  width: 270px;
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid #888;
+  border-radius: 10px;
+}
+
+.music-lists {
+  text-align: center;
+}
+
+.music-lists li {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
 }

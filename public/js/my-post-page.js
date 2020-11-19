@@ -63,9 +63,8 @@ const loadNextPosts = () => {
     displayLoading();
     setTimeout(async () => {
       // 마이 포스팅 시작
-      const res = await request.get('/posts');
-      const newPosts = await res.json();
-      const _posts = await newPosts.filter(post => post.writter === userInfo.id);
+      const res = await request.get(`/posts?writter_like=\\b${userInfo.id}\\b`);
+      const _posts = await res.json();
       // 마이 포스팅 끝
       if (_posts.length < 6) {
         posts = [...posts, ..._posts];
@@ -96,9 +95,8 @@ window.onload = () => {
     userInfo = JSON.parse(sessionStorage.getItem('user'));
     displayUserName(userInfo);
     // 마이 포스팅 시작
-    const res = await request.get('/posts');
-    const newPosts = await res.json();
-    posts = await newPosts.filter(post => post.writter === userInfo.id);
+    const res = await request.get(`/posts?writter_like=\\b${userInfo.id}\\b`);
+    posts = await res.json();
     // 마이 포스팅 끝
     renderPost();
     applyThumbnail();

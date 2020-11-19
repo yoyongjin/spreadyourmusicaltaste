@@ -104,6 +104,21 @@
       "id": "rlaehdcks",
       "pw": "rlaehdcks",
       "nickname": "ehd"
+    },
+    {
+      "id": "rlawoals",
+      "pw": "rlawoals",
+      "nickname": "잼옹"
+    },
+    {
+      "id": "rlaehdcks1",
+      "pw": "rlaehdcks",
+      "nickname": ""
+    },
+    {
+      "id": "dddddd",
+      "pw": "11111111",
+      "nickname": "11111"
     }
   ],
   "posts": [
@@ -468,6 +483,56 @@
       "title": "현아가 있던 시절의 원더걸스!",
       "like": [],
       "scrap": []
+    },
+    {
+      "id": 20,
+      "writter": "ehd",
+      "date": "2020-11-19",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/rWpnZafjauU/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=rWpnZafjauU",
+        "title": "BLUE"
+      },
+      "content": "띵곡 추천",
+      "title": "뜨로이 씨반",
+      "like": [],
+      "scrap": []
+    },
+    {
+      "id": 21,
+      "writter": "ehd",
+      "date": "2020-11-19",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/gQCpoIbPD5s/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=gQCpoIbPD5s",
+        "title": "Wonder Girls-이 바보 (This Fool)"
+      },
+      "content": "lorem Ipsum dadsadsddddsdsadasdsadsadwewewewewew조윤아edasdwewdsdsdsd",
+      "title": "조윤아조장님",
+      "like": [],
+      "scrap": []
+    }
+  ],
+  "mymusic": [
+    {
+      "id": "rladydals",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/en/7/7b/Sunmi_-_Noir.jpg",
+      "url": "https://www.youtube.com/watch?v=i20Op_qKa-M"
+    },
+    {
+      "id": "nara12345",
+      "thumbnail": "https://i.ytimg.com/vi/gQCpoIbPD5s/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=gQCpoIbPD5s"
+    },
+    {
+      "id": "rlaehdcks",
+      "thumbnail": "https://i.ytimg.com/vi/BzYnNdJhZQw/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=BzYnNdJhZQw"
+    },
+    {
+      "id": "rlaehdcks00",
+      "thumbnail": "https://i.ytimg.com/vi/Ub6IyAOTwr8/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=Ub6IyAOTwr8"
     }
   ]
 }
