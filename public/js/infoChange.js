@@ -27,6 +27,16 @@ const {id: currId, pw:currPw, nickname: currNickName} = JSON.parse(sessionStorag
 $displayId.textContent = `${currNickName}님`;
 
 //비밀번호 확인 후 다음페이지
+const request = {
+  patch(url, payload) {
+    return fetch(url, {
+      method: 'PATCH',
+      headers: { 'content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+  }
+}
+
 const pwChecked = () => {
   if ($changePwInput.value !== currPw) {
     $pwError.textContent = '비밀번호가 일치하지 않습니다.'
@@ -67,36 +77,42 @@ const finishChange = () => {
   if ($changingPwInput.value === $changedPwInput.value && !$myNickInput.value) {
     const changeUserPw = { id: currId, pw: $changedPwInput.value, nickname: currNickName }
     sessionStorage.setItem('user', JSON.stringify(changeUserPw));
+
+    request.patch(`/users/${sessionStorage.getItem('user.id')}`, {
+      pw: `${currPw}`
+    }).then(response => response.json())
+      // .then(users => console.log(users))
+      .then(_user => JSON.parse(_user))
+      .then(patched_user => { console.log(patched_user); })
+      .catch(err => console.error(err));  
     window.location.assign('my-page.html');
   }
 
   if ($changingPwInput.value === $changedPwInput.value && $myNickInput.value) {
     const changeUserInfo = { id: currId, pw: $changedPwInput.value, nickname: $myNickInput.value }
     sessionStorage.setItem('user', JSON.stringify(changeUserInfo));
+
+    request.patch(`/users/${JSON.parse(sessionStorage.getItem('user')).id}`, {
+      pw: `${currPw}`, nickname: `${currNickName}`
+    }).then(response => response.json())
+      // .then(users => console.log(users))
+      .then(_user => JSON.parse(_user))
+      .then(patched_user => { console.log(patched_user); })
+      .catch(err => console.error(err));  
     window.location.assign('my-page.html');
 
-    const request = {
-      patch(url, payload) {
-        return fetch(url, {
-          mothod: 'PATCH',
-          headers: { 'content-Type': 'application/json' },
-          body: JSON.stringify(payload)
-        });
-      }
-    }
-
-    request.patch(`/users/${sessionStorage.getItem('user.id')}`, {
+    request.patch(`/users/${JSON.parse(sessionStorage.getItem('user')).id}`, {
       pw: `${currPw}`
     }).then(response => response.json())
-      .then(users => console.log(users))
+      // .then(users => console.log(users))
+      .then(_user => JSON.parse(_user))
+      .then(patched_user => { console.log(patched_user); })
       .catch(err => console.error(err));  
-    request.patch(`/users/${sessionStorage.getItem('user.nickname')}`, {
+    request.patch(`/users/${JSON.parse(sessionStorage.getItem('user')).nickname}`, {
       pw: `${currNickName}`
     }).then(response => response.json())
       .then(users => console.log(users))
       .catch(err => console.error(err));  
-
-    
   }
 }
 
@@ -130,4 +146,4 @@ $changeCancleBtn.onclick = () => {
 
 $changeCancleBtn2.onclick = () => {
   window.location.assign('my-page.html');
-}
+};
