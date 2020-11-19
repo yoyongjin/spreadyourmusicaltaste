@@ -14,6 +14,8 @@ const $selectedMusic = document.querySelector(".selected-music");
 const $previousBtn = document.querySelector(".previous-page-btn");
 const $nextBtn = document.querySelector(".next-page-btn");
 
+
+
 // 작성된 내용 DB에 보내기
 const $completeBtn = document.querySelector(".complete-btn");
 const $cancleBtn = document.querySelector(".cancel-btn");
@@ -195,3 +197,9 @@ $completeBtn.onclick = async () => {
 $cancleBtn.onclick = () => {
   window.location.assign("main-page.html");
 };
+
+//게시물 없을 때 작성 완료 버튼 비활성화
+if($postContent.textContent === '') {
+  $completeBtn.setAttribute('disabled');
+}
+
