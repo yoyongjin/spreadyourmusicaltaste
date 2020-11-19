@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/posting.css" />
-    <script defer src='./js/posting.js'></script>
+    <script defer src="./js/posting.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -13,9 +13,8 @@
       <h2 class="post-music-heading">게시물 올리기</h2>
       <div class="post-music-wrapper">
         <button class="add-music-btn" type="button">음악 추가하기</button>
-        <div class='selected-music'>
+        <div class="selected-music">
           <!-- 여기에 렌더 -->
-
         </div>
         <input
           class="post-title"
@@ -35,15 +34,20 @@
       </div>
 
       <!-- 노래 검색창 -->
-      <div class='search-cover-container'>
+      <div class="search-cover-container">
         <div class="search-music-container">
-          <input class="input-search-music" type="text" />
+          <input
+            class="input-search-music"
+            type="text"
+            placeholder="찾을 노래 제목을 입력해주세요"
+          />
           <ul class="music-lists"></ul>
-          <div class='search-more-btn-wrapper'>
-            <button class='previous-page-btn'></button>
-            <button class='next-page-btn'></button>
+          <div class="search-more-btn-wrapper">
+            <button class="previous-page-btn"></button>
+            <button class="next-page-btn"></button>
           </div>
-          <button class="search-music-cancel" type='button'></button>
+          <button class="search-music-cancel" type="button"></button>
+        </div>
       </div>
     </section>
   </body>

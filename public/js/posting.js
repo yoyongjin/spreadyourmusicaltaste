@@ -21,6 +21,7 @@ $addMusic.onclick = () => {
   $searchCoverContainer.classList.add("active");
 };
 
+// 검색창 닫기
 $searchMusicCancel.onclick = () => {
   $searchCoverContainer.classList.remove("active");
   $searchMoreBtnWrapper.classList.remove("showBtn");
@@ -34,6 +35,7 @@ $inputSearchMusic.onchange = () => {
   $musicLists.innerHTML = "";
 };
 
+// 검색어 찾기
 $inputSearchMusic.onkeyup = async (e) => {
   if (e.key !== "Enter" || $inputSearchMusic.value === "") return;
 
@@ -64,6 +66,7 @@ $inputSearchMusic.onkeyup = async (e) => {
   }
 };
 
+// 검색된 음악 선택
 $musicLists.onclick = (e) => {
   if (!e.target.matches(".search-music-title")) return;
 
@@ -75,6 +78,7 @@ $musicLists.onclick = (e) => {
   renderSelectedMusic();
 };
 
+// 선택된 음악 랜더
 const renderSelectedMusic = () => {
   selectedData = musicItems.items.find((item) => {
     return item.id.videoId === videoId;
@@ -84,6 +88,7 @@ const renderSelectedMusic = () => {
   $selectedMusic.innerHTML = `<img class='render-music-thumbnail' src="${selectedData.snippet.thumbnails.medium.url}" alt="${selectedData.snippet.title}"> <span class='render-music-title'>${selectedData.snippet.title}</span>`;
 };
 
+// 다음 검색 결과 보기
 $nextBtn.onclick = async () => {
   const nextMusicUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${$inputSearchMusic.value}&pageToken=${musicItems.nextPageToken}&key=AIzaSyAc3Bpa6FdYzU_4MAk5IltowVJdbW8jlsU`;
 
@@ -112,6 +117,7 @@ $nextBtn.onclick = async () => {
   }
 };
 
+// 이전 검색 결과 보기
 $previousBtn.onclick = async () => {
   const nextMusicUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${$inputSearchMusic.value}&pageToken=${musicItems.prevPageToken}&key=AIzaSyAc3Bpa6FdYzU_4MAk5IltowVJdbW8jlsU`;
 
@@ -142,4 +148,52 @@ $previousBtn.onclick = async () => {
   } catch (err) {
     console.error(err);
   }
+};
+
+// 작성된 내용 DB에 보내기
+const $completeBtn = document.querySelector(".complete-btn");
+const $cancleBtn = document.querySelector(".cancel-btn");
+const $postTitle = document.querySelector(".post-title");
+const $postContent = document.getElementById("post-content");
+
+$completeBtn.onclick = async () => {
+  const loginUser = JSON.parse(sessionStorage.getItem("user"));
+  const today = new Date();
+
+  if ($postTitle.value === "" || $postContent.value === "") return;
+  try {
+    const res = await fetch("/posts");
+    const posts = await res.json();
+    const postId = posts.length
+      ? Math.max(...posts.map((post) => post.id)) + 1
+      : 1;
+
+    const postingData = {
+      id: postId,
+      writter: loginUser.nickname,
+      date: `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`,
+      music: {
+        thumbnail: selectedData.snippet.thumbnails.medium.url,
+        url: `https://www.youtube.com/watch?v=${selectedData.id.videoId}`,
+        title: selectedData.snippet.title,
+      },
+      content: $postContent.value,
+      title: $postTitle.value,
+      like: [],
+      scrap: [],
+    };
+    // console.log(postingData);
+    await fetch("/posts", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(postingData),
+    });
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+// 작성 취소하기
+$cancleBtn.onclick = () => {
+  window.location.assign("main-page.html");
 };
