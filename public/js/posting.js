@@ -8,9 +8,7 @@ const $addMusic = document.querySelector(".add-music-btn");
 const $searchCoverContainer = document.querySelector(".search-cover-container");
 const $searchMusicCancel = document.querySelector(".search-music-cancel");
 const $inputSearchMusic = document.querySelector(".input-search-music");
-const $searchMoreBtnWrapper = document.querySelector(
-  ".search-more-btn-wrapper"
-);
+const $searchMoreBtnWrapper = document.querySelector(".search-more-btn-wrapper");
 const $musicLists = document.querySelector(".music-lists");
 const $selectedMusic = document.querySelector(".selected-music");
 const $previousBtn = document.querySelector(".previous-page-btn");
@@ -25,9 +23,7 @@ $searchMusicCancel.onclick = () => {
   $searchCoverContainer.classList.remove("active");
   $searchMoreBtnWrapper.classList.remove("showBtn");
   $inputSearchMusic.value = "";
-  [...$musicLists.children].forEach((musicList) =>
-    $musicLists.removeChild(musicList)
-  );
+  [...$musicLists.children].forEach(musicList => $musicLists.removeChild(musicList));
 };
 
 $inputSearchMusic.onchange = () => {
@@ -64,7 +60,7 @@ $inputSearchMusic.onkeyup = async (e) => {
   }
 };
 
-$musicLists.onclick = (e) => {
+$musicLists.onclick = e => {
   if (!e.target.matches(".search-music-title")) return;
 
   // console.log(e.target);
