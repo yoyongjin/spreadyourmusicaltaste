@@ -45,6 +45,14 @@ const request = {
   }
 };
 
+const isEqualArrays = (arr1, arr2) => {
+  if (arr1.length !== arr2.length) return false;
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) return false;
+    return true;
+  }
+};
+
 const displayLoading = () => {
   const $imgContainer = document.createElement('div');
   const $img = document.createElement('img');
@@ -58,16 +66,24 @@ const displayLoading = () => {
 
 const loadNextPosts = () => {
   const { scrollY } = window;
-  console.log(scrollY);
   if (scrollY + document.body.getBoundingClientRect().height >= $mainMain.scrollHeight + 50 && !isLastPage) {
     displayLoading();
     setTimeout(async () => {
-      // 마이 포스팅 시작
-      const res = await request.get('/posts');
-      const newPosts = await res.json();
-      const _posts = await newPosts.filter(post => post.writter === userInfo.id);
-      // 마이 포스팅 끝
-      if (_posts.length < 6) {
+      // 스크랩 영역 시작
+
+      const res = await request.get(`/posts?scrap_like=\b${userInfo.id}\b`);
+      const _posts = await res.json();
+
+      // const res = await request.get('/posts');
+      // const newPosts = await res.json();
+      // const scraps = await newPosts.map(post => post.scrap).flat();
+      // const _posts = await scraps.filter(scrap => scrap === userInfo.id);
+
+      // 스크랩 영역 끝
+
+      if (_posts.length < 6) { // 마지막페이지인 경우
+        console.log('마지막페이지 입니다.');
+        console.log(_posts);
         posts = [...posts, ..._posts];
         renderPost();
         applyThumbnail();
@@ -91,15 +107,22 @@ const displayBtn = () => {
 };
 
 // events
-window.onload = () => {
+window.onload = () => { 
   (async () => {
     userInfo = JSON.parse(sessionStorage.getItem('user'));
     displayUserName(userInfo);
-    // 마이 포스팅 시작
-    const res = await request.get('/posts');
-    const newPosts = await res.json();
-    posts = await newPosts.filter(post => post.writter === userInfo.id);
-    // 마이 포스팅 끝
+    // 스크랩 영역 시작
+    console.log(userInfo.id);
+    const res = await request.get(`/posts?scrap_like=\b${userInfo.id}\b`);
+    posts = await res.json();
+
+    // const test = newPosts.map(post => post.scrap.flat().map(scrap => scrap === userInfo.id));
+    // console.log(test);
+    // const scraps = await newPosts.map(post => post.scrap).flat();
+    // posts = await scraps.filter(scrap => scrap === userInfo.id);
+
+    // 스크랩 영역 끝
+
     renderPost();
     applyThumbnail();
     displayBtn();
@@ -122,3 +145,34 @@ $mainBoard.onclick = e => {
 $icon.onclick = () => {
   window.scroll({ top: 0, left: 0, behavior: 'smooth' });
 };
+
+// $sortBtn.onclick = () => {
+//   if ($orderPanel.classList.contains('slide-up')) {
+//     $orderPanel.classList.add('slide-down');
+//     $orderPanel.classList.remove('slide-up');
+//     return;
+//   }
+//   $orderPanel.classList.remove('slide-down');
+//   $orderPanel.classList.add('slide-up');
+// };
+
+// $orderPanel.onclick = e => {
+//   console.log(e.target.classList[1]);
+//   orderState = e.target.classList[1];
+//   document.querySelector('.selected').classList.remove('selected');
+//   e.target.classList.add('selected');
+//   $orderPanel.classList.remove('slide-up');
+//   $orderPanel.classList.add('slide-down');
+//   (async () => {
+//     sortBy = orderState === 'recent' ? 'date'
+//     : orderState === 'like' ? 'like' : 'scrap';
+//     userInfo = JSON.parse(sessionStorage.getItem('user'));
+//     displayUserName(userInfo);
+//     const res = await request.get(`/posts?_page=1&_limit=6&_sort=${sortBy}&_order=desc`);
+//     posts = await res.json();
+//     console.log(posts);
+//     renderPost();
+//     applyThumbnail();
+//     displayBtn();
+//   })();
+// };

@@ -44,6 +44,10 @@ body {
   padding-left: 10px;
 }
 
+.mypage-member-icon {
+  margin-bottom: 20px;
+}
+
 .user-nick-name {
   margin-left: 10px;
   font-weight: 700;
