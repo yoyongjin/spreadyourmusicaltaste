@@ -102,7 +102,8 @@ body {
   box-shadow: 2px 2px 2px lightgray;
 }
 .main-post-image {
-  background-size: contain;
+  background-size: cover;
+  background-repeat: round;
   width:200px;
   height: 200px;
   border-radius: 50%;
@@ -141,7 +142,7 @@ body {
 
 }
 .main-post:hover > .main-post-image {
-  animation: spin 5s linear infinite;
+  animation: spin 1.8s linear infinite;
 }
 .main-post-contents {
   display: flex;
@@ -169,9 +170,6 @@ body {
   border: 3px solid white;
   white-space: nowrap;
   line-height: 2.7rem;
-}
-.main-post-like,
-.main-post-scrap {
   width: 100%;
 }
 .main-post-songTitle {
@@ -203,15 +201,16 @@ a {
   height: 40px;
   font-size: 1.4rem;
   color: white;
-  background: linear-gradient(45deg, #A32CDF, #106AD2);  
   bottom: 0;
   position: fixed;
   width:375px;
-  z-index: 2;
+  z-index: 0;
 }
 .main-nav-menus {
+  position: relative;
   display: flex;
   justify-content: space-evenly;
+  background: linear-gradient(45deg, #A32CDF, #106AD2);  
 }
 .main-nav-menu{
   cursor: pointer;
@@ -257,18 +256,18 @@ a {
 .main-nav-menu.sort, .main-nav-posting, .main-nav-myPage{
   text-align: center;
   padding: 0 15px;
+  z-index: 999;
 }
 .order-panel {
-  position: fixed;
-  bottom: -15vh;
-  left: 67vh;
-  z-index: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
   background: linear-gradient(45deg, #A32CDF, #106AD2);
   border-radius: 15px 15px 0 0;
   cursor: pointer;
 }
 .order-panel-item {
-  width:15vh;
+  width:17vh;
   height:50px;
   line-height: 50px;
   text-align: center;

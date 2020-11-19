@@ -111,56 +111,12 @@
       "nickname": "잼옹"
     },
     {
-      "id": "rlaehdcks1",
-      "pw": "rlaehdcks",
-      "nickname": ""
-    },
-    {
-      "id": "dddddd",
-      "pw": "11111111",
-      "nickname": "11111"
+      "id": "yuna12",
+      "pw": "yuna1212",
+      "nickname": "yunada"
     }
   ],
   "posts": [
-    {
-      "id": 15,
-      "writter": "kym123",
-      "date": "2020-12-16",
-      "music": {
-        "thumbnail": "https://lh3.googleusercontent.com/proxy/Jo80SYq9v-c6rrKFDJTe0uO6YaiTf6rJ_CiHtwF-JrVSmGimN4nxzpI5WsV1VYnlgC00zhdUWYNaRh_Oqebb4RaX74LI2MJwIkXLfv28Pg2fhcbb9Sr63pY6ByF3VLx1HccV9uEHV3wPwk3oWXBSSDj4A4KyBSrU0Q",
-        "url": "https://yotube.com",
-        "title": "owlcity - hot airballoon"
-      },
-      "content": "owlcity - hot airballoon.",
-      "title": "owlcity - hot airballoon",
-      "like": [
-        "rladydals",
-        "rladydals1"
-      ],
-      "scrap": [
-        "rladydals"
-      ]
-    },
-    {
-      "id": 14,
-      "writter": "rladydals",
-      "date": "2020-12-14",
-      "music": {
-        "thumbnail": "https://upload.wikimedia.org/wikipedia/en/7/7b/Sunmi_-_Noir.jpg",
-        "url": "https://yotube.com",
-        "title": "sunmi - Noir"
-      },
-      "content": "sunmi - Noir.",
-      "title": "sunmi - Noir",
-      "like": [
-        "nara12345",
-        "rladydals1",
-        "rladydals"
-      ],
-      "scrap": [
-        "rladydals"
-      ]
-    },
     {
       "id": 13,
       "writter": "kym123",
@@ -415,34 +371,6 @@
       ]
     },
     {
-      "id": 1,
-      "writter": "용진천재123",
-      "date": "2019-02-23",
-      "music": {
-        "thumbnail": "https://d24jnm9llkb1ub.cloudfront.net/icpn/190295489595/190295489595-cover-zoom.jpg",
-        "url": "https://yotube.com",
-        "title": "aimyon- marigold"
-      },
-      "content": "aimyon- marigold.",
-      "title": "aimyon- marigold",
-      "like": [
-        "rladydals1",
-        1,
-        2,
-        5,
-        4,
-        6
-      ],
-      "scrap": [
-        "rladydals1",
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    },
-    {
       "id": 17,
       "writter": "용지니",
       "date": "2020-11-19",
@@ -457,20 +385,6 @@
       "scrap": []
     },
     {
-      "id": 18,
-      "writter": "김용민123",
-      "date": "2020-11-19",
-      "music": {
-        "thumbnail": "https://i.ytimg.com/vi/1ye6D7ExAzg/mqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=1ye6D7ExAzg",
-        "title": "[부러우면 지는거다] JYP를 만나러 간 원더걸스! ＂예쁘다 진짜...♥＂  20200629"
-      },
-      "content": "원더걸스 멤버들한테 몰카를 당하는 영! 너무 재미있네요 다들 한번씩 보세요. 비오는데 조심하세요.",
-      "title": "혜림 결혼전에 만난 원더걸스와 박진영",
-      "like": [],
-      "scrap": []
-    },
-    {
       "id": 19,
       "writter": "김용민123",
       "date": "2020-11-19",
@@ -481,6 +395,104 @@
       },
       "content": "선예와 현아의 옷 리폼하기 동영상입니다 재밋게 봐주세요!",
       "title": "현아가 있던 시절의 원더걸스!",
+      "like": [],
+      "scrap": []
+    },
+    {
+      "id": 20,
+      "writter": "용민천재123",
+      "date": "2020-11-19",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/r_x13Ok4uJg/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=r_x13Ok4uJg",
+        "title": "01. 주인공 [선미 (SUNMI) – 주인공] mp3 audio"
+      },
+      "content": "소녀시대 팬이었는데 이노래 한번 듣고 바로 갈아탔어요!",
+      "title": "선미 - 주인공 들어보세요! 너무좋아요!",
+      "like": [],
+      "scrap": []
+    },
+    {
+      "id": 21,
+      "writter": "용민천재123",
+      "date": "2020-11-19",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/7jTq2FXKr0g/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=7jTq2FXKr0g",
+        "title": "Michael Jackson - Dangerous (Audio)"
+      },
+      "content": "너무좋아요 진짜 매일 삼천번씩 듣고있어요!",
+      "title": "micheal jackson- dangerous",
+      "like": [],
+      "scrap": []
+    },
+    {
+      "id": 22,
+      "writter": "김용민123",
+      "date": "2020-11-19",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/6diAJ6MrkiE/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=6diAJ6MrkiE",
+        "title": "[Simply K-Pop] Wonder Girls(원더걸스) &#39;Why So Lonely&#39;"
+      },
+      "content": "fggffgffg",
+      "title": "원더걸스",
+      "like": [],
+      "scrap": []
+    },
+    {
+      "id": 20,
+      "writter": "yongjin",
+      "date": "2020-11-19",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/kx0ynC8Thlw/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=kx0ynC8Thlw",
+        "title": "All SSD Types EXPLAINED"
+      },
+      "content": "sdsdsd",
+      "title": "dssd",
+      "like": [],
+      "scrap": []
+    },
+    {
+      "id": 21,
+      "writter": "yuna12",
+      "date": "2020-11-19",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/3vVHy0XoIN4/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=3vVHy0XoIN4",
+        "title": "Wonder Girls &quot;Tell Me&quot; M/V"
+      },
+      "content": "dd",
+      "title": "dd",
+      "like": [],
+      "scrap": []
+    },
+    {
+      "id": 22,
+      "writter": "yuna12",
+      "date": "2020-11-19",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/t7X8qhESIfs/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=t7X8qhESIfs",
+        "title": "Wonder Girls - Tell Me, 원더걸스 - 텔미, Music Core 20070908"
+      },
+      "content": "텔미",
+      "title": "텔미",
+      "like": [],
+      "scrap": []
+    },
+    {
+      "id": 23,
+      "writter": "yuna12",
+      "date": "2020-11-19",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/zV9C4fh3Fuc/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=zV9C4fh3Fuc",
+        "title": "Wonder Girls (원더걸스) - Tell Me (텔미) Stage Mix 무대모음 교차편집"
+      },
+      "content": "fsdsdf",
+      "title": "dsdsfdsf",
       "like": [],
       "scrap": []
     },
