@@ -19,6 +19,7 @@ const $changingPwError = document.querySelector('.changing-pw-error');
 const $changedPwError = document.querySelector('.changed-pw-error');
 const $changeCancleBtn = document.querySelector('.change-cancel-btn');
 const $changeCancleBtn2 = document.querySelector('.change-cancel-btn2');
+const $goodByeBtn = document.querySelector('.good-bye-btn');
 
 // 세션 스토리지 user 정보 받아올 변수
 const {id: currId, pw:currPw, nickname: currNickName} = JSON.parse(sessionStorage.getItem('user'));
@@ -34,8 +35,11 @@ const request = {
       headers: { 'content-Type': 'application/json' },
       body: JSON.stringify(payload)
     });
+  },
+  delete(url) {
+    return fetch(url, {method: 'DELETE'});
   }
-}
+};
 
 const pwChecked = () => {
   if ($changePwInput.value !== currPw) {
@@ -100,19 +104,6 @@ const finishChange = () => {
       .then(patched_user => { console.log(patched_user); })
       .catch(err => console.error(err));  
     window.location.assign('my-page.html');
-
-    request.patch(`/users/${JSON.parse(sessionStorage.getItem('user')).id}`, {
-      pw: `${currPw}`
-    }).then(response => response.json())
-      // .then(users => console.log(users))
-      .then(_user => JSON.parse(_user))
-      .then(patched_user => { console.log(patched_user); })
-      .catch(err => console.error(err));  
-    request.patch(`/users/${JSON.parse(sessionStorage.getItem('user')).nickname}`, {
-      pw: `${currNickName}`
-    }).then(response => response.json())
-      .then(users => console.log(users))
-      .catch(err => console.error(err));  
   }
 }
 
@@ -147,3 +138,14 @@ $changeCancleBtn.onclick = () => {
 $changeCancleBtn2.onclick = () => {
   window.location.assign('my-page.html');
 };
+
+//회원 탈퇴(good-bye) : db.json에서 삭제
+$goodByeBtn.onclick = () => {
+  console.log(JSON.parse(sessionStorage.getItem('user')).id)
+
+  request.delete(`/users/${JSON.parse(sessionStorage.getItem('user')).id}`)
+    .then(users => users.json())
+    .then(users_fixed => console.log(users_fixed))
+    .catch(err => console.error(err));
+  window.location.assign('login.html');
+}

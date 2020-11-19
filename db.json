@@ -86,11 +86,6 @@
       "nickname": "김재"
     },
     {
-      "id": "yongjin",
-      "pw": "yongjin123",
-      "nickname": "용지니"
-    },
-    {
       "id": "rladydals",
       "pw": "rladydals",
       "nickname": "김용민123"
@@ -104,6 +99,11 @@
       "id": "rlaehdcks",
       "pw": "rlaehdcks",
       "nickname": "ehd"
+    },
+    {
+      "id": "yongjin",
+      "pw": "yongjin123",
+      "nickname": "용지니"
     }
   ],
   "posts": [
