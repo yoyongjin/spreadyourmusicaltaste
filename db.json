@@ -1,15 +1,6 @@
 {
   "users": [
     {
-<<<<<<< HEAD
-      "id": "yongjin",
-      "pw": "yongjin123",
-      "nickname": "용지니"
-    }
-  ],
-  "posts": [],
-  "mymusic": []
-=======
       "id": "rladydals",
       "pw": "rladydals",
       "nickname": "김용민"
@@ -18,6 +9,31 @@
       "id": "rladydals2",
       "pw": "rladydals2",
       "nickname": "김용민2"
+    },
+    {
+      "id": "test12345",
+      "pw": "test12345",
+      "nickname": "테스트"
+    },
+    {
+      "id": "test123456",
+      "pw": "test12345",
+      "nickname": "테스트"
+    },
+    {
+      "id": "test",
+      "pw": "test12345",
+      "nickname": "테스트"
+    },
+    {
+      "id": "dydwlsdydals",
+      "pw": "dydwlsdydals",
+      "nickname": "123123123"
+    },
+    {
+      "id": "rladydals123",
+      "pw": "123123123",
+      "nickname": "김용민123"
     }
   ],
   "posts": [
@@ -218,5 +234,4 @@
       "url": "https://www.youtube.com/watch?v=D1PvIWdJ8xo"
     }
   ]
->>>>>>> 3a05c668abd0d1a09a88c014b7c7e8dcc8043073
 }
