@@ -24,6 +24,11 @@
       "id": "rladydals",
       "pw": "rladydals",
       "nickname": "김용민1"
+    },
+    {
+      "id": "dldudtkd",
+      "pw": "dldudtkd",
+      "nickname": "패캠비디오"
     }
   ],
   "posts": [
@@ -89,7 +94,9 @@
       },
       "content": "돈까스",
       "title": "스윙스",
-      "like": [],
+      "like": [
+        "dldudtkd"
+      ],
       "scrap": [],
       "likeLength": 0,
       "scrapLength": 0,
