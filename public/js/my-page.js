@@ -16,6 +16,7 @@ const $previousBtn = document.querySelector('.previous-page-btn');
 const $nextBtn = document.querySelector('.next-page-btn');
 const $myMusicBox = document.querySelector('.mymusic-box');
 const $myMusic = document.querySelector('.my-music');
+const $logOutBtn = document.querySelector('.log-out-btn');
 
 let count;
 let selectedData;
@@ -216,3 +217,8 @@ $previousBtn.onclick = async () => {
     console.error(err);
   }
 };
+
+$logOutBtn.onclick = () => {
+  sessionStorage.clear();
+  window.location.assign('login.html');
+}

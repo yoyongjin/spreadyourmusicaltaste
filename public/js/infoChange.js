@@ -23,6 +23,12 @@ const $goodByeBtn = document.querySelector('.good-bye-btn');
 const $caution = document.querySelector('.caution');
 const $cautionCheck = document.querySelector('input[type=checkbox]');
 const $cautionCheckBtn = document.querySelector('.caution-check-btn');
+const $changeSuccess = document.querySelector('.change-success');
+const $backGround = document.querySelector('.back-ground');
+const $cautionCloseBtn = document.querySelector('.caution-close-btn');
+const $backGround2 = document.querySelector('.back-ground2');
+const $changeDone = document.querySelector('.change-done');
+
 
 
 // 세션 스토리지 user 정보 받아올 변수
@@ -125,7 +131,16 @@ const finishChange = () => {
   }
 }
 $changeCompleteBtn2.onclick = () => {
-  finishChange();
+  
+  $backGround2.style.display = 'block';
+  $changeDone.style.display = 'block';
+  // $backGround2.style.display = 'block';
+  
+
+  const timerId = setTimeout(finishChange, 1500);
+  // clearTimeout(timerId);
+
+  
 }
 $changedPwInput.onkeyup = e => {
   if(e.key == 'Enter') {
@@ -158,6 +173,15 @@ $changeCancleBtn2.onclick = () => {
 //회원 탈퇴(good-bye) : db.json에서 삭제
 $goodByeBtn.onclick = () => {
   $caution.style.display = 'block';
+  $backGround.style.display = 'block';
+
+  $cautionCloseBtn.onclick = () => {
+    console.log(1);
+    $caution.style.display = 'none';
+    $backGround.style.display = 'none';
+  }
+
+
   $cautionCheckBtn.onclick = () => {
     console.log(JSON.parse(sessionStorage.getItem('user')).id)
     
@@ -169,3 +193,8 @@ $goodByeBtn.onclick = () => {
 
   };  
 };
+
+
+
+
+

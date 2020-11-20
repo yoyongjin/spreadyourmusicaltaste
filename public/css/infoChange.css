@@ -142,15 +142,94 @@ body {
 /* 회원탈퇴 버튼 */
 .good-bye-btn {
   display: none;
+  font-weight: 700;
+  font-size: 10px;
+  width: 85px;  
+  padding: 5px 15px;  
+  border: 0;
+  border-radius: 20px;
+  background-color: #fff;
+  color: #666;
+  box-shadow: 1px 1px 1px #666;
+}
+.good-bye-btn:hover {
+  background-color: tomato;
+  color: #fff;
+}
+.caution-check-btn {
+  font-weight: 700;
+  font-size: 10px;
+  width: 85px;  
+  padding: 5px 15px;  
+  border: 0;
+  border-radius: 20px;
+  background-color: #fff;
+  color: #666;
+  box-shadow: 1px 1px 1px #666;
+  width: 50px;
+  color : tomato;
+}
+.caution-close-btn {
+  font-weight: 700;
+  font-size: 10px;
+  width: 85px;  
+  padding: 5px 15px;  
+  border: 0;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 1px 1px 1px #666;
+  width: 50px;
+  color : black;
+  margin-right: 10px;
+}
+.caution-check-btn:hover {
+  background-color: tomato;
+  color: #fff;
+}
+.caution-close-btn:hover {
+  background-color: #aaa;
 }
 
-.caution {
+.caution, .change-done {
   display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* background-color: linear-gradient(45deg, #a32cdf, #106ad2); */
+  background-color: rgb(110, 35, 201);
+  color: aliceblue;
+  z-index: 99999;
+  padding: 50px 30px;
+  vertical-align: middle;
+  border: 2px solid rgb(245, 69, 227);
+  border-radius: 30px;
 }
-
+.caution-text, .change-done-text {
+  line-height: 2rem;
+}
 .caution-red {
   color: red;
 }
 .caution-emphasis {
   text-emphasis: filled red;
 }
+.btn-wrap {
+  margin-top: 20px;
+}
+.change-success {
+  display: none;
+}
+.back-ground, .back-ground2 {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+
+}
+

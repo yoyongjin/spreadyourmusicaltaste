@@ -268,3 +268,16 @@ body {
   justify-content: space-between;
   margin: 10px;
 }
+
+.log-out-btn {
+  font-weight: 700;
+  font-size: 10px;
+  width: 85px;  
+  padding: 5px 15px;  
+  border: 0;
+  border-radius: 20px;
+  background-color: #fff;
+  color: #666;
+  box-shadow: 1px 1px 1px #666;
+  margin-left: 35px;
+}
