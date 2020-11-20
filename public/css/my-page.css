@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Jua&display=swap");
+
 *,
 *::before,
 *::after {
@@ -5,7 +9,7 @@
 }
 
 html {
-  font-family: 'Nanum Gothic';
+  font-family: "Nanum Gothic";
   font-size: 10px;
   color: #fff;
 }
@@ -19,21 +23,21 @@ body {
   background: linear-gradient(45deg, #a32cdf, #106ad2);
 }
 
-
 .profile-image {
-  padding-left: 10px;
+  padding-left: 20px;
   /* width: 15%;
   height: 15%; */
-  width: 60px;
+  width: 70px;
   height: 50px;
   vertical-align: middle;
 }
 
 .mypage-heading {
+  font-family: "Jua";
   text-align: center;
   padding: 20px;
   font-size: 2rem;
-  font-weight: 700;
+  letter-spacing: 1.2px;
   /* background-color: #1d4dd1; */
 }
 
@@ -42,10 +46,13 @@ body {
   vertical-align: middle;
   font-size: 1.5rem;
   padding-left: 10px;
+  font-family: "Jua";
+  letter-spacing: 1.3px;
 }
 
 .mypage-member-icon {
   margin-bottom: 20px;
+  font-family: "sanAlegreya Sans";
 }
 
 .user-nick-name {
@@ -56,18 +63,22 @@ body {
 .mypage-member-link {
   padding-top: 20px;
   margin: 0 10px;
-  background-color: #fff;
-  border-radius: 20px 20px 0 0;
+  background-color: aliceblue;
+  border: none;
+  border-radius: 20px;
   font-size: 1.5rem;
   font-weight: 700;
   color: #000;
 }
-
 .mypage-member-link li {
-  margin-left: 20px;
+  margin-left: 15px;
   line-height: 70px;
 }
-
+.mypage-member-link img {
+  vertical-align: middle;
+  width: 20px;
+  margin: 10px;
+}
 .mypage-member-link a {
   text-decoration: none;
 }
@@ -92,18 +103,22 @@ body {
 }
 
 .add-mymusic-btn {
-  background: #fff;
+  background: aliceblue;
   font-size: 1.5rem;
   font-weight: 700;
   outline: none;
   border: 0;
   padding: 0;
 }
-
 .mypage-member-icon {
+  background: linear-gradient(180deg, #fbc2eb, #a6c1ee);
   font-size: 1.5rem;
   text-align: center;
-  margin-top: 20px;
+  margin: 20px 20px 30px;
+  color: #000;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 2px 0 2px #a6c1ee, -2px 0 2px #fbc2eb;
 }
 
 .mypage-member-icon li {
@@ -131,7 +146,14 @@ body {
   padding: 10px;
   vertical-align: middle;
 }
-
+/* .design-box {
+  margin: 0 auto;
+  width: 355px;
+  height: 30px;
+  border: none;
+  border-radius: 0 0 20px 20px;
+  background-color: aliceblue;
+} */
 .mypage-home-nav {
   background: linear-gradient(45deg, #a32cdf, #106ad2);
   text-align: center;
@@ -173,9 +195,11 @@ body {
 }
 
 .search-music-container {
-  background: linear-gradient(45deg,
-      rgba(163, 44, 223, 0.9),
-      rgba(16, 106, 210, 0.9));
+  background: linear-gradient(
+    45deg,
+    rgba(163, 44, 223, 0.9),
+    rgba(16, 106, 210, 0.9)
+  );
   border-radius: 10px;
   width: 300px;
   padding: 15px 0 10px;

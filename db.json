@@ -114,6 +114,11 @@
       "id": "yuna12",
       "pw": "yuna1212",
       "nickname": "yunada"
+    },
+    {
+      "id": "yuna1225",
+      "pw": "yuna1212",
+      "nickname": "유나다"
     }
   ],
   "posts": [
@@ -521,6 +526,48 @@
       },
       "content": "lorem Ipsum dadsadsddddsdsadasdsadsadwewewewewew조윤아edasdwewdsdsdsd",
       "title": "조윤아조장님",
+      "like": [],
+      "scrap": []
+    },
+    {
+      "id": 24,
+      "writter": "yuna1225",
+      "date": "2020-11-19",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/SJUWooZnfVQ/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=SJUWooZnfVQ",
+        "title": "dreams, books, power and walls (꿈과 책과 힘과 벽)"
+      },
+      "content": "잔나비 노래 중 많이 유명하지는 않지만 후렴구가 너무 좋아요 ",
+      "title": "잔나비 명곡",
+      "like": [],
+      "scrap": []
+    },
+    {
+      "id": 25,
+      "writter": "yuna1225",
+      "date": "2020-11-19",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/A4jp4bH52E8/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=A4jp4bH52E8",
+        "title": "아이유 - Love poem 가사 (러브 포엠) [Color Coded Lyrics/Han/Rom/Eng]"
+      },
+      "content": "위로가 되는 노래입니다 :)",
+      "title": "아이유- love poem",
+      "like": [],
+      "scrap": []
+    },
+    {
+      "id": 26,
+      "writter": "yuna1225",
+      "date": "2020-11-20",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/jJKHTJy_eek/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=jJKHTJy_eek",
+        "title": "[DJ티비씨] 태연(Taeyeon) - 만약에 ♬ #비긴어게인3 #DJ티비씨"
+      },
+      "content": "좋아요",
+      "title": "추천",
       "like": [],
       "scrap": []
     }
