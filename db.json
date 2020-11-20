@@ -4,6 +4,11 @@
       "id": "rladydals",
       "pw": "rladydals",
       "nickname": "김용민"
+    },
+    {
+      "id": "rladydals2",
+      "pw": "rladydals2",
+      "nickname": "김용민2"
     }
   ],
   "posts": [
@@ -89,11 +94,14 @@
       "content": "ㅎㅎ",
       "title": "선미 -모범생",
       "like": [
+        "rladydals2",
         "rladydals"
       ],
-      "scrap": [],
-      "likeLength": 1,
-      "scrapLength": 0,
+      "scrap": [
+        "rladydals2"
+      ],
+      "likeLength": 2,
+      "scrapLength": 1,
       "id": 5
     },
     {
@@ -129,6 +137,23 @@
       "likeLength": 0,
       "scrapLength": 0,
       "id": 7
+    },
+    {
+      "writter": "rladydals2",
+      "date": "2020-11-20",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/3Muu5XlzAaM/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=3Muu5XlzAaM",
+        "title": "[골라봐야지] ＂꼴 보기가 싫어!＂ 거침없는 소녀시대의 저격 타임! (feat. 상처만 남은 진실의 거울)｜아는형님",
+        "musicid": "3Muu5XlzAaM"
+      },
+      "content": "2dtdd",
+      "title": "2dtdd",
+      "like": [],
+      "scrap": [],
+      "likeLength": 0,
+      "scrapLength": 0,
+      "id": 8
     }
   ],
   "mymusic": [
@@ -136,6 +161,11 @@
       "id": "rladydals",
       "thumbnail": "https://i.ytimg.com/vi/t7X8qhESIfs/mqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=t7X8qhESIfs"
+    },
+    {
+      "id": "rladydals2",
+      "thumbnail": "https://i.ytimg.com/vi/-ikYiWp0H5g/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=-ikYiWp0H5g"
     }
   ]
 }

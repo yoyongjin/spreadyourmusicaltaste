@@ -165,7 +165,7 @@ body {
   box-sizing: border-box;
   display: inline-block;
   background-color: white;
-  padding: 20px 10px 5px 10px;
+  padding: 20px 10px 20px 10px;
   margin: 0;
   color: black;
   border-radius: 20px 0 0 0;
@@ -207,7 +207,6 @@ a {
   position: fixed;
   width: 375px;
   z-index: 0;
-  ov
 }
 .main-nav-menus {
   position: relative;

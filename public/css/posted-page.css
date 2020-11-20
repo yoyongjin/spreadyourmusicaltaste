@@ -269,26 +269,57 @@ ul {
   top: 40px;
 }
 
-.like-fakeview1,
-.like-fakeview2,
-.like-fakeview3 {
+.fake-wrapper {
+  position: relative;
+}
+
+.like-fakethumbs {
   background-image: url(../image/heart.svg);
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   position: absolute;
-  top: 45%;
-  left: 60%;
   opacity: 0;
 }
 
+.like-fakeview1 {
+  top: 60%;
+  left: 0%;
+}
 .like-fakeview2 {
-  top: 57%;
+  top: 75%;
+  left: 5%;
+}
+.like-fakeview3 {
+  top: 50%;
+  left: 15%;
+}
+.like-fakeview4 {
+  top: 70%;
   left: 25%;
 }
-
-.like-fakeview3 {
+.like-fakeview5 {
+  top: 55%;
+  left: 35%;
+}
+.like-fakeview6 {
   top: 70%;
-  left: 45%;
+  left: 55%;
+}
+.like-fakeview7 {
+  top: 60%;
+  left: 50%;
+}
+.like-fakeview8 {
+  top: 55%;
+  left: 60%;
+}
+.like-fakeview9 {
+  top: 45%;
+  left: 70%;
+}
+.like-fakeview10 {
+  top: 60%;
+  left: 80%;
 }
 
 @keyframes fake {
