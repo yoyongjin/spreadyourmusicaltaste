@@ -9,11 +9,6 @@
       "id": "rladydals2",
       "pw": "rladydals2",
       "nickname": "김용민2"
-    },
-    {
-      "id": "test1234",
-      "pw": "test1234",
-      "nickname": "조윤아"
     }
   ],
   "posts": [
@@ -176,6 +171,25 @@
       "likeLength": 0,
       "scrapLength": 0,
       "id": 9
+    },
+    {
+      "writter": "test1234",
+      "date": "2020-11-20",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/qlwPttH0gjw/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=qlwPttH0gjw",
+        "title": "Be My Baby (English Version)",
+        "musicid": "qlwPttH0gjw"
+      },
+      "content": "짱",
+      "title": "원걸",
+      "like": [],
+      "scrap": [
+        "test1234"
+      ],
+      "likeLength": 0,
+      "scrapLength": 1,
+      "id": 10
     }
   ],
   "mymusic": [
@@ -188,6 +202,11 @@
       "id": "rladydals2",
       "thumbnail": "https://i.ytimg.com/vi/-ikYiWp0H5g/mqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=-ikYiWp0H5g"
+    },
+    {
+      "id": "test1234",
+      "thumbnail": "https://i.ytimg.com/vi/D1PvIWdJ8xo/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=D1PvIWdJ8xo"
     }
   ]
 }
