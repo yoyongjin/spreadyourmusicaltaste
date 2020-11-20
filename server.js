@@ -27,7 +27,13 @@ server.delete('/todos/completed', (req, res) => {
   res.send(db.get('todos').value());
 });
 
-
+router.render = function(req, res) {
+  var newData = {
+  TotalCount: res.get('X-Total-Count'),
+  Result: res.locals.data
+  }
+  res.json(newData);
+  };
 
 // Use default router
 server.use(router);

@@ -104,6 +104,18 @@ window.onload = () => {
   })();
 };
 
+document.addEventListener('DOMContentLoaded', async () => {
+  userInfo = JSON.parse(sessionStorage.getItem('user'));
+  console.log(userInfo);
+  const res = await request.get(`/posts/${sessionStorage.getItem('post-id')}`);
+  const post = await res.json();
+  console.log(post.writter);
+  renderWritterInfo(post);
+  checkIfWritter(post.writter);
+  if (checkPressedLikeBtn(post.like)) $postedPageLikeBtn.classList.add('pressed');
+  if (checkPressedScrapBtn(post.scrap)) $postedPageScrapBtn.classList.add('pressed');
+});
+
 $postedpageAlbum.onclick = async e => {
   console.log(e.target);
   isSelected = true;

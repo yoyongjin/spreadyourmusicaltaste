@@ -68,6 +68,8 @@ ul {
   width: 200px;
   height: 200px;
   background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
   background-image: url('https://t1.daumcdn.net/cfile/tistory/2108644A577ADA710F?original');
   transition-property: border-radius;
   transition-duration: 1s;

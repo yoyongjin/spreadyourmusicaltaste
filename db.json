@@ -4,81 +4,24 @@
       "id": "rlaehdcks",
       "pw": "rlaehdcks",
       "nickname": "동찬킴"
+    },
+    {
+      "id": "rlawoals",
+      "pw": "rlawoals",
+      "nickname": "잼옹"
+    },
+    {
+      "id": "yuna12",
+      "pw": "yuna1212",
+      "nickname": "yunada"
+    },
+    {
+      "id": "rladydals2",
+      "pw": "rladydals2",
+      "nickname": "용민2"
     }
   ],
   "posts": [
-    {
-      "id": 1,
-      "writter": "rlaehdcks",
-      "date": "2020-11-19",
-      "music": {
-        "thumbnail": "https://i.ytimg.com/vi/7pfX1OKqP80/mqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=7pfX1OKqP80",
-        "title": "Everglow"
-      },
-      "content": "띵곡 추천합니다",
-      "title": "콜드플레이 좋아요",
-      "like": [],
-      "scrap": []
-    },
-    {
-      "id": 2,
-      "writter": "rlaehdcks",
-      "date": "2020-11-19",
-      "music": {
-        "thumbnail": "https://i.ytimg.com/vi/OiMWFojB9Ok/mqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=OiMWFojB9Ok",
-        "title": "BTS (방탄소년단) - DYNAMITE (Official Audio)"
-      },
-      "content": "세영's 픽",
-      "title": "다이나믹합니다",
-      "like": [],
-      "scrap": []
-    },
-    {
-      "id": 3,
-      "writter": "rlaehdcks",
-      "date": "2020-11-19",
-      "music": {
-        "thumbnail": "https://i.ytimg.com/vi/Ymk1crmr4SY/mqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=Ymk1crmr4SY",
-        "title": "Dynamic Duo (다이나믹듀오) - Life is Good (거품 안 넘치게 따라줘) (Feat. Crush, DJ Friz)"
-      },
-      "content": "비디오's pick",
-      "title": "영상이가 추천해요",
-      "like": [],
-      "scrap": []
-    },
-    {
-      "id": 4,
-      "writter": "rlaehdcks",
-      "date": "2020-11-19",
-      "music": {
-        "thumbnail": "https://i.ytimg.com/vi/rWpnZafjauU/mqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=rWpnZafjauU",
-        "title": "BLUE"
-      },
-      "content": "신입입니다",
-      "title": "안녕하세요",
-      "like": [],
-      "scrap": [
-        "rlaehdcks"
-      ]
-    },
-    {
-      "id": 5,
-      "writter": "rlaehdcks",
-      "date": "2020-11-19",
-      "music": {
-        "thumbnail": "https://i.ytimg.com/vi/sE0tKkHrwJo/mqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=sE0tKkHrwJo",
-        "title": "Break"
-      },
-      "content": "듣고말해",
-      "title": "일단넣어",
-      "like": [],
-      "scrap": []
-    },
     {
       "id": 6,
       "writter": "rlaehdcks",
@@ -95,20 +38,6 @@
       "scrap": []
     },
     {
-      "0": {
-        "writter": "rlaehdcks",
-        "date": "2020-11-20",
-        "music": {
-          "thumbnail": "https://i.ytimg.com/vi/C-V3SwQpOTY/mqdefault.jpg",
-          "url": "https://www.youtube.com/watch?v=C-V3SwQpOTY",
-          "title": "[ENG] SMTM9 [5회/풀버전] 스윙스 X 카키 X 래원 @3차 예선 I 트리플 크루 배틀 Full ver. EP.5 201113",
-          "musicid": "C-V3SwQpOTY"
-        },
-        "content": "돈까스",
-        "title": "스윙스",
-        "like": [],
-        "scrap": []
-      },
       "id": 10,
       "writter": "rlaehdcks",
       "date": "2020-11-20",
@@ -120,36 +49,19 @@
       },
       "content": "띵곡",
       "title": "먼키 신곡",
-      "like": [],
-      "scrap": []
-    },
-    {
-      "id": 11,
-      "writter": "rlaehdcks",
-      "date": "2020-11-19",
-      "music": {
-        "thumbnail": "https://i.ytimg.com/vi/sGRYm1lE6nQ/mqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=sGRYm1lE6nQ",
-        "title": "SUNMI (선미) - pporappippam (보라빛 밤) [MP3 Audio]"
-      },
-      "content": "보라빛 밤!",
-      "title": "보라빛 밤!",
-      "like": [],
-      "scrap": []
-    },
-    {
-      "id": 12,
-      "writter": "rlaehdcks",
-      "date": "2020-11-20",
-      "music": {
-        "thumbnail": "https://i.ytimg.com/vi/1rLEDe91iDk/mqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=1rLEDe91iDk",
-        "title": "박효신-야생화 한시간"
-      },
-      "content": "박효신 킹효신",
-      "title": "야생화 들어보세요",
-      "like": [],
-      "scrap": []
+      "like": [
+        "rladydals",
+        1,
+        2,
+        3,
+        4
+      ],
+      "scrap": [
+        1,
+        2
+      ],
+      "likeLength": 5,
+      "scrapLength": 2,
     }
   ],
   "mymusic": [
