@@ -1,8 +1,11 @@
 {
   "users": [
+    {
+      "id": "yongjin",
+      "pw": "yongjin123",
+      "nickname": "용지니"
+    }
   ],
-  "posts": [
-  ],
-  "mymusic": [
-  ]
+  "posts": [],
+  "mymusic": []
 }
