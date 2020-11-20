@@ -5,7 +5,7 @@ let count;
 let count1 = 0; // 유튜브 노래 선택여부
 let count2 = 0; // 게시글 제목 작성 여부
 let count3 = 0; // 게시글 내용 작성여부
-const userKey = 'AIzaSyCkcVgTMMnc53VeCFxsSftqKBctr9WOf0U';
+const userKey = 'AIzaSyBHqXzcGxlePRMoN3A34Y93cIANHJkzxXc';
 
 //DOMs
 const $addMusic = document.querySelector(".add-music-btn");
