@@ -96,21 +96,26 @@ ul {
   padding: 10px;
   margin-top: 15px;
 }
+
 @keyframes panelanime {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
+
 .posted-page-song-detail.selected {
   opacity: 1;
   animation: panelanime 1s ease-in;
 }
+
 .posted-page-youtube-title {
   opacity: 0;
 }
+
 .posted-page-bottom {
   position: relative;
   background-color: white;
