@@ -265,7 +265,7 @@ $completeBtn.onclick = async () => {
       body: JSON.stringify(postingData)
     });
     // 게시물 수정 PATCH 끝
-    window.location.assign("/main-page.html");
+    window.location.assign("/index.html");
   } catch (err) {
     console.error(err);
   }
@@ -273,5 +273,5 @@ $completeBtn.onclick = async () => {
 
 // 작성 취소하기
 $cancleBtn.onclick = () => {
-  window.location.assign("main-page.html");
+  window.location.assign("index.html");
 };

@@ -140,7 +140,7 @@ $signupBtn.onclick = async () => {
       body: JSON.stringify(newUser)
     });
     sessionStorage.setItem('user', JSON.stringify(newUser));
-    window.location.assign('main-page.html');
+    window.location.assign('index.html');
   } catch (err) {
     console.error(err);
   }

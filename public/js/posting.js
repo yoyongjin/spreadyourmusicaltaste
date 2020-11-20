@@ -245,7 +245,7 @@ $completeBtn.onclick = async () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(postingData),
     });
-    window.location.assign("/main-page.html");
+    window.location.assign("/index.html");
   } catch (err) {
     console.error(err);
   }
@@ -253,7 +253,7 @@ $completeBtn.onclick = async () => {
 
 // 작성 취소하기
 $cancleBtn.onclick = () => {
-  window.location.assign("main-page.html");
+  window.location.assign("index.html");
 };
 
 //게시물 없을 때 작성 완료 버튼 비활성화

@@ -1,7 +1,7 @@
 let posts = []; // 로드된 자료들을 담고있는 배열
 let userInfo; // 로그인한 회원정보
 let currPageNum = 1;
-let orderState = "recent";
+let orderState = sessionStorage.getItem('sort-by');
 let sortBy = "date";
 let totalPageNum = 0; // 페이지 갯수 구하기 위해서 선언한 변수
 let isAlerted = false;
@@ -34,9 +34,9 @@ const renderPost = () => {
 };
 
 // 상단에 로그인 유저 아이디 출력
-// const displayUserName = userInfo => {
-//   $userName.textContent = `${userInfo.nickname}님 안녕하세요.`;
-// };
+const displayUserName = userInfo => {
+  $userName.textContent = `${userInfo.nickname}님 요.`;
+};
 
 // 유튜브 api에서 가져온 썸네일 렌더해주는 함수
 const applyThumbnail = () => {
@@ -118,6 +118,14 @@ const displayBtn = () => {
   $icon.style.display = window.scrollY >= 450 ? "block" : "none";
 };
 
+// 정렬순서를 기억해서 order panel에 표시하는 함수
+const displayOrderPanel = () => {
+  [...$orderPanel.children].forEach(item => {
+    document.querySelector('.selected').classList.remove('selected');
+    item.classList.add('selected', item.classList[1] === sessionStorage.getItem('sort-by'));
+  });
+};
+
 // events
 window.onload = () => {
   (async () => {
@@ -130,11 +138,11 @@ window.onload = () => {
     const _posts = await resForPages.json();
     totalPageNum = Math.ceil(_posts.length / 6); // 전체 데이터의 페이지 수 -> totalPageNum
     console.log(totalPageNum);
-
     const res = await request.get(
       `/posts?_page=1&_limit=6&_sort=${sortBy},id&_order=desc,desc`
     ); // 첫번째 페이지 자료 요청
     posts = await res.json(); // 전역변수 posts에 첫번째 페이지를 위한 배열을 할당
+    displayOrderPanel();
     renderPost(); // 현재까지 로드된 자료들을 담고있는 배열인 posts를 이용해서 렌더하는 함수 실행
     applyThumbnail(); // posts들에 썸네일 적용해주는 함수
     displayBtn(); // 스크롤링시 상단으로 한번에 이동시켜주는 이벤트 버튼 출력
@@ -150,6 +158,7 @@ document.onscroll = _.throttle(() => {
 $mainBoard.onclick = (e) => {
   if (e.target.matches("ul")) return;
   sessionStorage.setItem("post-id", e.target.closest("li").classList[1]);
+  sessionStorage.setItem("sort-by", orderState);
   window.location.assign("./posted-page.html");
 };
 
@@ -179,9 +188,6 @@ $orderPanel.onclick = (e) => {
 
   (async () => {
     determineSortBy();
-
-    userInfo = JSON.parse(sessionStorage.getItem("user"));
-    displayUserName(userInfo);
 
     currPageNum = 1;
 

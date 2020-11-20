@@ -148,8 +148,8 @@ $postedpageAlbum.onclick = async e => {
 
 document.onclick = e => {
   if (e.target === $postedpageAlbum) return;
-  document.querySelector('.posted-page-album.selected').classList.remove('selected');
-  document.querySelector('.posted-page-song-detail.selected').classList.remove('selected');
+  if (document.querySelector('.posted-page-album.selected')) document.querySelector('.posted-page-album.selected').classList.remove('selected');
+  if (document.querySelector('.posted-page-song-detail.selected'))document.querySelector('.posted-page-song-detail.selected').classList.remove('selected');
   $postedpageAlbum.style.transform = 'translateX(0%)';
   isSelected = false;
 
@@ -157,7 +157,7 @@ document.onclick = e => {
   if (isSelected === false) {
     $fakeFrame.style.transform = 'translateX(0%)';
   }
-  if(checkIndex === true) {
+  if (checkIndex === true) {
     checkIndex = false;
     $fakeFrame.style.zIndex = '-10';
     $fakeFrame.removeAttribute('src');
@@ -210,7 +210,7 @@ $postedPageStatus.onclick = e => {
 
 $postedPageDelete.onclick = () => {
   deletePost(`/posts/${sessionStorage.getItem('post-id')}`);
-  window.location.assign('./main-page.html');
+  window.location.assign('./index.html');
 };
 
 // 좋아요 이벤트

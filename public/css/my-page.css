@@ -73,6 +73,7 @@ button:focus {
   font-size: 1.5rem;
   font-weight: 700;
   color: #000;
+  position: relative;
 }
 
 .mypage-member-link li {
@@ -213,8 +214,9 @@ button:focus {
   margin: 30px auto 20px;
   text-align: center;
   position: absolute;
-  top: 20.5%;
-  left: 26.5%;
+  top: 22%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .search-music-thumbnail {
