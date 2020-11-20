@@ -22,18 +22,22 @@ body {
   width: 375px;
   height: 100vh;
   font-size: 1.3rem;
+
 }
 
 .post-music {
   height: 100%;
   position: relative;
+  background: linear-gradient(45deg, #a32cdf, #106ad2);
 }
 
 .post-music-wrapper {
   width: 300px;
   /* height: 100%; */
-  margin: 0 auto;
+  margin: 48px auto;
+  background-color: rgba(255, 255, 255, 0.7);
   text-align: center;
+  border-radius: 10px;
 }
 
 .post-music-heading {
@@ -70,7 +74,13 @@ body {
   border-bottom: 2px solid #3c90f0;
   font-family: inherit;
   letter-spacing: 1.3px;
+  background-color: transparent;
+  outline-color: violet;
   /* border-radius: 5px; */
+}
+.post-title:focus 
+.post-content:focus{
+  box-shadow: 0 0 2pt 4pt #dbdb30;
 }
 
 #post-content {
@@ -85,6 +95,8 @@ body {
   word-wrap: break-all;
   font-family: "Alegreya Sans";
   letter-spacing: 1.3px;
+  background-color: transparent;
+  outline-color: violet;
 }
 
 .title-show-error {

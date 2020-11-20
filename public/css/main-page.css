@@ -2,8 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Jua&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-@import url('https://use.fontawesome.com/releases/v5.5.0/css/all.css');
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://use.fontawesome.com/releases/v5.5.0/css/all.css");
 
 *,
 *::before,
@@ -34,21 +34,21 @@ body {
   }
 }
 .spin {
-  animation: spin 10s linear infinite alternate both;  
+  animation: spin 10s linear infinite alternate both;
 }
 .loading-container {
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
   top: 0%;
   left: 0%;
   position: fixed;
   text-align: center;
-  background-color: rgba(0,0,0, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 .loading-img {
   position: absolute;
-  top:30%;
-  left:43%;
+  top: 30%;
+  left: 43%;
   width: 200px;
   height: 200px;
   animation: spin 1s linear infinite;
@@ -58,36 +58,37 @@ body {
 }
 .main-nav-top {
   box-sizing: border-box;
-  padding: 2px 10px;
-  font-family: 'Lobster';
+  padding: 8px 12px;
+  font-family: "Lobster";
   color: white;
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   text-align: left;
   line-height: 50px;
   width: 375px;
   height: auto;
-  background: linear-gradient(45deg, #A32CDF, #106AD2);  
+  background: linear-gradient(45deg, #a32cdf, #106ad2);
 }
-.main-nav-top-slogan{
+.main-nav-top-slogan {
 }
-.main-nav-top-username{
+.main-nav-top-username {
   text-align: right;
-  font-family: 'Nanum Gothic';
+  font-family: "Nanum Gothic";
   font-size: 1.4rem;
   line-height: 1.6rem;
 }
 .main-board {
   box-sizing: border-box;
-  width:375px;
+  width: 375px;
   background-color: white;
   margin: 0 auto;
   padding: 0.5rem;
   padding-bottom: 40px;
-  min-height:990px;
+  min-height: 990px;
   display: flex;
   flex-flow: row wrap;
+  position: relative;
 }
-.main-post { 
+.main-post {
   cursor: pointer;
   overflow: hidden;
   box-sizing: border-box;
@@ -100,14 +101,14 @@ body {
   border: 3px solid white;
   border-radius: 15px 15px 0 0;
   position: relative;
-  background: linear-gradient(45deg, #A32CDF, #106AD2);  
+  background: linear-gradient(45deg, #a32cdf, #106ad2);
   box-shadow: 2px 2px 2px lightgray;
 }
 .main-post-image {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  width:200px;
+  width: 200px;
   height: 200px;
   border-radius: 50%;
   position: absolute;
@@ -116,13 +117,13 @@ body {
 
 .main-post-image-hole {
   display: inline-block;
-  width:40px;
-  height:40px;
+  width: 40px;
+  height: 40px;
   position: absolute;
   border: 2px solid silver;
-  background: #106AD2;
-  top:50%;
-  left:50%;
+  background: #106ad2;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
 }
@@ -131,8 +132,8 @@ body {
   width: 130px;
   height: 50px;
   position: absolute;
-  top:150px;
-  left:-170px;
+  top: 150px;
+  left: -170px;
   transition-duration: 0.5s;
   transform-origin: 100% 100%;
   transform: scaleX(-1);
@@ -142,7 +143,6 @@ body {
   transition-duration: 2s;
   transform: rotate(125deg);
   transform-origin: 100% 100%;
-
 }
 .main-post:hover > .main-post-image {
   animation: spin 1.8s linear infinite;
@@ -151,7 +151,7 @@ body {
   display: flex;
   flex-flow: row wrap;
   width: 275px;
-  height:180px;
+  height: 180px;
 }
 .main-post-title {
   width: 100px;
@@ -165,8 +165,8 @@ body {
   box-sizing: border-box;
   display: inline-block;
   background-color: white;
-  padding:20px 10px 5px 10px;
-  margin:0;
+  padding: 20px 10px 5px 10px;
+  margin: 0;
   color: black;
   border-radius: 20px 0 0 0;
   border: 3px solid white;
@@ -205,16 +205,17 @@ a {
   color: white;
   bottom: 0;
   position: fixed;
-  width:375px;
+  width: 375px;
   z-index: 0;
+  ov
 }
 .main-nav-menus {
   position: relative;
   display: flex;
   justify-content: space-evenly;
-  background: linear-gradient(45deg, #A32CDF, #106AD2);  
+  background: linear-gradient(45deg, #a32cdf, #106ad2);
 }
-.main-nav-menu{
+.main-nav-menu {
   cursor: pointer;
 }
 .scroll-icon {
@@ -226,16 +227,16 @@ a {
   animation: glow 2s infinite backwards;
   transform: translate(-50%, -50%);
   display: none;
-  width:50px;
-  height:50px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  background: linear-gradient(45deg, #A32CDF, #106AD2);  
+  background: linear-gradient(45deg, #a32cdf, #106ad2);
 }
-.scroll-icon::before{
-  color:white;
+.scroll-icon::before {
+  color: white;
   position: absolute;
-  left:50%;
-  top:50%;
+  left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
 }
 @keyframes glow {
@@ -252,10 +253,11 @@ a {
   100% {
     opacity: 1;
     transform: translate(-50%, -44%);
-
   }
 }
-.main-nav-menu.sort, .main-nav-posting, .main-nav-myPage{
+.main-nav-menu.sort,
+.main-nav-posting,
+.main-nav-myPage {
   text-align: center;
   padding: 0 15px;
   z-index: 999;
@@ -264,24 +266,26 @@ a {
   position: absolute;
   top: 0px;
   left: 0px;
-  background: linear-gradient(45deg, #A32CDF, #106AD2);
-  border-radius: 15px 15px 0 0;
+  background: linear-gradient(45deg, #a32cdf, #106ad2);
+  border-radius: 20px 20px 0 0;
   cursor: pointer;
 }
 .order-panel-item {
   width: 145px;
-  height:50px;
-  line-height: 50px;
+  height: 40px;
+  line-height: 40px;
   text-align: center;
   font-size: 1.5rem;
-  color:white;
-  border:1px solid white;
+  color: white;
+  border: 1px solid aliceblue;
 }
 .order-panel-item:last-child {
   border-bottom: 0;
 }
 .order-panel-item.selected {
-  background-color: yellowgreen;
+  background: linear-gradient(45deg, #ffe53b, #00ffff);
+  font-weight: 600;
+  color: black;
 }
 .slide-up {
   animation: slideUp 0.5s ease-in forwards;
@@ -304,4 +308,66 @@ a {
   to {
     transform: translateY(0);
   }
+}
+.alert-last-container {
+  width: 250px;
+  height: 50px;
+  display: flex;
+  padding: 10px 15px;
+  align-items: center;
+  border: 4px solid black;
+  background-color: white;
+  border-radius: 5px;
+  position: absolute;
+  top: -150px;
+  right: 0%;
+}
+.alert-last-container.show {
+  display: block;
+  width: 250px;
+  height: 50px;
+  display: flex;
+  padding: 10px 15px;
+  align-items: center;
+  border: 4px solid black;
+  background-color: white;
+  border-radius: 5px;
+  position: absolute;
+  top: -150px;
+  right: 0%;
+  animation: show-container 1s ease-in forwards;
+}
+@keyframes show-container {
+  0% {
+    transform: translateX(270%);
+  }
+  100% {
+    transform: translateX(-30%);
+  }
+}
+@keyframes show {
+  0% {
+    transform: perspective(120px) rotateY(25deg);
+  }
+  50% {
+    transform: perspective(120px) rotateY(-25deg);
+  }
+  100% {
+    transform: perspective(120px) rotateY(25deg);
+  }
+}
+.alert-last-img{
+  width: 26%;
+  height: auto;
+  animation: show 2s ease-in-out infinite forwards;
+}
+.alert-last-message {
+  width: 70%;
+  height: auto;
+  font-size: 1.7rem;
+  font-weight: 700;
+  padding-left: 5px;
+  color: black;
+  padding-left: 25px;
+  line-height: 2.4rem;
 }
