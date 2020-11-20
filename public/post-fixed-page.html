@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/post-fixed-page.css" />
+    <script defer src="./js/post-fixed-page.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="post-music">
+      <h2 class="post-music-heading">게시물 수정하기</h2>
+      <div class="post-music-wrapper">
+        <button class="add-music-btn" type="button">음악 추가하기</button>
+        <div class="selected-music">
+          <!-- 여기에 렌더 -->
+        </div>
+        <input
+          class="post-title"
+          type="text"
+          placeholder="제목을 입력해주세요"
+        />
+        <div class="title-show-error"></div>
+        <textarea
+          name="posting"
+          id="post-content"
+          placeholder="게시할 내용을 입력해 주세요 
+          (250자 내)"
+        ></textarea>
+        <div class="content-show-error"></div>
+        <div class="btn-wrapper">
+          <button class="complete-btn" type="button" disabled>수정완료</button>
+          <button class="cancel-btn" type="button">수정취소</button>
+        </div>
+      </div>
+
+      <!-- 노래 검색창 -->
+      <div class="search-cover-container">
+        <div class="search-music-container">
+          <input
+            class="input-search-music"
+            type="text"
+            placeholder="찾을 노래 제목을 입력해주세요"
+          />
+          <ul class="music-lists"></ul>
+          <div class="search-more-btn-wrapper">
+            <button class="previous-page-btn"></button>
+            <button class="next-page-btn"></button>
+          </div>
+          <button class="search-music-cancel" type="button"></button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

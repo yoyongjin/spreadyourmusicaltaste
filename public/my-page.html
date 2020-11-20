@@ -1,59 +1,79 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Page</title>
-  <link rel="stylesheet" href="./css/reset.css" />
-  <link rel="stylesheet" href="./css/my-page.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" />
-  <script src="https://kit.fontawesome.com/6726aa563f.js" crossorigin="anonymous"></script>
-  <script defer src="./js/my-page.js"></script>
-</head>
-
-<body>
-  <div class="container-box">
-    <section class="mypage-container">
-      <h2 class="mypage-heading">마이 페이지</h2>
-      <img class="profile-image" alt="" />
-      <p class="mypage-member-nickname">안녕하세요<strong class="user-nick-name"></strong></p>
-      <button class="log-out-btn">로그 아웃</button>
-      <ul class="mypage-member-icon">
-        <li><span class="user-info">스크랩한 글 수</span><i class="far fa-star"></i><span class="scrap-number"></span></li>
-        <li><span class="user-info">게시글 수</span><i class="fas fa-pen"></i><span class="posting-number"></span></li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Page</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/my-page.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap"
+    />
+    <script
+      src="https://kit.fontawesome.com/6726aa563f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/my-page.js"></script>
+  </head>
+  <body>
+    <div class="container-box">
+      <section class="mypage-container">
+        <h2 class="mypage-heading">마이 페이지</h2>
+        <img class="profile-image" alt="" />
+        <p class="mypage-member-nickname">
+          안녕하세요<strong class="user-nick-name"></strong>
+        </p>
+        <ul class="mypage-member-icon">
+          <li>
+            <span class="user-info">스크랩한 글 수</span
+            ><i class="far fa-star"></i><span class="scrap-number"></span>
+          </li>
+          <li>
+            <span class="user-info">게시글 수</span><i class="fas fa-pen"></i
+            ><span class="posting-number"></span>
+          </li>
+        </ul>
+      </section>
+      <ul class="mypage-member-link">
+        <li class="mymusic-box">
+          <a class="my-music"></a>
+        </li>
+        <li class="profile-music-add">
+          <img src="./image/music-solid.svg" alt="#" /> 
+          <button class="add-mymusic-btn">프로필 음악 추가 및 변경</button>
+        </li>
+        <li class="my-article">
+          <img src="./image/edit-regular.svg" alt="#" />
+          <a href="my-post-page.html">내가 작성한 글 보기</a>
+        </li>
+        <li class="scraped-article">
+          <img src="./image/star-regular.svg" alt="#" />
+          <a href="my-scrap-page.html">스크랩한 글 보기</a>
+        </li>
+        <li class="change-info">
+          <img src="./image/id-card-regular.svg" alt="#" /><a href="infoChange.html"
+            >&nbsp개인정보 변경</a>
+        </li>
       </ul>
-    </section>
-    <ul class="mypage-member-link">
-      <li class="mymusic-box">
-        <a class="my-music"></a>
-      </li>
-      <li><button class="add-mymusic-btn">프로필 음악 추가 및 변경</button></li>
-      <li><a href="my-post-page.html">내가 작성한 글 보기</a></li>
-      <li><a href="my-scrap-page.html">스크랩한 글 보기</a></li>
-      <li><a href="infoChange.html">개인정보 변경</a></li>
-    </ul>
 
-    <div class="search-cover-container">
-      <div class="search-music-container">
-        <input
-          class="input-search-music"  
-          type="text"
-          placeholder="찾을 노래 제목을 입력해주세요"
-        />
-        <ul class="music-lists"></ul>
-        <div class="search-more-btn-wrapper">
-          <button class="previous-page-btn"></button>
-          <button class="next-page-btn"></button>
+      <div class="search-cover-container">
+        <div class="search-music-container">
+          <input
+            class="input-search-music"
+            type="text"
+            placeholder="찾을 노래 제목을 입력해주세요"/>
+          <ul class="music-lists"></ul>
+          <div class="search-more-btn-wrapper">
+            <button class="previous-page-btn"></button>
+            <button class="next-page-btn"></button>
+          </div>
+          <button class="search-music-cancel" type="button"></button>
         </div>
-        <button class="search-music-cancel" type="button"></button>
+      </div>
+      <div class="mypage-home-nav">
+        <a href="main-page.html"><img src="./image/home-solid (1).svg" alt="#"/></a>
       </div>
     </div>
-    
-    <div class="mypage-home-nav">
-      <a href="main-page.html"><img src="./image/home-solid (1).svg" alt="#" /></a>
-    </div>
-  </div>
-</body>
-
+  </body>
 </html>
