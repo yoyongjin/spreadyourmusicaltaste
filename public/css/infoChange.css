@@ -35,7 +35,7 @@ body {
 }
 
 .info-change-items li {
-  margin: 8px 0;
+  margin: 7px 0 3px;
 }
 
 .info-change-items input::placeholder {
@@ -48,13 +48,21 @@ body {
 .info-change-items input {
   width: 65%;
   height: 40px;
-  margin: 5px;
+  margin: 5px 0 2px;
   padding: 10px;
   border: 0;
   border-radius: 30px;
   box-sizing: border-box;
   text-align: center;
   /* box-shadow: 1px 1px 1px #666; */
+}
+.pw-error,
+.changing-pw-error,
+.changed-pw-error {
+  margin-top: 2px;
+  color: pink;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 
 .change-complete-btn,
@@ -110,15 +118,24 @@ body {
 .changed-pw {
   display: none;
 }
+.info-change-items input:focus {
+  outline: none;
+  box-shadow: 0 0 2pt 2pt #dbdb30;
+}
+.info-change-id {
+  font-family: "Jua";
+  padding: 8px;
+}
 
-.change-btn-wrapper,
-.change-btn-wrapper2 {
-  margin: 10px auto 0;
+.change-btn-wrapper {
+  margin: 5px auto 0;
   text-align: right;
 }
 
 .change-btn-wrapper2 {
   display: none;
+  margin: 20px auto 0;
+  text-align: right;
 }
 
 .my-nick {

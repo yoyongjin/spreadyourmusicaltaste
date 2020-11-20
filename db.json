@@ -123,8 +123,12 @@
       },
       "content": "웅모2",
       "title": "불변객체",
-      "like": [],
-      "scrap": [],
+      "like": [
+        "yuna1225"
+      ],
+      "scrap": [
+        "yuna1225"
+      ],
       "likeLength": 0,
       "scrapLength": 0,
       "id": 6
@@ -145,6 +149,23 @@
       "likeLength": 0,
       "scrapLength": 0,
       "id": 7
+    },
+    {
+      "writter": "yuna12",
+      "date": "2020-11-20",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/D1PvIWdJ8xo/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=D1PvIWdJ8xo",
+        "title": "[MV] IU(아이유) _ Blueming(블루밍)",
+        "musicid": "D1PvIWdJ8xo"
+      },
+      "content": "아이유의 띵곡 입니다",
+      "title": "아이유 블루밍",
+      "like": [],
+      "scrap": [],
+      "likeLength": 0,
+      "scrapLength": 0,
+      "id": 8
     }
   ],
   "mymusic": [

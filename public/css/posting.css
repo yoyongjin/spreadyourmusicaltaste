@@ -21,6 +21,10 @@ body {
   height: 100vh;
   font-size: 1.3rem;
 }
+button:focus {
+  outline: none;
+  box-shadow: 0 0 2pt 2pt violet;
+}
 .post-music {
   height: 100%;
   position: relative;
@@ -30,6 +34,12 @@ body {
   /* height: 100%; */
   margin: 0 auto;
   text-align: center;
+}
+.input-search-music:focus,
+.post-music-wrapper input:focus,
+.post-music-wrapper textarea:focus {
+  outline: none;
+  box-shadow: 0 0 2pt 2pt violet;
 }
 .post-music-heading {
   background-color: #1a4789;
@@ -126,7 +136,7 @@ body {
   letter-spacing: 1.3px;
   box-shadow: 1px 1px 1px #666;
 }
-}
+
 .cancel-btn:hover {
   color: white;
   background: linear-gradient(45deg, #fec194, #ff0061);
