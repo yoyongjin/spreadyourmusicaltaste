@@ -163,7 +163,6 @@ document.onclick = e => {
     $fakeFrame.removeAttribute('src');
   }
   // 페이크 프레임 끝
-
 };
 
 $postedPageStatus.onclick = e => {
@@ -177,13 +176,13 @@ $postedPageStatus.onclick = e => {
       scrap = post.scrap;
       if (checkPressedScrapBtn(scrap)) {
         scrap = removeUserScrap();
-        await request.patch(`/posts/${sessionStorage.getItem('post-id')}`, { scrap: [...scrap] });
+        await request.patch(`/posts/${sessionStorage.getItem('post-id')}`, { scrap: [...scrap], scrapLength: scrap.length });
         $postedPageScrapBtn.nextElementSibling.textContent = scrap.length;
         $postedPageScrapBtn.classList.remove('pressed');
         return;
       }
-      await request.patch(`/posts/${sessionStorage.getItem('post-id')}`, { scrap: [userInfo.id, ...scrap] });
       scrap = [userInfo.id, ...scrap];
+      await request.patch(`/posts/${sessionStorage.getItem('post-id')}`, { scrap, scrapLength: scrap.length });
       $postedPageScrapBtn.nextElementSibling.textContent = scrap.length;
       $postedPageScrapBtn.classList.add('pressed');
     })();
@@ -195,13 +194,13 @@ $postedPageStatus.onclick = e => {
       like = post.like;
       if (checkPressedLikeBtn(like)) {
         like = removeUserLike();
-        await request.patch(`/posts/${sessionStorage.getItem('post-id')}`, { like: [...like] });
+        await request.patch(`/posts/${sessionStorage.getItem('post-id')}`, { like: [...like], likeLength: like.length });
         $postedPageLikeBtn.nextElementSibling.textContent = like.length;
         $postedPageLikeBtn.classList.remove('pressed');
         return;
       }
-      await request.patch(`/posts/${sessionStorage.getItem('post-id')}`, { like: [userInfo.id, ...like] });
       like = [userInfo.id, ...like];
+      await request.patch(`/posts/${sessionStorage.getItem('post-id')}`, { like, likeLength: like.length });
 
       $postedPageLikeBtn.nextElementSibling.textContent = like.length;
       $postedPageLikeBtn.classList.add('pressed');
@@ -214,17 +213,16 @@ $postedPageDelete.onclick = () => {
   window.location.assign('./main-page.html');
 };
 
-
 // 좋아요 이벤트
 $postedPageLikeBtn.onclick = e => {
-  if(e.target.classList.contains('pressed')) {
+  if (e.target.classList.contains('pressed')) {
     [...$likeFakeThumbs].forEach(fakethumb => fakethumb.classList.remove('thumbsup'));
     return;
   }
   [...$likeFakeThumbs].forEach(fakethumb => fakethumb.classList.add('thumbsup'));
-}
+};
 
 // 게시물 수정 
 $postedPageEdit.onclick = e => {
   window.location.assign('post-fixed-page.html');
-}
+};
