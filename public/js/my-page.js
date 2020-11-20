@@ -1,21 +1,23 @@
 // Doms
-const $userNickName = document.querySelector('.user-nick-name');
-const $profileImage = document.querySelector('.profile-image');
+const $userNickName = document.querySelector(".user-nick-name");
+const $profileImage = document.querySelector(".profile-image");
 
-const $scrapNumber = document.querySelector('.scrap-number');
-const $postingNumber = document.querySelector('.posting-number');
+const $scrapNumber = document.querySelector(".scrap-number");
+const $postingNumber = document.querySelector(".posting-number");
 
 // 마이뮤직
-const $addMusicBtn = document.querySelector('.add-mymusic-btn');
-const $searchCoverContainer = document.querySelector('.search-cover-container');
-const $searchMusicCancel = document.querySelector('.search-music-cancel');
-const $searchMoreBtnWrapper = document.querySelector('.search-more-btn-wrapper');
-const $inputSearchMusic = document.querySelector('.input-search-music');
-const $musicLists = document.querySelector('.music-lists');
-const $previousBtn = document.querySelector('.previous-page-btn');
-const $nextBtn = document.querySelector('.next-page-btn');
-const $myMusicBox = document.querySelector('.mymusic-box');
-const $myMusic = document.querySelector('.my-music');
+const $addMusicBtn = document.querySelector(".add-mymusic-btn");
+const $searchCoverContainer = document.querySelector(".search-cover-container");
+const $searchMusicCancel = document.querySelector(".search-music-cancel");
+const $searchMoreBtnWrapper = document.querySelector(
+  ".search-more-btn-wrapper"
+);
+const $inputSearchMusic = document.querySelector(".input-search-music");
+const $musicLists = document.querySelector(".music-lists");
+const $previousBtn = document.querySelector(".previous-page-btn");
+const $nextBtn = document.querySelector(".next-page-btn");
+const $myMusicBox = document.querySelector(".mymusic-box");
+const $myMusic = document.querySelector(".my-music");
 
 let count;
 let selectedData;
@@ -25,11 +27,11 @@ let videoId;
 const {
   id: currUserId,
   pw: currUserPw,
-  nickname: currUserNickName
-} = JSON.parse(sessionStorage.getItem('user'));
+  nickname: currUserNickName,
+} = JSON.parse(sessionStorage.getItem("user"));
 
 // 로딩 이벤트
-window.addEventListener('load', async () => {
+window.addEventListener("load", async () => {
   // 세션 스토리지 user 정보 받아올 변수
   // const {
   //   id: currUserId,
@@ -38,19 +40,21 @@ window.addEventListener('load', async () => {
   // } = JSON.parse(sessionStorage.getItem('user'));
 
   // 프로필 이미지 랜덤 추출
-  const random = Math.floor((Math.random() * 20) + 1);
+  const random = Math.floor(Math.random() * 20 + 1);
   // 프로필 이미지 추가
-  $profileImage.setAttribute('src', `./image/profile${random}.gif`);
+  $profileImage.setAttribute("src", `./image/profile${random}.gif`);
   // 유저 닉네임 추가
   $userNickName.textContent = `${currUserNickName}님`;
 
   try {
     // 게시물 정보 획득
-    const res = await fetch('/posts');
+    const res = await fetch("/posts");
     const newPosts = await res.json();
-    const postCount = await newPosts.filter(post => post.writter === currUserId);
-    const scraps = await newPosts.map(post => post.scrap).flat();
-    const scrapCount = await scraps.filter(scrap => scrap === currUserId);
+    const postCount = await newPosts.filter(
+      (post) => post.writter === currUserId
+    );
+    const scraps = await newPosts.map((post) => post.scrap).flat();
+    const scrapCount = await scraps.filter((scrap) => scrap === currUserId);
 
     $postingNumber.textContent = `${postCount.length}`;
     $scrapNumber.textContent = `${scrapCount.length}`;
@@ -60,8 +64,8 @@ window.addEventListener('load', async () => {
     const myMusic = await result.json();
 
     if (myMusic.length === 1) {
-      $myMusicBox.innerHTML = '';
-      $myMusicBox.innerHTML = `<a class="my-music" href="${myMusic['0'].url}" style="background-image: url(${myMusic['0'].thumbnail});"></a>`;
+      $myMusicBox.innerHTML = "";
+      $myMusicBox.innerHTML = `<a class="my-music" href="${myMusic["0"].url}" style="background-image: url(${myMusic["0"].thumbnail});"></a>`;
     }
   } catch (err) {
     console.error(err);
@@ -70,33 +74,35 @@ window.addEventListener('load', async () => {
 
 // 프로필 음악 추가 버튼
 $addMusicBtn.onclick = () => {
-  $searchCoverContainer.classList.add('active');
-  $musicLists.innerHTML = '';
-  $inputSearchMusic.value = '';
+  $searchCoverContainer.classList.add("active");
+  $musicLists.innerHTML = "";
+  $inputSearchMusic.value = "";
 };
 
 // 검색창 닫기
 $searchMusicCancel.onclick = () => {
-  $searchCoverContainer.classList.remove('active');
-  $searchMoreBtnWrapper.classList.remove('showBtn');
-  $inputSearchMusic.value = '';
-  [...$musicLists.children].forEach(musicList => $musicLists.removeChild(musicList));
+  $searchCoverContainer.classList.remove("active");
+  $searchMoreBtnWrapper.classList.remove("showBtn");
+  $inputSearchMusic.value = "";
+  [...$musicLists.children].forEach((musicList) =>
+    $musicLists.removeChild(musicList)
+  );
 };
 
 // 검색창 변경시 초기화
 $inputSearchMusic.onchange = () => {
-  $musicLists.innerHTML = '';
+  $musicLists.innerHTML = "";
 };
 
 // 검색어 찾기
-$inputSearchMusic.onkeyup = async e => {
-  if (e.key !== 'Enter' || $inputSearchMusic.value === '') return;
+$inputSearchMusic.onkeyup = async (e) => {
+  if (e.key !== "Enter" || $inputSearchMusic.value === "") return;
 
   count = 0;
-  $previousBtn.style.display = 'none';
+  $previousBtn.style.display = "none";
 
   setTimeout(() => {
-    $searchMoreBtnWrapper.classList.add('showBtn');
+    $searchMoreBtnWrapper.classList.add("showBtn");
   }, 400);
 
   const musicUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${$inputSearchMusic.value}&key=AIzaSyBmXKte4MYkU1dWxEOcSdTag5Ew0wXE0T0`;
@@ -105,12 +111,14 @@ $inputSearchMusic.onkeyup = async e => {
     const res = await fetch(musicUrl);
     musicItems = await res.json();
     const musicLists = await musicItems;
-    $musicLists.innerHTML = '';
+    $musicLists.innerHTML = "";
     $musicLists.innerHTML += musicLists.items
-      .map(item => `<li class='${item.id.videoId}'>
+      .map(
+        (item) => `<li class='${item.id.videoId}'>
           <img class='search-music-thumbnail' src='${item.snippet.thumbnails.medium.url}'><label class='search-music-title'>${item.snippet.title}<input class='search-music-radio' name='checking' type='radio'><label>
-        </li>`)
-      .join('');
+        </li>`
+      )
+      .join("");
   } catch (err) {
     console.error(err);
   }
@@ -118,21 +126,25 @@ $inputSearchMusic.onkeyup = async e => {
 
 // 선택된 음악 전송
 const renderSelectedMusic = () => {
-  selectedData = musicItems.items.find(item => item.id.videoId === videoId);
-  $myMusicBox.innerHTML = '';
+  selectedData = musicItems.items.find((item) => item.id.videoId === videoId);
+  $myMusicBox.innerHTML = "";
   $myMusicBox.innerHTML = `<a class="my-music" href="https://www.youtube.com/watch?v=${selectedData.id.videoId}" style="background-image: url(${selectedData.snippet.thumbnails.medium.url});"></a>`;
 };
 
 // 검색된 음악 선택
-$musicLists.onclick = async e => {
-  if (!e.target.matches('.search-music-title')) return;
+$musicLists.onclick = async (e) => {
+  if (!e.target.matches(".search-music-title")) return;
 
   videoId = e.target.parentNode.className;
 
-  $searchCoverContainer.classList.remove('active');
+  $searchCoverContainer.classList.remove("active");
 
   renderSelectedMusic();
-  const newMusic = { id: `${currUserId}`, thumbnail: `${selectedData.snippet.thumbnails.medium.url}`, url: `https://www.youtube.com/watch?v=${selectedData.id.videoId}` };
+  const newMusic = {
+    id: `${currUserId}`,
+    thumbnail: `${selectedData.snippet.thumbnails.medium.url}`,
+    url: `https://www.youtube.com/watch?v=${selectedData.id.videoId}`,
+  };
   console.log(newMusic);
 
   try {
@@ -141,19 +153,19 @@ $musicLists.onclick = async e => {
 
     // 프로필 음악을 설정하지 않은 유저라면 Post
     if (myMusicCheck.length === 0) {
-      await fetch('/mymusic', {
-        method: 'POST',
-        headers: { 'Content-type': 'application/json' },
-        body: JSON.stringify(newMusic)
+      await fetch("/mymusic", {
+        method: "POST",
+        headers: { "Content-type": "application/json" },
+        body: JSON.stringify(newMusic),
       });
     }
 
     // 프로필 음악을 설정한 유저라면 Patch
     if (myMusicCheck.length === 1) {
       await fetch(`/mymusic/${currUserId}`, {
-        method: 'PATCH',
-        headers: { 'Content-type': 'application/json' },
-        body: JSON.stringify(newMusic)
+        method: "PATCH",
+        headers: { "Content-type": "application/json" },
+        body: JSON.stringify(newMusic),
       });
     }
   } catch (err) {
@@ -165,11 +177,11 @@ $musicLists.onclick = async e => {
 $nextBtn.onclick = async () => {
   const nextMusicUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${$inputSearchMusic.value}&pageToken=${musicItems.nextPageToken}&key=AIzaSyBmXKte4MYkU1dWxEOcSdTag5Ew0wXE0T0`;
 
-  $previousBtn.style.display = 'block';
+  $previousBtn.style.display = "block";
   count++;
 
   setTimeout(() => {
-    $searchMoreBtnWrapper.classList.add('showBtn');
+    $searchMoreBtnWrapper.classList.add("showBtn");
   }, 400);
 
   try {
@@ -178,10 +190,12 @@ $nextBtn.onclick = async () => {
     const musicLists = await musicItems;
 
     $musicLists.innerHTML = musicLists.items
-      .map(item => `<li class='${item.id.videoId}'>
+      .map(
+        (item) => `<li class='${item.id.videoId}'>
           <img class='search-music-thumbnail' src='${item.snippet.thumbnails.medium.url}'><label class='search-music-title'>${item.snippet.title}<input class='search-music-radio' name='checking' type='radio'><label>
-        </li>`)
-      .join('');
+        </li>`
+      )
+      .join("");
   } catch (err) {
     console.error(err);
   }
@@ -198,18 +212,20 @@ $previousBtn.onclick = async () => {
     // console.log(musicLists);
 
     $musicLists.innerHTML = musicLists.items
-      .map(item => `<li class='${item.id.videoId}'>
+      .map(
+        (item) => `<li class='${item.id.videoId}'>
           <img class='search-music-thumbnail' src='${item.snippet.thumbnails.medium.url}'><label class='search-music-title'>${item.snippet.title}<input class='search-music-radio' name='checking' type='radio'><label>
-        </li>`)
-      .join('');
+        </li>`
+      )
+      .join("");
 
     count--;
     setTimeout(() => {
-      $searchMoreBtnWrapper.classList.add('showBtn');
+      $searchMoreBtnWrapper.classList.add("showBtn");
     }, 400);
 
     if (count < 1) {
-      $previousBtn.style.display = 'none';
+      $previousBtn.style.display = "none";
       return;
     }
   } catch (err) {
