@@ -89,17 +89,25 @@ ul {
   right: 8px;
   background-color: aliceblue;
   opacity: 0;
-  transition-timing-function: ease-in;
-  transition-duration: 1s;
   border-radius: 10px;
   padding: 10px;
   margin-top: 15px;
 }
-
+@keyframes panelanime {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .posted-page-song-detail.selected {
   opacity: 1;
+  animation: panelanime 1s ease-in;
 }
-
+.posted-page-youtube-title {
+  opacity: 0;
+}
 .posted-page-bottom {
   position: relative;
   background-color: white;
@@ -197,7 +205,7 @@ ul {
 }
 
 .posted-page-likeBtn {
-  background-image: url(../image/thumbs-up-regular.svg);
+  background-image: url(../image/like.svg);
   background-repeat: no-repeat;
   vertical-align: super;
   outline: none;
@@ -213,7 +221,7 @@ ul {
 .posted-page-likeBtn.pressed {
   /* background-color: yellowgreen;
   color: black; */
-  background-image: url(../image/thumbs-up-solid.svg);
+  background-image: url(../image/heart.svg);
   background-repeat: no-repeat;
   vertical-align: super;
 }
@@ -264,7 +272,7 @@ ul {
 .like-fakeview1,
 .like-fakeview2,
 .like-fakeview3 {
-  background-image: url(../image/thumbs-up-solid.svg);
+  background-image: url(../image/heart.svg);
   width: 100px;
   height: 100px;
   position: absolute;
