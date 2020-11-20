@@ -114,13 +114,13 @@ $inputNickname.onblur = async () => {
 };
 
 
-$signupBtn.onmouseenter = () => {
-  const userCheck = [...$userInfo].filter(userInfo => userInfo.value.length);
-  $signupBtn.style.backgroundColor = 'red';
-  if (userCheck.length < 4) return;
-  $signupBtn.style.backgroundColor = 'yellowgreen';
-  $signupBtn.classList.add('focus-btn');
-};
+// $signupBtn.onmouseenter = () => {
+//   const userCheck = [...$userInfo].filter(userInfo => userInfo.value.length);
+//   $signupBtn.style.backgroundColor = 'red';
+//   if (userCheck.length < 4) return;
+//   $signupBtn.style.backgroundColor = 'yellowgreen';
+//   $signupBtn.classList.add('focus-btn');
+// };
 
 // 가입하기 버튼 이벤트
 $signupBtn.onclick = async () => {
@@ -132,6 +132,14 @@ $signupBtn.onclick = async () => {
     nickname: $inputNickname.value
   };
   try {
+    const res = await fetch('/users');
+    const users = await res.json();
+    const checkId = await users.find(user => $inputId.value === user.id);
+    if (checkId) {
+      $signupBtn.style.backgroundColor = 'red';
+      return;
+    }
+    $signupBtn.style.backgroundColor = 'yellowgreen';
     await fetch('/users', {
       method: 'POST',
       headers: {
@@ -139,8 +147,9 @@ $signupBtn.onclick = async () => {
       },
       body: JSON.stringify(newUser)
     });
+
     sessionStorage.setItem('user', JSON.stringify(newUser));
-    window.location.assign('index.html');
+    setTimeout(() => { window.location.assign('index.html')}, 1000);
   } catch (err) {
     console.error(err);
   }

@@ -1,7 +1,7 @@
 let posts = []; // 로드된 자료들을 담고있는 배열
 let userInfo; // 로그인한 회원정보
 let currPageNum = 1;
-let orderState = sessionStorage.getItem('sort-by');
+let orderState = 'recent';
 let sortBy = "date";
 let totalPageNum = 0; // 페이지 갯수 구하기 위해서 선언한 변수
 let isAlerted = false;
@@ -54,7 +54,8 @@ const request = {
 };
 
 const determineSortBy = () => {
-  sortBy = (orderState === 'recent') ? 'date' : (orderState === 'like' ? 'likeLength' : 'scrapLength');
+  if (!sessionStorage.getItem('sort-by')) sortBy = 'date';
+  sortBy = (sessionStorage.getItem('sort-by') === 'recent') ? 'date' : (sessionStorage.getItem('sort-by') === 'like' ? 'likeLength' : 'scrapLength');
 }; // 정렬기준 구하는 함수
 
 // 로딩화면 띄워주는 함수
@@ -121,8 +122,9 @@ const displayBtn = () => {
 // 정렬순서를 기억해서 order panel에 표시하는 함수
 const displayOrderPanel = () => {
   [...$orderPanel.children].forEach(item => {
-    document.querySelector('.selected').classList.remove('selected');
-    item.classList.add('selected', item.classList[1] === sessionStorage.getItem('sort-by'));
+    // document.querySelector('.selected').classList.remove('selected');
+    // document.querySelector('select').classList.add('selected');
+    item.classList.toggle('selected', item.classList[1] === sessionStorage.getItem('sort-by'));
   });
 };
 
@@ -179,10 +181,13 @@ $sortBtn.onclick = () => {
 $orderPanel.onclick = (e) => {
   window.scroll({ top: 0, left: 0 });
   isAlerted = false;
+  
   orderState = e.target.classList[1];
+  sessionStorage.setItem('sort-by', orderState);
   document.querySelector(".selected").classList.remove("selected");
   e.target.classList.add("selected");
 
+  sessionStorage.setItem('sort-by', orderState);
   $orderPanel.classList.remove("slide-up");
   $orderPanel.classList.add("slide-down");
 

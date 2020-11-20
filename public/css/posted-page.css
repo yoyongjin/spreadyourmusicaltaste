@@ -95,6 +95,7 @@ ul {
   border-radius: 10px;
   padding: 10px;
   margin-top: 15px;
+  color:black;
 }
 
 @keyframes panelanime {
@@ -110,10 +111,11 @@ ul {
 .posted-page-song-detail.selected {
   opacity: 1;
   animation: panelanime 1s ease-in;
+  color:black;
 }
 
 .posted-page-youtube-title {
-  opacity: 0;
+  color:black;
 }
 
 .posted-page-bottom {
@@ -281,7 +283,7 @@ ul {
   position: relative;
 }
 
-.like-fakethumbs {
+.like-fakethumbs,
 .like-fakeview1,
 .like-fakeview2,
 .like-fakeview3,

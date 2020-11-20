@@ -11,14 +11,44 @@
       "nickname": "김용민2"
     },
     {
-      "id": "test1234",
-      "pw": "test1234",
-      "nickname": "조윤아"
+      "id": "test12345",
+      "pw": "test12345",
+      "nickname": "테스트"
     },
     {
-      "id": "yongjin",
-      "pw": "yongjin123",
-      "nickname": "용지니"
+      "id": "test123456",
+      "pw": "test12345",
+      "nickname": "테스트"
+    },
+    {
+      "id": "test",
+      "pw": "test12345",
+      "nickname": "테스트"
+    },
+    {
+      "id": "dydwlsdydals",
+      "pw": "dydwlsdydals",
+      "nickname": "123123123"
+    },
+    {
+      "id": "rladydals123",
+      "pw": "123123123",
+      "nickname": "김용민123"
+    },
+    {
+      "id": "rladydals1",
+      "pw": "rladydals1",
+      "nickname": "김용민12"
+    },
+    {
+      "id": "rladydals09",
+      "pw": "rladydals",
+      "nickname": "ym002"
+    },
+    {
+      "id": "testtest",
+      "pw": "testtest",
+      "nickname": "test1234"
     }
   ],
   "posts": [
@@ -181,6 +211,28 @@
       "likeLength": 0,
       "scrapLength": 0,
       "id": 9
+<<<<<<< HEAD
+=======
+    },
+    {
+      "writter": "test1234",
+      "date": "2020-11-20",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/qlwPttH0gjw/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=qlwPttH0gjw",
+        "title": "Be My Baby (English Version)",
+        "musicid": "qlwPttH0gjw"
+      },
+      "content": "짱",
+      "title": "원걸",
+      "like": [],
+      "scrap": [
+        "test1234"
+      ],
+      "likeLength": 0,
+      "scrapLength": 1,
+      "id": 10
+>>>>>>> a6828760a3ff14ccfae8eb5e15e1872c14693b45
     }
   ],
   "mymusic": [
@@ -193,6 +245,11 @@
       "id": "rladydals2",
       "thumbnail": "https://i.ytimg.com/vi/-ikYiWp0H5g/mqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=-ikYiWp0H5g"
+    },
+    {
+      "id": "test1234",
+      "thumbnail": "https://i.ytimg.com/vi/D1PvIWdJ8xo/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=D1PvIWdJ8xo"
     }
   ]
 }

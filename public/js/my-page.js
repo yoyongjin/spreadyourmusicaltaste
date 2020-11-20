@@ -4,6 +4,8 @@ const $profileImage = document.querySelector(".profile-image");
 const $scrapNumber = document.querySelector(".scrap-number");
 const $postingNumber = document.querySelector(".posting-number");
 const userKey = 'AIzaSyBHqXzcGxlePRMoN3A34Y93cIANHJkzxXc';
+const $logOutBtn = document.querySelector(".log-out-btn");
+
 // 마이뮤직
 const $addMusicBtn = document.querySelector(".add-mymusic-btn");
 const $searchCoverContainer = document.querySelector(".search-cover-container");
@@ -197,3 +199,8 @@ $previousBtn.onclick = async () => {
     console.error(err);
   }
 };
+
+$logOutBtn.onclick = () => {
+  sessionStorage.clear();
+  window.location.assign('login.html'); 
+}
