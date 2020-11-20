@@ -82,6 +82,9 @@ ul {
 }
 
 .posted-page-song-detail {
+  font-family: 'Nanum Gothic';
+  font-weight: 700;
+  line-height: 1.5;
   width: 150px;
   height: 200px;
   position: absolute;
@@ -93,21 +96,26 @@ ul {
   padding: 10px;
   margin-top: 15px;
 }
+
 @keyframes panelanime {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
+
 .posted-page-song-detail.selected {
   opacity: 1;
   animation: panelanime 1s ease-in;
 }
+
 .posted-page-youtube-title {
   opacity: 0;
 }
+
 .posted-page-bottom {
   position: relative;
   background-color: white;
@@ -274,6 +282,16 @@ ul {
 }
 
 .like-fakethumbs {
+.like-fakeview1,
+.like-fakeview2,
+.like-fakeview3,
+.like-fakeview4,
+.like-fakeview5,
+.like-fakeview6,
+.like-fakeview7,
+.like-fakeview8,
+.like-fakeview9,
+.like-fakeview10 {
   background-image: url(../image/heart.svg);
   width: 50px;
   height: 50px;
@@ -324,18 +342,8 @@ ul {
 
 @keyframes fake {
   0% {
-    opacity: 0.5;
-    transform: translateY(0%);
-  }
-
-  25% {
     opacity: 1;
-    transform: translateY(-100%);
-  }
-
-  50% {
-    opacity: 0.5;
-    transform: translateY(-200%);
+    transform: translateY(200%);
   }
 
   100% {
@@ -360,4 +368,7 @@ ul {
   border-radius: 10px;
   width: 200px;
   height: 200px;
+}
+.view-box {
+  position: relative;
 }
