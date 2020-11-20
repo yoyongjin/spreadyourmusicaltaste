@@ -171,11 +171,9 @@
       },
       "content": "명곡 ㅇㅈ...",
       "title": "원더걸스 - 2 dt",
-      "like": [
-        "test1234"
-      ],
+      "like": [],
       "scrap": [],
-      "likeLength": 1,
+      "likeLength": 0,
       "scrapLength": 0,
       "id": 9
     }

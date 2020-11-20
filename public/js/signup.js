@@ -139,6 +139,15 @@ $signupBtn.onclick = async () => {
       },
       body: JSON.stringify(newUser)
     });
+    const res = await fetch('/users');
+    const users = await res.json();
+    const checkId = await users.find(user => $inputId.value === user.id);
+    if (checkId) {
+      $idError.textContent = '이미 존재하는 아이디입니다.';
+      $inputId.style.boxShadow = '0 0 2pt 4pt red';
+      return;
+    }
+    $inputId.style.boxShadow = '0 0 2pt 4pt yellowgreen';
     sessionStorage.setItem('user', JSON.stringify(newUser));
     window.location.assign('index.html');
   } catch (err) {

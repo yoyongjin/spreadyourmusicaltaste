@@ -1,7 +1,7 @@
 let posts = []; // 로드된 자료들을 담고있는 배열
 let userInfo; // 로그인한 회원정보
 let currPageNum = 1;
-let orderState = sessionStorage.getItem('sort-by');
+let orderState = 'recent';
 let sortBy = "date";
 let totalPageNum = 0; // 페이지 갯수 구하기 위해서 선언한 변수
 let isAlerted = false;
