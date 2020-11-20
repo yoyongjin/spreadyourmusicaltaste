@@ -26,12 +26,137 @@
       "nickname": "김용민1"
     }
   ],
-  "posts": [],
+  "posts": [
+    {
+      "writter": "rladydals",
+      "date": "2020-11-20",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/t7X8qhESIfs/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=t7X8qhESIfs",
+        "title": "Wonder Girls - Tell Me, 원더걸스 - 텔미, Music Core 20070908",
+        "musicid": "t7X8qhESIfs"
+      },
+      "content": "텔미",
+      "title": "텔미",
+      "like": [],
+      "scrap": [],
+      "likeLength": 0,
+      "scrapLength": 0,
+      "id": 1
+    },
+    {
+      "writter": "rladydals",
+      "date": "2020-11-20",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/-ikYiWp0H5g/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=-ikYiWp0H5g",
+        "title": "Wonder Girls – Tell Me Lyrics [HAN|ROM|ENG]",
+        "musicid": "-ikYiWp0H5g"
+      },
+      "content": "텔미유 원미원미 원미\n",
+      "title": "텔미텔미",
+      "like": [],
+      "scrap": [],
+      "likeLength": 0,
+      "scrapLength": 0,
+      "id": 2
+    },
+    {
+      "writter": "rladydals",
+      "date": "2020-11-20",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/931kxHYscDY/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=931kxHYscDY",
+        "title": "소녀시대 다만세 레전드 댓글 모음집 1탄",
+        "musicid": "931kxHYscDY"
+      },
+      "content": "다만세",
+      "title": "다만세",
+      "like": [],
+      "scrap": [],
+      "likeLength": 0,
+      "scrapLength": 0,
+      "id": 3
+    },
+    {
+      "writter": "rladydals",
+      "date": "2020-11-20",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/C-V3SwQpOTY/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=C-V3SwQpOTY",
+        "title": "[ENG] SMTM9 [5회/풀버전] 스윙스 X 카키 X 래원 @3차 예선 I 트리플 크루 배틀 Full ver. EP.5 201113",
+        "musicid": "C-V3SwQpOTY"
+      },
+      "content": "돈까스",
+      "title": "스윙스",
+      "like": [],
+      "scrap": [],
+      "likeLength": 0,
+      "scrapLength": 0,
+      "id": 4
+    },
+    {
+      "writter": "rladydals",
+      "date": "2020-11-20",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/B_GRymHuLhw/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=B_GRymHuLhw",
+        "title": "SUB)촉촉한 팬케이크에 푸짐한 샌드위치 에그스크램블 등 브런치 먹방!🥞🥪(ft.감자튀김) 리얼사운드 Pancake Sandwich Brunch mukbang ASMR",
+        "musicid": "B_GRymHuLhw"
+      },
+      "content": "먹방",
+      "title": "배고파",
+      "like": [],
+      "scrap": [],
+      "likeLength": 0,
+      "scrapLength": 0,
+      "id": 5
+    },
+    {
+      "writter": "rladydals",
+      "date": "2020-11-20",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/u_672V85_jI/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=u_672V85_jI",
+        "title": "9. 불변 객체",
+        "musicid": "u_672V85_jI"
+      },
+      "content": "웅모2",
+      "title": "불변객체",
+      "like": [],
+      "scrap": [],
+      "likeLength": 0,
+      "scrapLength": 0,
+      "id": 6
+    },
+    {
+      "writter": "rladydals",
+      "date": "2020-11-20",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/pHY6p76qEic/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=pHY6p76qEic",
+        "title": "9. 화살표 함수",
+        "musicid": "pHY6p76qEic"
+      },
+      "content": "으악",
+      "title": "화살표함수",
+      "like": [],
+      "scrap": [],
+      "likeLength": 0,
+      "scrapLength": 0,
+      "id": 7
+    }
+  ],
   "mymusic": [
     {
       "id": "rlaehdcks",
       "thumbnail": "https://i.ytimg.com/vi/DPCtiXpx-UQ/mqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=DPCtiXpx-UQ"
+    },
+    {
+      "id": "rladydals",
+      "thumbnail": "https://i.ytimg.com/vi/zV9C4fh3Fuc/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=zV9C4fh3Fuc"
     }
   ]
 }
