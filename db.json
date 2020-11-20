@@ -9,6 +9,11 @@
       "id": "rladydals2",
       "pw": "rladydals2",
       "nickname": "김용민2"
+    },
+    {
+      "id": "test1234",
+      "pw": "test1234",
+      "nickname": "조윤아"
     }
   ],
   "posts": [
@@ -154,6 +159,25 @@
       "likeLength": 0,
       "scrapLength": 0,
       "id": 8
+    },
+    {
+      "writter": "test1234",
+      "date": "2020-11-20",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/bJAlaIUmdsA/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=bJAlaIUmdsA",
+        "title": "2DT - Wonder Girls",
+        "musicid": "bJAlaIUmdsA"
+      },
+      "content": "명곡 ㅇㅈ...",
+      "title": "원더걸스 - 2 dt",
+      "like": [
+        "test1234"
+      ],
+      "scrap": [],
+      "likeLength": 1,
+      "scrapLength": 0,
+      "id": 9
     }
   ],
   "mymusic": [
