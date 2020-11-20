@@ -110,6 +110,9 @@ const finishChange = () => {
     sessionStorage.setItem('user', JSON.stringify(changeUserInfo));
     window.location.assign('my-page.html');
 
+    $backGround2.style.display = 'block';
+    $changeDone.style.display = 'block';
+
     const request = {
       patch(url, payload) {
         return fetch(url, {
@@ -139,17 +142,10 @@ const finishChange = () => {
     }, 1500);
   }
 }
-$changeCompleteBtn2.onclick = () => {
-  
-  $backGround2.style.display = 'block';
-  $changeDone.style.display = 'block';
-  // $backGround2.style.display = 'block';
-  
-
-  const timerId = setTimeout(finishChange, 1500);
-  // clearTimeout(timerId);
-
-  
+$changeCompleteBtn2.onclick = () => {  
+  // $backGround2.style.display = 'block';  
+  setTimeout(finishChange, 1500);
+  // clearTimeout(timerId);  
 }
 $changedPwInput.onkeyup = e => {
   if(e.key == 'Enter') {
