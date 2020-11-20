@@ -197,7 +197,7 @@ ul {
 }
 
 .posted-page-likeBtn {
-  background-image: url(../image/thumbs-up-regular.svg);
+  background-image: url(../image/like.svg);
   background-repeat: no-repeat;
   vertical-align: super;
 }
@@ -211,7 +211,7 @@ ul {
 .posted-page-likeBtn.pressed {
   /* background-color: yellowgreen;
   color: black; */
-  background-image: url(../image/thumbs-up-solid.svg);
+  background-image: url(../image/heart.svg);
   background-repeat: no-repeat;
   vertical-align: super;
 }
@@ -259,7 +259,7 @@ ul {
 .like-fakeview1,
 .like-fakeview2,
 .like-fakeview3 {
-  background-image: url(../image/thumbs-up-solid.svg);
+  background-image: url(../image/heart.svg);
   width: 100px;
   height: 100px;
   position: absolute;
