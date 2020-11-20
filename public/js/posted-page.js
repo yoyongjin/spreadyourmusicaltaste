@@ -87,10 +87,10 @@ const checkIfWritter = postWritter => {
 
 // Events
 window.onload = () => {
-    // 프로필 이미지 랜덤 추출
-    const random = Math.floor((Math.random() * 20) + 1);
-    // 프로필 이미지 추가
-    $postedProfileImage.setAttribute('src', `./image/profile${random}.gif`);
+  // 프로필 이미지 랜덤 추출
+  const random = Math.floor((Math.random() * 20) + 1);
+  // 프로필 이미지 추가
+  $postedProfileImage.setAttribute('src', `./image/profile${random}.gif`);
   (async () => {
     userInfo = JSON.parse(sessionStorage.getItem('user'));
     console.log(userInfo);
@@ -127,11 +127,11 @@ $postedpageAlbum.onclick = async e => {
   if (isSelected === true) {
     $fakeFrame.style.transform = 'translateX(-40%)';
   }
-  if(checkIndex === false) {
+  if (checkIndex === false) {
     checkIndex = true;
     return;
   }
-  if(checkIndex === true) {
+  if (checkIndex === true) {
     $fakeFrame.style.zIndex = '10';
   }
 

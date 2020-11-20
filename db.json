@@ -121,11 +121,13 @@
       },
       "content": "웅모2",
       "title": "불변객체",
-      "like": [],
+      "like": [
+        "rladydals"
+      ],
       "scrap": [
         "rladydals"
       ],
-      "likeLength": 0,
+      "likeLength": 1,
       "scrapLength": 1,
       "id": 6
     },

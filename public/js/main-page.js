@@ -11,6 +11,7 @@ const $mainMain = document.querySelector('.main-main');
 const $icon = document.querySelector('.scroll-icon');
 const $sortBtn = document.querySelector('.sort');
 const $orderPanel = document.querySelector('.order-panel');
+const $alertContainer = document.querySelector('.alert-last-container');
 
 // 포스팅 노래 렌더 함수
 const renderPost = () => {
@@ -49,7 +50,7 @@ const request = {
 
 const determineSortBy = () => {
   sortBy = (orderState === 'recent') ? 'date' : (orderState === 'like' ? 'likeLength' : 'scrapLength');
-}; //정렬기준 구하는 함수
+}; // 정렬기준 구하는 함수
 
 // 로딩화면 띄워주는 함수
 const displayLoading = () => {
@@ -85,9 +86,12 @@ const loadNextPosts = () => {
       posts = [...posts, ..._posts]; // posts 배열에 로드한 요소들 추가
       renderPost();
       applyThumbnail();
-
+      $alertContainer.classList.add('show');
+      setTimeout(() => {
+        $alertContainer.remove();
+      }, 4000);
       document.querySelector('.loading-container').remove(); // 로딩화면 돔에서 제거
-    }, 300);
+    }, 500);
   }
 };
 // 스크롤 상단으로 옮겨주는 버튼 출력
