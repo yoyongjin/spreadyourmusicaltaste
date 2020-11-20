@@ -1,6 +1,15 @@
 {
   "users": [
     {
+<<<<<<< HEAD
+      "id": "yongjin",
+      "pw": "yongjin123",
+      "nickname": "용지니"
+    }
+  ],
+  "posts": [],
+  "mymusic": []
+=======
       "id": "rladydals",
       "pw": "rladydals",
       "nickname": "김용민"
@@ -190,4 +199,5 @@
       "url": "https://www.youtube.com/watch?v=-ikYiWp0H5g"
     }
   ]
+>>>>>>> 3a05c668abd0d1a09a88c014b7c7e8dcc8043073
 }
