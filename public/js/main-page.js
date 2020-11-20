@@ -4,6 +4,7 @@ let currPageNum = 1;
 let orderState = 'recent';
 let sortBy = 'date';
 let totalPageNum = 0; // 페이지 갯수 구하기 위해서 선언한 변수
+let isAlerted = false;
 
 const $userName = document.querySelector('.main-nav-top-username');
 const $mainBoard = document.querySelector('.main-board');
@@ -11,7 +12,7 @@ const $mainMain = document.querySelector('.main-main');
 const $icon = document.querySelector('.scroll-icon');
 const $sortBtn = document.querySelector('.sort');
 const $orderPanel = document.querySelector('.order-panel');
-const $alertContainer = document.querySelector('.alert-last-container');
+const $mainNav = document.querySelector('.main-nav');
 
 // 포스팅 노래 렌더 함수
 const renderPost = () => {
@@ -73,7 +74,22 @@ const loadNextPosts = () => {
 
   if (window.pageYOffset + window.innerHeight
     === document.body.scrollHeight) { // 문서의 최하단에 닿으면 다음단계 진행
-    if (posts.length < 6 || totalPageNum === currPageNum) return;
+    if (posts.length < 6 || totalPageNum === currPageNum) {
+      if(isAlerted || currPageNum === 1) return;
+      const htmlForAlert = `<div class="alert-last-container">
+      <img src="./image/meh-rolling-eyes-regular.svg" alt="alert image" class="alert-last-img"/>
+      <span class="alert-last-message">It seems like you are on the last page...</span>
+    </div>`;
+      $mainNav.insertAdjacentHTML('beforeend', htmlForAlert);
+      const $alertContainer = document.querySelector('.alert-last-container');
+      console.log($alertContainer);
+      document.querySelector('.alert-last-container').classList.add('show');
+      setTimeout(() => {
+        document.querySelector('.alert-last-container').remove();
+      }, 2500);
+      isAlerted = true;
+      return;
+    }
     // 현재 로드된 post의 갯수가 6개 미만이면 마지막 페이지로 간주, 아무 행동도 하지 않는다.
     // 현재 페이지 숫자가 전체 페이지 숫자와 같으면 아무 행동도 하지 않는다.
     displayLoading(); // 로딩화면 게시
@@ -86,10 +102,6 @@ const loadNextPosts = () => {
       posts = [...posts, ..._posts]; // posts 배열에 로드한 요소들 추가
       renderPost();
       applyThumbnail();
-      $alertContainer.classList.add('show');
-      setTimeout(() => {
-        $alertContainer.remove();
-      }, 4000);
       document.querySelector('.loading-container').remove(); // 로딩화면 돔에서 제거
     }, 500);
   }
@@ -148,7 +160,7 @@ $sortBtn.onclick = () => {
 
 $orderPanel.onclick = e => {
   window.scroll({ top: 0, left: 0 });
-
+  isAlerted = false;
   orderState = e.target.classList[1];
   document.querySelector('.selected').classList.remove('selected');
   e.target.classList.add('selected');

@@ -319,8 +319,6 @@ a {
   position: absolute;
   top: -150px;
   right: 0%;
-  transform: translateX(300%);
-  transition: 2s ease-in-out;
 }
 .alert-last-container.show {
   display: block;
@@ -335,7 +333,15 @@ a {
   position: absolute;
   top: -150px;
   right: 0%;
-  transform: translateX(-30%);
+  animation: show-container 1s ease-in forwards;
+}
+@keyframes show-container {
+  0% {
+    transform: translateX(270%);
+  }
+  100% {
+    transform: translateX(-30%);
+  }
 }
 @keyframes show {
   0% {
