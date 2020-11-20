@@ -16,53 +16,12 @@
       "nickname": "yunada"
     },
     {
-      "id": "rladydals2",
-      "pw": "rladydals2",
-      "nickname": "용민2"
+      "id": "yuna1225",
+      "pw": "yuna1212",
+      "nickname": "유나다"
     }
   ],
   "posts": [
-    {
-      "id": 6,
-      "writter": "rlaehdcks",
-      "date": "2020-11-20",
-      "music": {
-        "thumbnail": "https://i.ytimg.com/vi/mlwqHWHo-5E/mqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=mlwqHWHo-5E",
-        "title": "빈지노 (Beenzino) - OKGO (Feat. E SENS) MV",
-        "musicid": "mlwqHWHo-5E"
-      },
-      "content": "미쳤다미쳤어",
-      "title": "빈지노X이센스",
-      "like": [],
-      "scrap": []
-    },
-    {
-      "id": 10,
-      "writter": "rlaehdcks",
-      "date": "2020-11-20",
-      "music": {
-        "thumbnail": "https://i.ytimg.com/vi/Ou1xUChEDKM/mqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=Ou1xUChEDKM",
-        "title": "먼데이 키즈 - 사랑 못해, 남들 쉽게 다 하는 거 / 가사",
-        "musicid": "Ou1xUChEDKM"
-      },
-      "content": "띵곡",
-      "title": "먼키 신곡",
-      "like": [
-        "rladydals",
-        1,
-        2,
-        3,
-        4
-      ],
-      "scrap": [
-        1,
-        2
-      ],
-      "likeLength": 5,
-      "scrapLength": 2
-    }
   ],
   "mymusic": [
     {
