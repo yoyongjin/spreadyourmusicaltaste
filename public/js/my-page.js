@@ -7,18 +7,17 @@ const $postingNumber = document.querySelector(".posting-number");
 const userKey = 'AIzaSyBHqXzcGxlePRMoN3A34Y93cIANHJkzxXc';
 
 // 마이뮤직
-const $addMusicBtn = document.querySelector(".add-mymusic-btn");
-const $searchCoverContainer = document.querySelector(".search-cover-container");
-const $searchMusicCancel = document.querySelector(".search-music-cancel");
-const $searchMoreBtnWrapper = document.querySelector(
-  ".search-more-btn-wrapper"
-);
-const $inputSearchMusic = document.querySelector(".input-search-music");
-const $musicLists = document.querySelector(".music-lists");
-const $previousBtn = document.querySelector(".previous-page-btn");
-const $nextBtn = document.querySelector(".next-page-btn");
-const $myMusicBox = document.querySelector(".mymusic-box");
-const $myMusic = document.querySelector(".my-music");
+const $addMusicBtn = document.querySelector('.add-mymusic-btn');
+const $searchCoverContainer = document.querySelector('.search-cover-container');
+const $searchMusicCancel = document.querySelector('.search-music-cancel');
+const $searchMoreBtnWrapper = document.querySelector('.search-more-btn-wrapper');
+const $inputSearchMusic = document.querySelector('.input-search-music');
+const $musicLists = document.querySelector('.music-lists');
+const $previousBtn = document.querySelector('.previous-page-btn');
+const $nextBtn = document.querySelector('.next-page-btn');
+const $myMusicBox = document.querySelector('.mymusic-box');
+const $myMusic = document.querySelector('.my-music');
+const $logOutBtn = document.querySelector('.log-out-btn');
 
 let count;
 let selectedData;
@@ -233,3 +232,8 @@ $previousBtn.onclick = async () => {
     console.error(err);
   }
 };
+
+$logOutBtn.onclick = () => {
+  sessionStorage.clear();
+  window.location.assign('login.html');
+}

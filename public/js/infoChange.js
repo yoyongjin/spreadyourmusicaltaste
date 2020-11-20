@@ -19,6 +19,17 @@ const $changingPwError = document.querySelector('.changing-pw-error');
 const $changedPwError = document.querySelector('.changed-pw-error');
 const $changeCancleBtn = document.querySelector('.change-cancel-btn');
 const $changeCancleBtn2 = document.querySelector('.change-cancel-btn2');
+const $goodByeBtn = document.querySelector('.good-bye-btn');
+const $caution = document.querySelector('.caution');
+const $cautionCheck = document.querySelector('input[type=checkbox]');
+const $cautionCheckBtn = document.querySelector('.caution-check-btn');
+const $changeSuccess = document.querySelector('.change-success');
+const $backGround = document.querySelector('.back-ground');
+const $cautionCloseBtn = document.querySelector('.caution-close-btn');
+const $backGround2 = document.querySelector('.back-ground2');
+const $changeDone = document.querySelector('.change-done');
+
+
 
 // 세션 스토리지 user 정보 받아올 변수
 const {id: currId, pw:currPw, nickname: currNickName} = JSON.parse(sessionStorage.getItem('user'));
@@ -27,6 +38,19 @@ const {id: currId, pw:currPw, nickname: currNickName} = JSON.parse(sessionStorag
 $displayId.textContent = `${currNickName}님`;
 
 //비밀번호 확인 후 다음페이지
+const request = {
+  patch(url, payload) {
+    return fetch(url, {
+      method: 'PATCH',
+      headers: { 'content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+  },
+  delete(url) {
+    return fetch(url, {method: 'DELETE'});
+  }
+};
+
 const pwChecked = () => {
   if ($changePwInput.value !== currPw) {
     $pwError.textContent = '비밀번호가 일치하지 않습니다.'
@@ -40,6 +64,7 @@ const pwChecked = () => {
     $changeBtnWrapper2.style.display = 'block';
     $myNick.style.display = 'block';
     $changedPw.style.display = 'block';
+    $goodByeBtn.style.display = 'block';
   }
 }
 $changeCompleteBtn.onclick = () => {
@@ -67,6 +92,14 @@ const finishChange = () => {
   if ($changingPwInput.value === $changedPwInput.value && !$myNickInput.value) {
     const changeUserPw = { id: currId, pw: $changedPwInput.value, nickname: currNickName }
     sessionStorage.setItem('user', JSON.stringify(changeUserPw));
+
+    request.patch(`/users/${sessionStorage.getItem('user.id')}`, {
+      pw: `${currPw}`
+    }).then(response => response.json())
+      // .then(users => console.log(users))
+      .then(_user => JSON.parse(_user))
+      .then(patched_user => { console.log(patched_user); })
+      .catch(err => console.error(err));  
     window.location.assign('my-page.html');
   }
 
@@ -85,8 +118,8 @@ const finishChange = () => {
       }
     }
 
-    request.patch(`/users/${sessionStorage.getItem('user.id')}`, {
-      pw: `${currPw}`
+    request.patch(`/users/${JSON.parse(sessionStorage.getItem('user')).id}`, {
+      pw: `${currPw}`, nickname: `${currNickName}`
     }).then(response => response.json())
       .then(users => console.log(users))
       .catch(err => console.error(err));
@@ -98,7 +131,16 @@ const finishChange = () => {
   }
 }
 $changeCompleteBtn2.onclick = () => {
-  finishChange();
+  
+  $backGround2.style.display = 'block';
+  $changeDone.style.display = 'block';
+  // $backGround2.style.display = 'block';
+  
+
+  const timerId = setTimeout(finishChange, 1500);
+  // clearTimeout(timerId);
+
+  
 }
 $changedPwInput.onkeyup = e => {
   if(e.key == 'Enter') {
@@ -116,14 +158,43 @@ $changePwInput.onkeyup = e => {
   if(e.key == 'Enter') {
     pwChecked();
   }
-}
+};
 
 
 
 $changeCancleBtn.onclick = () => {
   window.location.assign('my-page.html');
-}
+};
 
 $changeCancleBtn2.onclick = () => {
   window.location.assign('my-page.html');
-}
+};
+
+//회원 탈퇴(good-bye) : db.json에서 삭제
+$goodByeBtn.onclick = () => {
+  $caution.style.display = 'block';
+  $backGround.style.display = 'block';
+
+  $cautionCloseBtn.onclick = () => {
+    console.log(1);
+    $caution.style.display = 'none';
+    $backGround.style.display = 'none';
+  }
+
+
+  $cautionCheckBtn.onclick = () => {
+    console.log(JSON.parse(sessionStorage.getItem('user')).id)
+    
+    request.delete(`/users/${JSON.parse(sessionStorage.getItem('user')).id}`)
+      .then(users => users.json())
+      .then(users_fixed => console.log(users_fixed))
+      .catch(err => console.error(err));
+    window.location.assign('login.html'); 
+
+  };  
+};
+
+
+
+
+

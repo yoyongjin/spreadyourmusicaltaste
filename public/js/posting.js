@@ -12,9 +12,7 @@ const $addMusic = document.querySelector(".add-music-btn");
 const $searchCoverContainer = document.querySelector(".search-cover-container");
 const $searchMusicCancel = document.querySelector(".search-music-cancel");
 const $inputSearchMusic = document.querySelector(".input-search-music");
-const $searchMoreBtnWrapper = document.querySelector(
-  ".search-more-btn-wrapper"
-);
+const $searchMoreBtnWrapper = document.querySelector(".search-more-btn-wrapper");
 const $musicLists = document.querySelector(".music-lists");
 const $selectedMusic = document.querySelector(".selected-music");
 const $previousBtn = document.querySelector(".previous-page-btn");
@@ -43,9 +41,7 @@ $searchMusicCancel.onclick = () => {
   $searchCoverContainer.classList.remove("active");
   $searchMoreBtnWrapper.classList.remove("showBtn");
   $inputSearchMusic.value = "";
-  [...$musicLists.children].forEach((musicList) =>
-    $musicLists.removeChild(musicList)
-  );
+  [...$musicLists.children].forEach(musicList => $musicLists.removeChild(musicList));
 };
 
 $inputSearchMusic.onchange = () => {
@@ -259,6 +255,11 @@ $completeBtn.onclick = async () => {
 $cancleBtn.onclick = () => {
   window.location.assign("main-page.html");
 };
+
+//게시물 없을 때 작성 완료 버튼 비활성화
+if($postContent.textContent === '') {
+  $completeBtn.setAttribute('disabled');
+}
 
 $searchMusicTitle.onmouseenter = e => {
   e.target.parentNode.style.background = 'linear-gradient(45deg, #ff0a6c, #4a3cdb)';
