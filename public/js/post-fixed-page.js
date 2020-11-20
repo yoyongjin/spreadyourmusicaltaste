@@ -5,14 +5,16 @@ let count;
 let count1 = 0; // 유튜브 노래 선택여부
 let count2 = 0; // 게시글 제목 작성 여부
 let count3 = 0; // 게시글 내용 작성여부
+
+// 게시글 번호 획득
+const postingId = JSON.parse(sessionStorage.getItem("post-id"));
+
 //DOMs
 const $addMusic = document.querySelector(".add-music-btn");
 const $searchCoverContainer = document.querySelector(".search-cover-container");
 const $searchMusicCancel = document.querySelector(".search-music-cancel");
 const $inputSearchMusic = document.querySelector(".input-search-music");
-const $searchMoreBtnWrapper = document.querySelector(
-  ".search-more-btn-wrapper"
-);
+const $searchMoreBtnWrapper = document.querySelector(".search-more-btn-wrapper");
 const $musicLists = document.querySelector(".music-lists");
 const $selectedMusic = document.querySelector(".selected-music");
 const $previousBtn = document.querySelector(".previous-page-btn");
@@ -25,10 +27,25 @@ const $contentShowError = document.querySelector(".content-show-error");
 const $titleShowError = document.querySelector(".title-show-error");
 
 // Event Handler
-window.onload = () => {
+window.onload = async () => {
   $postTitle.value = "";
   $postContent.value = "";
   $inputSearchMusic.value = "";
+  // 기존 게시물 로딩
+  try {
+    const res = await fetch(`/posts?id_like=\\b${postingId}\\b`);
+    const myPost = await res.json();
+    console.log(myPost);
+    console.log(myPost['0'].title);
+    console.log(myPost['0'].content);
+
+    $postTitle.value = `${myPost['0'].title}`;
+    $postContent.value = `${myPost['0'].content}`;
+    $selectedMusic.innerHTML = `<img class='render-music-thumbnail' src="${myPost['0'].music.thumbnail}" alt="${myPost['0'].music.title}"> <span class='render-music-title'>${myPost['0'].music.title}</span>`
+  } catch (err) {
+    console.error(err);
+  }
+  // 기존 게시물 로딩 끝
 };
 
 $addMusic.onclick = () => {
@@ -225,25 +242,27 @@ $completeBtn.onclick = async () => {
       : 1;
 
     const postingData = {
-      id: postId,
       writter: loginUser.id,
       date: `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`,
       music: {
         thumbnail: selectedData.snippet.thumbnails.medium.url,
         url: `https://www.youtube.com/watch?v=${selectedData.id.videoId}`,
         title: selectedData.snippet.title,
+        musicid: selectedData.id.videoId
       },
       content: $postContent.value,
       title: $postTitle.value,
       like: [],
       scrap: [],
     };
-    // console.log(postingData);
-    await fetch("/posts", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(postingData),
+
+    // 게시물 수정 PATCH 시작
+    await fetch(`/posts/${postingId}`, {
+      method: 'PATCH',
+      headers: { 'Content-type': 'application/json' },
+      body: JSON.stringify(postingData)
     });
+    // 게시물 수정 PATCH 끝
     window.location.assign("/main-page.html");
   } catch (err) {
     console.error(err);
