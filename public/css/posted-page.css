@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Jua&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Jua&display=swap");
 
 *,
 *::before,
@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  font-family: 'Jua';
+  font-family: "Jua";
   margin: 0 auto;
   box-sizing: border-box;
   width: 375px;
@@ -33,7 +33,7 @@ ul {
   border-radius: 0 0 15px 15px;
   position: relative;
   background: rgb(33, 236, 192);
-  background: linear-gradient(45deg, #A32CDF, #106AD2);
+  background: linear-gradient(45deg, #a32cdf, #106ad2);
 }
 
 /* 간단한 게시물정보, 게시글제목, 작성자, 날짜 */
@@ -44,7 +44,7 @@ ul {
   font-size: 1.4rem;
   border-radius: 25px;
   background-color: aliceblue;
-  margin-top: 20px;
+  margin: 20px 0 10px;
 }
 
 /* 노래명/플레이리스트/앨범자켓 이미지 컨테이너 */
@@ -70,7 +70,7 @@ ul {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url('https://t1.daumcdn.net/cfile/tistory/2108644A577ADA710F?original');
+  background-image: url("https://t1.daumcdn.net/cfile/tistory/2108644A577ADA710F?original");
   transition-property: border-radius;
   transition-duration: 1s;
   transition-property: transform;
@@ -85,7 +85,7 @@ ul {
   width: 150px;
   height: 200px;
   position: absolute;
-  top: 101px;
+  top: 100px;
   right: 8px;
   background-color: aliceblue;
   opacity: 0;
@@ -120,7 +120,7 @@ ul {
   margin-bottom: -10px;
   height: 80px;
   width: 375px;
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRQF58p4kLtXiv1dcCiCOLsNu0_llb_Dj4Vww&usqp=CAU');
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRQF58p4kLtXiv1dcCiCOLsNu0_llb_Dj4Vww&usqp=CAU");
 }
 
 .posted-page-title {
@@ -144,14 +144,14 @@ ul {
 /* 게시물 내용 컨테이너 */
 .posted-page-content {
   border-radius: 15px;
-  background-color: aliceblue;
+  background-color: rgb(238, 247, 253);
   color: black;
   margin: 0 auto;
   margin-top: 15px;
   padding: 8px 15px;
   font-size: 1.5rem;
   line-height: 1.8rem;
-  font-family: 'Alegreya Sans';
+  font-family: "Alegreya Sans";
   min-height: 400px;
 }
 
@@ -165,9 +165,9 @@ ul {
   margin-bottom: 10px;
   color: black;
   font-size: 1.3rem;
-  padding: 8px 15px;
+  padding: 15px 15px;
   background-color: whitesmoke;
-  background: linear-gradient(180deg, #FBC2EB, #A6C1EE);
+  background: linear-gradient(180deg, #fbc2eb, #a6c1ee);
 }
 
 .status-btn,
@@ -196,7 +196,7 @@ ul {
 .posted-page-likeBtn {
   border: none;
   cursor: pointer;
-  background: linear-gradient(180deg, #FBC2EB, #A6C1EE);
+  background: linear-gradient(180deg, #fbc2eb, #a6c1ee);
   /* color: white; */
   font-size: 1.4rem;
   border-radius: 5px;
@@ -208,12 +208,14 @@ ul {
   background-image: url(../image/like.svg);
   background-repeat: no-repeat;
   vertical-align: super;
+  outline: none;
 }
 
 .posted-page-scrapBtn {
   background-image: url(../image/star-regular.svg);
   background-repeat: no-repeat;
   vertical-align: super;
+  outline: none;
 }
 
 .posted-page-likeBtn.pressed {
@@ -231,7 +233,7 @@ ul {
 }
 
 .thumb {
-  background-image: url('../image/thumbs-up-solid.svg');
+  background-image: url("../image/thumbs-up-solid.svg");
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -242,19 +244,22 @@ ul {
 .posted-page-editBtn {
   border: 0;
   padding: 10px;
-  background-color: #A32CDF;
+  background-color: #b861e4;
   color: white;
   cursor: pointer;
   border-radius: 5px;
+  box-shadow: 1px 1px 1px #666;
+  outline-color: violet;
 }
 
 .posted-page-deleteBtn:hover,
 .posted-page-editBtn:hover {
   transition-duration: 0.3s;
-  background-color: #106AD2;
+  background: linear-gradient(45deg, #00ffa9, #106ad2);
 }
 
-.posted-page-editBtn {}
+.posted-page-editBtn {
+}
 
 .posted-profile-image {
   position: absolute;

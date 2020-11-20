@@ -4,7 +4,8 @@ const $profileImage = document.querySelector(".profile-image");
 
 const $scrapNumber = document.querySelector(".scrap-number");
 const $postingNumber = document.querySelector(".posting-number");
-const userKey = 'AIzaSyBHqXzcGxlePRMoN3A34Y93cIANHJkzxXc';
+
+const userKey = "AIzaSyCkcVgTMMnc53VeCFxsSftqKBctr9WOf0U";
 
 // 마이뮤직
 const $addMusicBtn = document.querySelector('.add-mymusic-btn');
