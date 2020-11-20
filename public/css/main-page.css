@@ -17,7 +17,7 @@ html {
 }
 body {
   width: 375px;
-  height: 100vh;
+  height: auto;
   background-color: #ccc;
   font-family: "Alegreya Sans";
   margin: 0 auto;
@@ -82,6 +82,8 @@ body {
   background-color: white;
   margin: 0 auto;
   padding: 0.5rem;
+  padding-bottom: 40px;
+  min-height:990px;
   display: flex;
   flex-flow: row wrap;
 }
@@ -103,7 +105,8 @@ body {
 }
 .main-post-image {
   background-size: cover;
-  background-repeat: round;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
   width:200px;
   height: 200px;
   border-radius: 50%;
@@ -161,9 +164,8 @@ body {
 .main-post-like {
   box-sizing: border-box;
   display: inline-block;
-  padding-top: 20px;
   background-color: white;
-  padding:20px 10px;
+  padding:20px 10px 5px 10px;
   margin:0;
   color: black;
   border-radius: 20px 0 0 0;
@@ -267,7 +269,7 @@ a {
   cursor: pointer;
 }
 .order-panel-item {
-  width:17vh;
+  width: 145px;
   height:50px;
   line-height: 50px;
   text-align: center;

@@ -9,9 +9,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   font-size: 10px;
 }
+
 body {
   /* font-family: 'Alegreya Sans'; */
   font-family: "Jua";
@@ -21,16 +23,19 @@ body {
   height: 100vh;
   font-size: 1.3rem;
 }
+
 .post-music {
   height: 100%;
   position: relative;
 }
+
 .post-music-wrapper {
   width: 300px;
   /* height: 100%; */
   margin: 0 auto;
   text-align: center;
 }
+
 .post-music-heading {
   background-color: #1a4789;
   /* background: linear-gradient(45deg, #a32cdf, #106ad2); */
@@ -40,6 +45,7 @@ body {
   letter-spacing: 2.5px;
   color: #fff;
 }
+
 .add-music-btn {
   width: 290px;
   background: linear-gradient(45deg, #a32cdf, #106ad2);
@@ -66,6 +72,7 @@ body {
   letter-spacing: 1.3px;
   /* border-radius: 5px; */
 }
+
 #post-content {
   width: 275px;
   height: 150px;
@@ -79,22 +86,26 @@ body {
   font-family: "Alegreya Sans";
   letter-spacing: 1.3px;
 }
+
 .title-show-error {
   font-family: "Alegreya Sans";
   height: 10px;
   font-weight: 700;
   color: tomato;
 }
+
 .content-show-error {
   font-family: "Alegreya Sans";
   height: 10px;
   font-weight: 700;
   color: tomato;
 }
+
 .btn-wrapper {
   text-align: right;
   padding: 10px;
 }
+
 .complete-btn {
   padding: 10px;
   margin: 5px;
@@ -127,6 +138,7 @@ body {
   box-shadow: 1px 1px 1px #666;
 }
 }
+
 .cancel-btn:hover {
   color: white;
   background: linear-gradient(45deg, #fec194, #ff0061);
@@ -136,6 +148,7 @@ body {
 .search-cover-container {
   display: none;
 }
+
 .active {
   display: block;
   position: absolute;
@@ -145,12 +158,11 @@ body {
   top: 0;
   left: 0;
 }
+
 .search-music-container {
-  background: linear-gradient(
-    45deg,
-    rgba(163, 44, 223, 0.9),
-    rgba(16, 106, 210, 0.9)
-  );
+  background: linear-gradient(45deg,
+      rgba(163, 44, 223, 0.9),
+      rgba(16, 106, 210, 0.9));
   border-radius: 10px;
   width: 300px;
   padding: 15px 0 10px;
@@ -160,6 +172,7 @@ body {
   top: 9vh;
   left: 10%;
 }
+
 .input-search-music {
   width: 270px;
   margin: 10px auto;
@@ -167,6 +180,7 @@ body {
   border: 1px solid #888;
   border-radius: 10px;
 }
+
 .selected-music {
   margin: 0 auto;
   border: none;
@@ -179,6 +193,7 @@ body {
   display: flex;
   margin-bottom: 15px;
 }
+
 .render-music-thumbnail {
   width: 80px;
   height: 65px;
@@ -186,6 +201,7 @@ body {
   border-radius: 3px;
   padding-top: 10px;
 }
+
 .render-music-title {
   display: inline-block;
   width: 150px;
@@ -204,21 +220,24 @@ body {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
+
 .music-lists {
   text-align: center;
 }
+
 .music-lists li {
   display: flex;
   justify-content: space-between;
   margin: 10px;
-  cursor: pointer;
 }
+
 .search-music-thumbnail {
   width: 80px;
   height: 55px;
   margin: 0 5px;
   border-radius: 3px;
 }
+
 .search-music-title {
   width: 180px;
   padding: 5px 0;
@@ -235,33 +254,35 @@ body {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  cursor: pointer;
 }
-.search-music-title:hover {
-  background: linear-gradient(45deg, #ff0a6c, #4a3cdb);
-}
+
 .search-music-radio {
   display: none;
 }
+
 .search-more-btn-wrapper {
   display: none;
 }
+
 .showBtn {
   display: flex;
   justify-content: space-around;
 }
+
 .previous-page-btn {
   background: url(../image/angle-double-left-solid.svg);
   background-repeat: no-repeat;
   padding: 13px;
   border: none;
 }
+
 .next-page-btn {
   background: url(../image/angle-double-right-solid.svg);
   background-repeat: no-repeat;
   padding: 13px;
   border: none;
 }
+
 .search-music-cancel {
   background: url(../image/times-circle-regular.svg);
   background-size: cover;

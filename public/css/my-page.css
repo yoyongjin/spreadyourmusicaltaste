@@ -20,6 +20,7 @@ body {
 }
 
 .container-box {
+  height:100vh;
   background: linear-gradient(45deg, #a32cdf, #106ad2);
 }
 

@@ -5,14 +5,16 @@ let count;
 let count1 = 0; // 유튜브 노래 선택여부
 let count2 = 0; // 게시글 제목 작성 여부
 let count3 = 0; // 게시글 내용 작성여부
+
+// 게시글 번호 획득
+const postingId = JSON.parse(sessionStorage.getItem("post-id"));
+
 //DOMs
 const $addMusic = document.querySelector(".add-music-btn");
 const $searchCoverContainer = document.querySelector(".search-cover-container");
 const $searchMusicCancel = document.querySelector(".search-music-cancel");
 const $inputSearchMusic = document.querySelector(".input-search-music");
-const $searchMoreBtnWrapper = document.querySelector(
-  ".search-more-btn-wrapper"
-);
+const $searchMoreBtnWrapper = document.querySelector(".search-more-btn-wrapper");
 const $musicLists = document.querySelector(".music-lists");
 const $selectedMusic = document.querySelector(".selected-music");
 const $previousBtn = document.querySelector(".previous-page-btn");
@@ -23,13 +25,27 @@ const $postTitle = document.querySelector(".post-title");
 const $postContent = document.getElementById("post-content");
 const $contentShowError = document.querySelector(".content-show-error");
 const $titleShowError = document.querySelector(".title-show-error");
-const $searchMusicTitle = document.querySelector('.search-music-title');
 
 // Event Handler
-window.onload = () => {
+window.onload = async () => {
   $postTitle.value = "";
   $postContent.value = "";
   $inputSearchMusic.value = "";
+  // 기존 게시물 로딩
+  try {
+    const res = await fetch(`/posts?id_like=\\b${postingId}\\b`);
+    const myPost = await res.json();
+    console.log(myPost);
+    console.log(myPost['0'].title);
+    console.log(myPost['0'].content);
+
+    $postTitle.value = `${myPost['0'].title}`;
+    $postContent.value = `${myPost['0'].content}`;
+    $selectedMusic.innerHTML = `<img class='render-music-thumbnail' src="${myPost['0'].music.thumbnail}" alt="${myPost['0'].music.title}"> <span class='render-music-title'>${myPost['0'].music.title}</span>`
+  } catch (err) {
+    console.error(err);
+  }
+  // 기존 게시물 로딩 끝
 };
 
 $addMusic.onclick = () => {
@@ -169,8 +185,8 @@ $previousBtn.onclick = async () => {
 // 제목 최대 입력 글자수 제한
 $postTitle.oninput = () => {
   const titleLength = $postTitle.value.length;
-  if (titleLength >= 30) {
-    $postTitle.textContent = $postTitle.value.substring(0, 30);
+  if (titleLength >= 20) {
+    $postTitle.textContent = $postTitle.value.substring(0, 20);
     $titleShowError.textContent = "입력 가능한 글자수를 초과하였습니다.";
   } else {
     $titleShowError.textContent = "";
@@ -198,7 +214,7 @@ document.body.onkeyup = (e) => {
   if ($postTitle.value !== "") count2 = 1;
   else count2 = 0;
 
-  if (count1 + count2 + count3 === 3 && $postContent.value.length < 250 && $postTitle.value.length < 30) {
+  if (count1 + count2 + count3 === 3) {
     $completeBtn.disabled = false;
     $completeBtn.style["box-shadow"] = "0 0 4px 5px skyblue inset";
     $completeBtn.style.cursor = "pointer";
@@ -221,9 +237,9 @@ $completeBtn.onclick = async () => {
   try {
     const res = await fetch("/posts");
     const posts = await res.json();
-    // const postId = posts.length
-    //   ? Math.max(...posts.map((post) => post.id)) + 1
-    //   : 1;
+    const postId = posts.length
+      ? Math.max(...posts.map((post) => post.id)) + 1
+      : 1;
 
     const postingData = {
       writter: loginUser.id,
@@ -238,15 +254,15 @@ $completeBtn.onclick = async () => {
       title: $postTitle.value,
       like: [],
       scrap: [],
-      likeLength: 0,
-      scrapLength: 0,
     };
-    // console.log(postingData);
-    await fetch("/posts", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(postingData),
+
+    // 게시물 수정 PATCH 시작
+    await fetch(`/posts/${postingId}`, {
+      method: 'PATCH',
+      headers: { 'Content-type': 'application/json' },
+      body: JSON.stringify(postingData)
     });
+    // 게시물 수정 PATCH 끝
     window.location.assign("/main-page.html");
   } catch (err) {
     console.error(err);
@@ -255,9 +271,5 @@ $completeBtn.onclick = async () => {
 
 // 작성 취소하기
 $cancleBtn.onclick = () => {
-  window.location.assign("main-page.html");ㅏㄴ저
-};
-
-$searchMusicTitle.onmouseenter = e => {
-  e.target.parentNode.style.background = 'linear-gradient(45deg, #ff0a6c, #4a3cdb)';
+  window.location.assign("main-page.html");
 };
