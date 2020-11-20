@@ -1,0 +1,275 @@
+let videoId;
+let selectedData;
+let musicItems;
+let count;
+let count1 = 0; // 유튜브 노래 선택여부
+let count2 = 0; // 게시글 제목 작성 여부
+let count3 = 0; // 게시글 내용 작성여부
+
+// 게시글 번호 획득
+const postingId = JSON.parse(sessionStorage.getItem("post-id"));
+
+//DOMs
+const $addMusic = document.querySelector(".add-music-btn");
+const $searchCoverContainer = document.querySelector(".search-cover-container");
+const $searchMusicCancel = document.querySelector(".search-music-cancel");
+const $inputSearchMusic = document.querySelector(".input-search-music");
+const $searchMoreBtnWrapper = document.querySelector(".search-more-btn-wrapper");
+const $musicLists = document.querySelector(".music-lists");
+const $selectedMusic = document.querySelector(".selected-music");
+const $previousBtn = document.querySelector(".previous-page-btn");
+const $nextBtn = document.querySelector(".next-page-btn");
+const $completeBtn = document.querySelector(".complete-btn");
+const $cancleBtn = document.querySelector(".cancel-btn");
+const $postTitle = document.querySelector(".post-title");
+const $postContent = document.getElementById("post-content");
+const $contentShowError = document.querySelector(".content-show-error");
+const $titleShowError = document.querySelector(".title-show-error");
+
+// Event Handler
+window.onload = async () => {
+  $postTitle.value = "";
+  $postContent.value = "";
+  $inputSearchMusic.value = "";
+  // 기존 게시물 로딩
+  try {
+    const res = await fetch(`/posts?id_like=\\b${postingId}\\b`);
+    const myPost = await res.json();
+    console.log(myPost);
+    console.log(myPost['0'].title);
+    console.log(myPost['0'].content);
+
+    $postTitle.value = `${myPost['0'].title}`;
+    $postContent.value = `${myPost['0'].content}`;
+    $selectedMusic.innerHTML = `<img class='render-music-thumbnail' src="${myPost['0'].music.thumbnail}" alt="${myPost['0'].music.title}"> <span class='render-music-title'>${myPost['0'].music.title}</span>`
+  } catch (err) {
+    console.error(err);
+  }
+  // 기존 게시물 로딩 끝
+};
+
+$addMusic.onclick = () => {
+  $searchCoverContainer.classList.add("active");
+};
+
+// 검색창 닫기
+$searchMusicCancel.onclick = () => {
+  $searchCoverContainer.classList.remove("active");
+  $searchMoreBtnWrapper.classList.remove("showBtn");
+  $inputSearchMusic.value = "";
+  [...$musicLists.children].forEach((musicList) =>
+    $musicLists.removeChild(musicList)
+  );
+};
+
+$inputSearchMusic.onchange = () => {
+  $musicLists.innerHTML = "";
+};
+
+// 검색어 찾기
+$inputSearchMusic.onkeyup = async (e) => {
+  if (e.key !== "Enter" || $inputSearchMusic.value === "") return;
+
+  count = 0;
+  $previousBtn.style.display = "none";
+  count1 = 1;
+
+  if (count1 + count2 + count3 === 3) $completeBtn.disabled = false;
+  setTimeout(() => {
+    $searchMoreBtnWrapper.classList.add("showBtn");
+  }, 400);
+
+  const musicUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${$inputSearchMusic.value}&key=AIzaSyBmXKte4MYkU1dWxEOcSdTag5Ew0wXE0T0`;
+
+  try {
+    const res = await fetch(musicUrl);
+    musicItems = await res.json();
+    const musicLists = await musicItems;
+    // console.log(musicLists);
+    $musicLists.innerHTML = "";
+    $musicLists.innerHTML += musicLists.items
+      .map((item) => {
+        return `<li class="${item.id.videoId}">
+          <img class='search-music-thumbnail' src='${item.snippet.thumbnails.medium.url}'><label class='search-music-title'>${item.snippet.title}<input class="search-music-radio" name='checking' type='radio'><label>
+        </li>`;
+      })
+      .join("");
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+// 검색된 음악 선택
+$musicLists.onclick = (e) => {
+  if (!e.target.matches(".search-music-title")) return;
+
+  // console.log(e.target);
+  videoId = e.target.parentNode.className;
+
+  $searchCoverContainer.classList.remove("active");
+
+  renderSelectedMusic();
+};
+
+// 선택된 음악 랜더
+const renderSelectedMusic = () => {
+  selectedData = musicItems.items.find((item) => {
+    return item.id.videoId === videoId;
+  });
+
+  $selectedMusic.innerHTML = "";
+  $selectedMusic.innerHTML = `<img class='render-music-thumbnail' src="${selectedData.snippet.thumbnails.medium.url}" alt="${selectedData.snippet.title}"> <span class='render-music-title'>${selectedData.snippet.title}</span>`;
+};
+
+// 다음 검색 결과 보기
+$nextBtn.onclick = async () => {
+  const nextMusicUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${$inputSearchMusic.value}&pageToken=${musicItems.nextPageToken}&key=AIzaSyBmXKte4MYkU1dWxEOcSdTag5Ew0wXE0T0`;
+
+  $previousBtn.style.display = "block";
+  count++;
+
+  setTimeout(() => {
+    $searchMoreBtnWrapper.classList.add("showBtn");
+  }, 400);
+
+  try {
+    const res = await fetch(nextMusicUrl);
+    musicItems = await res.json();
+    const musicLists = await musicItems;
+    // console.log(musicLists);
+
+    $musicLists.innerHTML = musicLists.items
+      .map((item) => {
+        return `<li class="${item.id.videoId}">
+          <img class='search-music-thumbnail' src='${item.snippet.thumbnails.medium.url}'><label class='search-music-title'>${item.snippet.title}<input class="search-music-radio" name='checking' type='radio'><label>
+        </li>`;
+      })
+      .join("");
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+// 이전 검색 결과 보기
+$previousBtn.onclick = async () => {
+  const nextMusicUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${$inputSearchMusic.value}&pageToken=${musicItems.prevPageToken}&key=AIzaSyBmXKte4MYkU1dWxEOcSdTag5Ew0wXE0T0`;
+
+  try {
+    const res = await fetch(nextMusicUrl);
+    musicItems = await res.json();
+    const musicLists = await musicItems;
+    // console.log(musicLists);
+
+    $musicLists.innerHTML = musicLists.items
+      .map((item) => {
+        return `<li class="${item.id.videoId}">
+          <img class='search-music-thumbnail' src='${item.snippet.thumbnails.medium.url}'><label class='search-music-title'>${item.snippet.title}<input class="search-music-radio" name='checking' type='radio'><label>
+        </li>`;
+      })
+      .join("");
+
+    count--;
+    setTimeout(() => {
+      $searchMoreBtnWrapper.classList.add("showBtn");
+    }, 400);
+    //console.log(musicItems.prevPageToken);
+
+    if (count < 1) {
+      $previousBtn.style.display = "none";
+      return;
+    }
+  } catch (err) {
+    console.error(err);
+  }
+};
+// 제목 최대 입력 글자수 제한
+$postTitle.oninput = () => {
+  const titleLength = $postTitle.value.length;
+  if (titleLength >= 20) {
+    $postTitle.textContent = $postTitle.value.substring(0, 20);
+    $titleShowError.textContent = "입력 가능한 글자수를 초과하였습니다.";
+  } else {
+    $titleShowError.textContent = "";
+  }
+};
+// 게시물 최대 입력 글자수 제한
+$postContent.oninput = () => {
+  const contentLength = $postContent.value.length;
+  if (contentLength >= 250) {
+    $postContent.value = $postContent.value.substring(0, 250);
+    $contentShowError.textContent = "입력 가능한 글자수를 초과하였습니다.";
+  } else {
+    $contentShowError.textContent = "";
+  }
+};
+
+document.body.onkeyup = (e) => {
+  if (!e.key === "Enter" || !$inputSearchMusic.value) return;
+
+  if (e.target === $inputSearchMusic) count1 = 1;
+
+  if ($postContent.value !== "") count3 = 1;
+  else count3 = 0;
+
+  if ($postTitle.value !== "") count2 = 1;
+  else count2 = 0;
+
+  if (count1 + count2 + count3 === 3) {
+    $completeBtn.disabled = false;
+    $completeBtn.style["box-shadow"] = "0 0 4px 5px skyblue inset";
+    $completeBtn.style.cursor = "pointer";
+    $completeBtn.classList.add("satisfied");
+  } else {
+    $completeBtn.disabled = true;
+    $completeBtn.style.cursor = "default";
+    $completeBtn.style["box-shadow"] = "";
+    $completeBtn.classList.remove("satisfied");
+  }
+};
+
+// 작성 완료하기
+$completeBtn.onclick = async () => {
+  const loginUser = JSON.parse(sessionStorage.getItem("user"));
+  const today = new Date();
+
+  if ($postTitle.value === "" || $postContent.value === "") return;
+
+  try {
+    const res = await fetch("/posts");
+    const posts = await res.json();
+    const postId = posts.length
+      ? Math.max(...posts.map((post) => post.id)) + 1
+      : 1;
+
+    const postingData = {
+      writter: loginUser.id,
+      date: `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`,
+      music: {
+        thumbnail: selectedData.snippet.thumbnails.medium.url,
+        url: `https://www.youtube.com/watch?v=${selectedData.id.videoId}`,
+        title: selectedData.snippet.title,
+        musicid: selectedData.id.videoId
+      },
+      content: $postContent.value,
+      title: $postTitle.value,
+      like: [],
+      scrap: [],
+    };
+
+    // 게시물 수정 PATCH 시작
+    await fetch(`/posts/${postingId}`, {
+      method: 'PATCH',
+      headers: { 'Content-type': 'application/json' },
+      body: JSON.stringify(postingData)
+    });
+    // 게시물 수정 PATCH 끝
+    window.location.assign("/main-page.html");
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+// 작성 취소하기
+$cancleBtn.onclick = () => {
+  window.location.assign("main-page.html");
+};

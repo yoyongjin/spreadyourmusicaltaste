@@ -1,109 +1,9 @@
 {
   "users": [
     {
-      "id": "ehdcks1234",
-      "pw": "ehdcks123",
-      "nickname": "동찬김"
-    },
-    {
-      "id": "joyunah",
-      "pw": "whdbsdk123",
-      "nickname": "윤아짱짱12"
-    },
-    {
-      "id": "fastcampus",
-      "pw": "rlaehdcks1",
-      "nickname": "패캠"
-    },
-    {
-      "id": "zizizi123",
-      "pw": "ehdcks003",
-      "nickname": "용진짱"
-    },
-    {
-      "id": "tlsldldl23",
-      "pw": "rlaehdcks1",
-      "nickname": "조윤아조장님"
-    },
-    {
-      "id": "opop2222",
-      "pw": "rlrlrlrl0",
-      "nickname": "rlrlrlrl"
-    },
-    {
-      "id": "fastcampus11",
-      "pw": "rlaehdcks2",
-      "nickname": "rlaehdcks"
-    },
-    {
-      "id": "videodsad2",
-      "pw": "rlaehdcks1",
-      "nickname": "패캠22"
-    },
-    {
-      "id": "fastcampoo",
-      "pw": "rlaehdcks1",
-      "nickname": "dsdsd2"
-    },
-    {
-      "id": "fasnppp2",
-      "pw": "rlaehdcks1",
-      "nickname": "dldldldl"
-    },
-    {
-      "id": "dasd323",
-      "pw": "rlaehdcks00",
-      "nickname": "ds222"
-    },
-    {
-      "id": "rlaehdcks00",
-      "pw": "rlaehdcks1",
-      "nickname": ""
-    },
-    {
-      "id": "arMQFoU",
-      "pw": "",
-      "nickname": ""
-    },
-    {
-      "id": "13sdsadad3",
-      "pw": "rlaehdcks1",
-      "nickname": "ddd"
-    },
-    {
-      "id": "rlaehdcks0",
-      "pw": "rlaehdcks1",
-      "nickname": "rlaehd"
-    },
-    {
-      "id": "fastmmp0",
-      "pw": "rlaehdcks0",
-      "nickname": "rlaehdcks"
-    },
-    {
-      "id": "kym1234",
-      "pw": "12341234",
-      "nickname": "김재"
-    },
-    {
-      "id": "yongjin",
-      "pw": "yongjin123",
-      "nickname": "용지니"
-    },
-    {
-      "id": "rladydals",
-      "pw": "rladydals",
-      "nickname": "김용민123"
-    },
-    {
-      "id": "nara12345",
-      "pw": "skfk12345",
-      "nickname": "나라짱"
-    },
-    {
       "id": "rlaehdcks",
       "pw": "rlaehdcks",
-      "nickname": "ehd"
+      "nickname": "동찬킴"
     },
     {
       "id": "rlawoals",
@@ -123,15 +23,32 @@
   ],
   "posts": [
     {
-      "writter": "rladydals",
-      "date": "2020-11-19",
+      "id": 6,
+      "writter": "rlaehdcks",
+      "date": "2020-11-20",
       "music": {
-        "thumbnail": "https://i.ytimg.com/vi/ATVDtfUe8pY/mqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=ATVDtfUe8pY",
-        "title": "칭찬받는 코드 작성법 (처음 HTML/CSS 공부하시는 분들이라면 꼭꼭 보세요!)"
+        "thumbnail": "https://i.ytimg.com/vi/mlwqHWHo-5E/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=mlwqHWHo-5E",
+        "title": "빈지노 (Beenzino) - OKGO (Feat. E SENS) MV",
+        "musicid": "mlwqHWHo-5E"
       },
-      "content": "김버그",
-      "title": "김버그",
+      "content": "미쳤다미쳤어",
+      "title": "빈지노X이센스",
+      "like": [],
+      "scrap": []
+    },
+    {
+      "id": 10,
+      "writter": "rlaehdcks",
+      "date": "2020-11-20",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/Ou1xUChEDKM/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=Ou1xUChEDKM",
+        "title": "먼데이 키즈 - 사랑 못해, 남들 쉽게 다 하는 거 / 가사",
+        "musicid": "Ou1xUChEDKM"
+      },
+      "content": "띵곡",
+      "title": "먼키 신곡",
       "like": [
         "rladydals",
         1,
@@ -145,188 +62,13 @@
       ],
       "likeLength": 5,
       "scrapLength": 2,
-      "id": 10
-    },
-    {
-      "writter": "rladydals",
-      "date": "2020-11-19",
-      "music": {
-        "thumbnail": "https://i.ytimg.com/vi/AMoDKhrlc8M/mqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=AMoDKhrlc8M",
-        "title": "[김버그X구름] 버그 없는 시리즈 제작 후기"
-      },
-      "content": "김버그2",
-      "title": "김버그2",
-      "like": [
-        1,
-        2,
-        3,
-        4
-      ],
-      "scrap": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        7
-      ],
-      "id": 11,
-      "likeLength": 4,
-      "scrapLength": 6
-    },
-    {
-      "writter": "rladydals",
-      "date": "2020-11-19",
-      "music": {
-        "thumbnail": "https://i.ytimg.com/vi/aS_0aPCARpg/mqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=aS_0aPCARpg",
-        "title": "GIRL&#39;S DAY (걸스데이) - DARLING (달링) Official Audio"
-      },
-      "content": "걸데달링\n",
-      "title": "걸데 달링",
-      "like": [
-        1
-      ],
-      "scrap": [
-        1
-      ],
-      "likeLength": 1,
-      "scrapLength": 1,
-      "id": 12
-    },
-    {
-      "writter": "rladydals",
-      "date": "2020-11-19",
-      "music": {
-        "thumbnail": "https://i.ytimg.com/vi/4G1BFFcEgpc/mqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=4G1BFFcEgpc",
-        "title": "Don&#39;t Look Back In Anger"
-      },
-      "content": "sdfsdf",
-      "title": "oasis don'tlooka",
-      "like": [
-        1,
-        2,
-        3,
-        5,
-        6,
-        7,
-        8.9,
-        0
-      ],
-      "scrap": [
-        1,
-        2,
-        3
-      ],
-      "likeLength": 8,
-      "scrapLength": 3,
-      "id": 13
-    },
-    {
-      "writter": "rladydals",
-      "date": "2020-11-20",
-      "music": {
-        "thumbnail": "https://i.ytimg.com/vi/wiAI6AUtltE/mqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=wiAI6AUtltE",
-        "title": "Wonder Girls - So Hot, 원더걸스 - 쏘 핫, Music Core 20080621"
-      },
-      "content": "wondergirls so hot",
-      "title": "wonder girls - so hot",
-      "like": [
-        1,
-        2,
-        3,
-        4
-      ],
-      "scrap": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9
-      ],
-      "likeLength": 4,
-      "scrapLength": 9,
-      "id": 14
-    },
-    {
-      "writter": "rladydals",
-      "date": "2020-11-20",
-      "music": {
-        "thumbnail": "https://i.ytimg.com/vi/PWD04kHB_7M/mqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=PWD04kHB_7M",
-        "title": "HYUNA(현아) - &#39;잘나가서 그래 (Feat. 정일훈 Of BTOB)&#39; (Roll Deep) [Audio]"
-      },
-      "content": "내가다 잘나가서그래",
-      "title": "잘나가서그래",
-      "like": [],
-      "scrap": [],
-      "likeLength": 0,
-      "scrapLength": 0,
-      "id": 16
-    },
-    {
-      "writter": "rladydals",
-      "date": "2020-11-20",
-      "music": {
-        "thumbnail": "https://i.ytimg.com/vi/CAC-onWPMB0/mqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=CAC-onWPMB0",
-        "title": "Kiss Me"
-      },
-      "content": "best song",
-      "title": "sixpence none the richer",
-      "like": [],
-      "scrap": [],
-      "likeLength": 0,
-      "scrapLength": 0,
-      "id": 17
-    },
-    {
-      "writter": "rladydals",
-      "date": "2020-11-20",
-      "music": {
-        "thumbnail": "https://i.ytimg.com/vi/rSD7jb4Xjq8/mqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=rSD7jb4Xjq8",
-        "title": "Snow Man「D.D.」MV (YouTube ver.)"
-      },
-      "content": "dskfjhsdkfjhsdkjfhskdfhsdkjfhskdjfksdjfhksdjhfksdjhfksehfkjsdkvbksdvbksdjbvksdjvbksdjbkvjjfhskdfhsdkjfhskdjfksdjfhksdjhfksdjhfksehfkjsdkvbksdvbksdjbvksdjvbksdjbkvjjfhskdfhsdkjfhskdjfksdjfhksdjhfksdjhfksehfkjsdkvbksdvbksdjbvksdjvbksdjbkvjjfhskdfhsdkjf",
-      "title": "sdfjdfshkdsfjhksdjfhksdjfhksdfhksdjf",
-      "like": [],
-      "scrap": [
-        "rladydals",
-        1
-      ],
-      "likeLength": 0,
-      "scrapLength": 1,
-      "id": 19
     }
   ],
   "mymusic": [
     {
-      "id": "rladydals",
-      "thumbnail": "https://upload.wikimedia.org/wikipedia/en/7/7b/Sunmi_-_Noir.jpg",
-      "url": "https://www.youtube.com/watch?v=i20Op_qKa-M"
-    },
-    {
-      "id": "nara12345",
-      "thumbnail": "https://i.ytimg.com/vi/gQCpoIbPD5s/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=gQCpoIbPD5s"
-    },
-    {
       "id": "rlaehdcks",
-      "thumbnail": "https://i.ytimg.com/vi/BzYnNdJhZQw/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=BzYnNdJhZQw"
-    },
-    {
-      "id": "rlaehdcks00",
-      "thumbnail": "https://i.ytimg.com/vi/Ub6IyAOTwr8/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=Ub6IyAOTwr8"
+      "thumbnail": "https://i.ytimg.com/vi/DPCtiXpx-UQ/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=DPCtiXpx-UQ"
     }
   ]
 }

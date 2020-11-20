@@ -3,6 +3,8 @@ let scrap;
 let like;
 let userInfo;
 let isSelected = false;
+// 페이크 프레임 확인 변수
+let checkIndex = false;
 
 // doms
 const $postedPageTitle = document.querySelector('.posted-page-title');
@@ -18,6 +20,11 @@ const $postedPageDelete = document.querySelector('.posted-page-delete');
 const $postedPageEdit = document.querySelector('.posted-page-edit');
 const $postedSongDetail = document.querySelector('.posted-page-song-detail');
 const $postedPageYtlink = document.querySelector('.posted-page-youtube-link');
+const $postedProfileImage = document.querySelector('.posted-profile-image');
+const $likeFakeThumbs = document.querySelectorAll('.like-fakethumbs');
+
+// 페이크 프레임
+const $fakeFrame = document.querySelector('.fake-frame');
 
 // functions
 const request = {
@@ -79,6 +86,24 @@ const checkIfWritter = postWritter => {
 };
 
 // Events
+window.onload = () => {
+    // 프로필 이미지 랜덤 추출
+    const random = Math.floor((Math.random() * 20) + 1);
+    // 프로필 이미지 추가
+    $postedProfileImage.setAttribute('src', `./image/profile${random}.gif`);
+  (async () => {
+    userInfo = JSON.parse(sessionStorage.getItem('user'));
+    console.log(userInfo);
+    const res = await request.get(`/posts/${sessionStorage.getItem('post-id')}`);
+    const post = await res.json();
+    console.log(post.writter);
+    renderWritterInfo(post);
+    checkIfWritter(post.writter);
+    if (checkPressedLikeBtn(post.like)) $postedPageLikeBtn.classList.add('pressed');
+    if (checkPressedScrapBtn(post.scrap)) $postedPageScrapBtn.classList.add('pressed');
+  })();
+};
+
 document.addEventListener('DOMContentLoaded', async () => {
   userInfo = JSON.parse(sessionStorage.getItem('user'));
   console.log(userInfo);
@@ -91,12 +116,34 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (checkPressedScrapBtn(post.scrap)) $postedPageScrapBtn.classList.add('pressed');
 });
 
-$postedpageAlbum.onclick = e => {
+$postedpageAlbum.onclick = async e => {
   console.log(e.target);
   isSelected = true;
   e.target.classList.add('selected');
   $postedSongDetail.classList.add('selected');
   e.target.style.transform = 'translateX(-40%)';
+
+  // 페이크 프레임 시작
+  if (isSelected === true) {
+    $fakeFrame.style.transform = 'translateX(-40%)';
+  }
+  if(checkIndex === false) {
+    checkIndex = true;
+    return;
+  }
+  if(checkIndex === true) {
+    $fakeFrame.style.zIndex = '10';
+  }
+
+  try {
+    const res = await request.get(`/posts/${sessionStorage.getItem('post-id')}`);
+    const post = await res.json();
+    const playmusic = await post.music.musicid;
+    $fakeFrame.setAttribute('src', `https://www.youtube.com/embed/${playmusic}`);
+  } catch (err) {
+    console.error(err);
+  }
+  // 페이크 프레임 끝
 };
 
 document.onclick = e => {
@@ -105,6 +152,18 @@ document.onclick = e => {
   document.querySelector('.posted-page-song-detail.selected').classList.remove('selected');
   $postedpageAlbum.style.transform = 'translateX(0%)';
   isSelected = false;
+
+  // 페이크 프레임 시작
+  if (isSelected === false) {
+    $fakeFrame.style.transform = 'translateX(0%)';
+  }
+  if(checkIndex === true) {
+    checkIndex = false;
+    $fakeFrame.style.zIndex = '-10';
+    $fakeFrame.removeAttribute('src');
+  }
+  // 페이크 프레임 끝
+
 };
 
 $postedPageStatus.onclick = e => {
@@ -115,7 +174,6 @@ $postedPageStatus.onclick = e => {
     (async () => {
       const res = await request.get(`/posts/${sessionStorage.getItem('post-id')}`);
       const post = await res.json();
-
       scrap = post.scrap;
       if (checkPressedScrapBtn(scrap)) {
         scrap = removeUserScrap();
@@ -155,3 +213,18 @@ $postedPageDelete.onclick = () => {
   deletePost(`/posts/${sessionStorage.getItem('post-id')}`);
   window.location.assign('./main-page.html');
 };
+
+
+// 좋아요 이벤트
+$postedPageLikeBtn.onclick = e => {
+  if(e.target.classList.contains('pressed')) {
+    [...$likeFakeThumbs].forEach(fakethumb => fakethumb.classList.remove('thumbsup'));
+    return;
+  }
+  [...$likeFakeThumbs].forEach(fakethumb => fakethumb.classList.add('thumbsup'));
+}
+
+// 게시물 수정 
+$postedPageEdit.onclick = e => {
+  window.location.assign('post-fixed-page.html');
+}

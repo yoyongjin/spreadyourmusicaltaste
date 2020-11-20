@@ -99,7 +99,7 @@ $inputSearchMusic.onkeyup = async e => {
     $searchMoreBtnWrapper.classList.add('showBtn');
   }, 400);
 
-  const musicUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${$inputSearchMusic.value}&key=AIzaSyAc3Bpa6FdYzU_4MAk5IltowVJdbW8jlsU`;
+  const musicUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${$inputSearchMusic.value}&key=AIzaSyBmXKte4MYkU1dWxEOcSdTag5Ew0wXE0T0`;
 
   try {
     const res = await fetch(musicUrl);
@@ -163,7 +163,7 @@ $musicLists.onclick = async e => {
 
 // 다음 검색 결과 보기
 $nextBtn.onclick = async () => {
-  const nextMusicUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${$inputSearchMusic.value}&pageToken=${musicItems.nextPageToken}&key=AIzaSyAc3Bpa6FdYzU_4MAk5IltowVJdbW8jlsU`;
+  const nextMusicUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${$inputSearchMusic.value}&pageToken=${musicItems.nextPageToken}&key=AIzaSyBmXKte4MYkU1dWxEOcSdTag5Ew0wXE0T0`;
 
   $previousBtn.style.display = 'block';
   count++;
@@ -189,7 +189,7 @@ $nextBtn.onclick = async () => {
 
 // 이전 검색 결과 보기
 $previousBtn.onclick = async () => {
-  const nextMusicUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${$inputSearchMusic.value}&pageToken=${musicItems.prevPageToken}&key=AIzaSyAc3Bpa6FdYzU_4MAk5IltowVJdbW8jlsU`;
+  const nextMusicUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${$inputSearchMusic.value}&pageToken=${musicItems.prevPageToken}&key=AIzaSyBmXKte4MYkU1dWxEOcSdTag5Ew0wXE0T0`;
 
   try {
     const res = await fetch(nextMusicUrl);
