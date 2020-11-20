@@ -1,8 +1,141 @@
 {
   "users": [
+    {
+      "id": "rladydals",
+      "pw": "rladydals",
+      "nickname": "김용민"
+    }
   ],
   "posts": [
+    {
+      "writter": "rladydals",
+      "date": "2020-11-20",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/t7X8qhESIfs/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=t7X8qhESIfs",
+        "title": "Wonder Girls - Tell Me, 원더걸스 - 텔미, Music Core 20070908",
+        "musicid": "t7X8qhESIfs"
+      },
+      "content": "텔미",
+      "title": "첫곡은 텔미",
+      "like": [
+        "rladydals"
+      ],
+      "scrap": [],
+      "likeLength": 1,
+      "scrapLength": 0,
+      "id": 1
+    },
+    {
+      "writter": "rladydals",
+      "date": "2020-11-20",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/3vVHy0XoIN4/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=3vVHy0XoIN4",
+        "title": "Wonder Girls &quot;Tell Me&quot; M/V",
+        "musicid": "3vVHy0XoIN4"
+      },
+      "content": "텔미텔미",
+      "title": "두번째도 텔미",
+      "like": [],
+      "scrap": [],
+      "likeLength": 0,
+      "scrapLength": 0,
+      "id": 2
+    },
+    {
+      "writter": "rladydals",
+      "date": "2020-11-20",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/Gvfgut8nAgw/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=Gvfgut8nAgw",
+        "title": "Wonderwall",
+        "musicid": "Gvfgut8nAgw"
+      },
+      "content": "hi",
+      "title": "wonderwall",
+      "like": [],
+      "scrap": [],
+      "likeLength": 0,
+      "scrapLength": 0,
+      "id": 3
+    },
+    {
+      "writter": "rladydals",
+      "date": "2020-11-20",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/E8TO8bxEXEs/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=E8TO8bxEXEs",
+        "title": "Oasis - Wonderwall [SACD Mix]",
+        "musicid": "E8TO8bxEXEs"
+      },
+      "content": "123123123",
+      "title": "youre my wonderwall",
+      "like": [],
+      "scrap": [],
+      "likeLength": 0,
+      "scrapLength": 0,
+      "id": 4
+    },
+    {
+      "writter": "rladydals",
+      "date": "2020-11-20",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/aHUk0qK-W6U/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=aHUk0qK-W6U",
+        "title": "LALALAY (날라리)",
+        "musicid": "aHUk0qK-W6U"
+      },
+      "content": "ㅎㅎ",
+      "title": "선미 -모범생",
+      "like": [
+        "rladydals"
+      ],
+      "scrap": [],
+      "likeLength": 1,
+      "scrapLength": 0,
+      "id": 5
+    },
+    {
+      "writter": "rladydals",
+      "date": "2020-11-20",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/m-XlaEC_e4g/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=m-XlaEC_e4g",
+        "title": "24 Hours",
+        "musicid": "m-XlaEC_e4g"
+      },
+      "content": "ㅇㄹㄴㅇㄹㄴㄴㄹㅇ",
+      "title": "24시간이 모자라",
+      "like": [],
+      "scrap": [],
+      "likeLength": 0,
+      "scrapLength": 0,
+      "id": 6
+    },
+    {
+      "writter": "rladydals",
+      "date": "2020-11-20",
+      "music": {
+        "thumbnail": "https://i.ytimg.com/vi/wz7DCWhey9o/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=wz7DCWhey9o",
+        "title": "누아르 (Noir)",
+        "musicid": "wz7DCWhey9o"
+      },
+      "content": "들어봐",
+      "title": "sunmi noir",
+      "like": [],
+      "scrap": [],
+      "likeLength": 0,
+      "scrapLength": 0,
+      "id": 7
+    }
   ],
   "mymusic": [
+    {
+      "id": "rladydals",
+      "thumbnail": "https://i.ytimg.com/vi/t7X8qhESIfs/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=t7X8qhESIfs"
+    }
   ]
 }
