@@ -28,21 +28,19 @@
   ],
   "posts": [
     {
-      "writter": "rladydals",
+      "writter": "rlaehdcks",
       "date": "2020-11-20",
       "music": {
-        "thumbnail": "https://i.ytimg.com/vi/t7X8qhESIfs/mqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=t7X8qhESIfs",
-        "title": "Wonder Girls - Tell Me, 원더걸스 - 텔미, Music Core 20070908",
-        "musicid": "t7X8qhESIfs"
+        "thumbnail": "https://i.ytimg.com/vi/jRAgj35X1GQ/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=jRAgj35X1GQ",
+        "title": "[4K] 팔로알토의 킬링벌스를 라이브로! (Switch, Cooler Than the Cool, 그늘, 3호선 매봉역, Good Times, 한라산 (Hi-Lite Sign))",
+        "musicid": "jRAgj35X1GQ"
       },
-      "content": "텔미",
-      "title": "텔미",
-      "like": [
-        "rladydals"
-      ],
+      "content": "성수동의 컬쳐",
+      "title": "팔로알토",
+      "like": [],
       "scrap": [],
-      "likeLength": 1,
+      "likeLength": 0,
       "scrapLength": 0,
       "id": 1
     },
@@ -142,6 +140,10 @@
       },
       "content": "으악",
       "title": "화살표함수",
+      "like": [],
+      "scrap": [
+        "rlaehdcks"
+      ],
       "like": [
         "rladydals"
       ],
@@ -295,8 +297,8 @@
   "mymusic": [
     {
       "id": "rlaehdcks",
-      "thumbnail": "https://i.ytimg.com/vi/DPCtiXpx-UQ/mqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=DPCtiXpx-UQ"
+      "thumbnail": "https://i.ytimg.com/vi/dGVWH6ojI0c/mqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=dGVWH6ojI0c"
     },
     {
       "id": "rladydals",

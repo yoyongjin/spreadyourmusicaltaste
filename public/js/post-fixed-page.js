@@ -6,6 +6,8 @@ let count1 = 0; // 유튜브 노래 선택여부
 let count2 = 0; // 게시글 제목 작성 여부
 let count3 = 0; // 게시글 내용 작성여부
 
+const userKey = 'AIzaSyBHqXzcGxlePRMoN3A34Y93cIANHJkzxXc';
+
 // 게시글 번호 획득
 const postingId = JSON.parse(sessionStorage.getItem("post-id"));
 
@@ -79,7 +81,7 @@ $inputSearchMusic.onkeyup = async (e) => {
     $searchMoreBtnWrapper.classList.add("showBtn");
   }, 400);
 
-  const musicUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${$inputSearchMusic.value}&key=AIzaSyBmXKte4MYkU1dWxEOcSdTag5Ew0wXE0T0`;
+  const musicUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${$inputSearchMusic.value}&key=${userKey}`;
 
   try {
     const res = await fetch(musicUrl);
@@ -123,7 +125,7 @@ const renderSelectedMusic = () => {
 
 // 다음 검색 결과 보기
 $nextBtn.onclick = async () => {
-  const nextMusicUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${$inputSearchMusic.value}&pageToken=${musicItems.nextPageToken}&key=AIzaSyBmXKte4MYkU1dWxEOcSdTag5Ew0wXE0T0`;
+  const nextMusicUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${$inputSearchMusic.value}&pageToken=${musicItems.nextPageToken}&key=${userKey}`;
 
   $previousBtn.style.display = "block";
   count++;
@@ -152,7 +154,7 @@ $nextBtn.onclick = async () => {
 
 // 이전 검색 결과 보기
 $previousBtn.onclick = async () => {
-  const nextMusicUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${$inputSearchMusic.value}&pageToken=${musicItems.prevPageToken}&key=AIzaSyBmXKte4MYkU1dWxEOcSdTag5Ew0wXE0T0`;
+  const nextMusicUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${$inputSearchMusic.value}&pageToken=${musicItems.prevPageToken}&key=${userKey}`;
 
   try {
     const res = await fetch(nextMusicUrl);
