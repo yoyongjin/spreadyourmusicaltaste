@@ -210,7 +210,7 @@ $postedPageStatus.onclick = e => {
 
 $postedPageDelete.onclick = () => {
   deletePost(`/posts/${sessionStorage.getItem('post-id')}`);
-  window.location.assign('./main-page.html');
+  window.location.assign('./index.html');
 };
 
 // 좋아요 이벤트

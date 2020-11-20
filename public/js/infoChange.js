@@ -28,6 +28,7 @@ const $backGround = document.querySelector('.back-ground');
 const $cautionCloseBtn = document.querySelector('.caution-close-btn');
 const $backGround2 = document.querySelector('.back-ground2');
 const $changeDone = document.querySelector('.change-done');
+const $changeDoneText = document.querySelector('.change-done-text');
 
 
 
@@ -88,9 +89,10 @@ const finishChange = () => {
     $changedPwError.textContent = '비밀번호가 일치하지 않습니다.';
     return;
   }
+
   
-  if ($changingPwInput.value === $changedPwInput.value && !$myNickInput.value) {
-    const changeUserPw = { id: currId, pw: $changedPwInput.value, nickname: currNickName }
+  if ($changingPwInput.value === $changedPwInput.value) {
+    const changeUserPw = { id: currId, pw: $changedPwInput.value, nickname: currNickName };
     sessionStorage.setItem('user', JSON.stringify(changeUserPw));
 
     request.patch(`/users/${sessionStorage.getItem('user.id')}`, {
@@ -99,12 +101,12 @@ const finishChange = () => {
       // .then(users => console.log(users))
       .then(_user => JSON.parse(_user))
       .then(patched_user => { console.log(patched_user); })
-      .catch(err => console.error(err));  
+      .catch(err => console.error(err));
     window.location.assign('my-page.html');
-  }
+  } 
 
   if ($changingPwInput.value === $changedPwInput.value && $myNickInput.value) {
-    const changeUserInfo = { id: currId, pw: $changedPwInput.value, nickname: $myNickInput.value }
+    const changeUserInfo = { id: currId, pw: $changedPwInput.value, nickname: $myNickInput.value };
     sessionStorage.setItem('user', JSON.stringify(changeUserInfo));
     window.location.assign('my-page.html');
 
@@ -128,6 +130,13 @@ const finishChange = () => {
     }).then(response => response.json())
       .then(users => console.log(users))
       .catch(err => console.error(err));
+  }
+
+  else{
+    $changeDoneText.textContent = '비밀번호가 일치하지 않습니다.';
+    setTimeout(() => {
+      history.go();
+    }, 1500);
   }
 }
 $changeCompleteBtn2.onclick = () => {
@@ -155,7 +164,7 @@ $myNickInput.onkeyup = e => {
 
 //개인정보 변경을 위한 비밀번호 확인
 $changePwInput.onkeyup = e => {
-  if(e.key == 'Enter') {
+  if(e.key === 'Enter') {
     pwChecked();
   }
 };
@@ -190,7 +199,6 @@ $goodByeBtn.onclick = () => {
       .then(users_fixed => console.log(users_fixed))
       .catch(err => console.error(err));
     window.location.assign('login.html'); 
-
   };  
 };
 

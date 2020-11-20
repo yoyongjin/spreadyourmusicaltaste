@@ -27,7 +27,7 @@ const loginFunc = async () => {
     if(checkUser) {
       console.log(checkUser);
       sessionStorage.setItem('user', JSON.stringify(checkUser));
-      window.location.assign('main-page.html');
+      window.location.assign('index.html');
     } else {
       $userError.textContent = '가입하지 않은 아이디이거나, 잘못된 비밀번호입니다.';
       $pwInput.value = '';
