@@ -54,6 +54,7 @@ const request = {
 };
 
 const determineSortBy = () => {
+  if (!sessionStorage.getItem('sort-by')) sortBy = 'date';
   sortBy = (sessionStorage.getItem('sort-by') === 'recent') ? 'date' : (sessionStorage.getItem('sort-by') === 'like' ? 'likeLength' : 'scrapLength');
 }; // 정렬기준 구하는 함수
 
